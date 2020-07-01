@@ -1,0 +1,21 @@
+{
+  "name": "ready-for-review",
+  "version": "1.0.0",
+  "description": "homepage for podcast \"Ready for review\"",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV=production npx eleventy",
+    "dev": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmies/ready-for-review.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/dmies/ready-for-review/issues"
+  },
+  "homepage": "https://github.com/dmies/ready-for-review#readme"
+}

@@ -1,0 +1,14 @@
+.title {
+  font-size: 4em;
+  line-height: 1.2;
+  word-spacing: 0;
+  letter-spacing: 0;
+  padding: 0;
+  color: var(--headline-color);
+  &_sub {
+    display: block;
+    font-size: 0.75em;
+    line-height: 1.4;
+    font-weight: normal;
+  }
+}

@@ -1,3 +1,4 @@
+.DS_Store
 # Logs
 logs
 *.log
@@ -105,3 +106,4 @@ dist
 
 # eleventy
 _site/
+src/site/_includes/css/

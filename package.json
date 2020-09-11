@@ -1,24 +1,28 @@
 {
   "name": "ready-for-review",
   "version": "1.0.0",
-  "description": "homepage for podcast \"Ready for review\"",
-  "main": "index.js",
-  "scripts": {
-    "build": "NODE_ENV=production npx eleventy",
-    "dev": "eleventy --serve"
+  "description": "homepage of podcast \"Ready for review\"",
+  "keywords": [],
+  "homepage": "https://github.com/dmies/ready-for-review#readme",
+  "bugs": {
+    "url": "https://github.com/dmies/ready-for-review/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dmies/ready-for-review.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/dmies/ready-for-review/issues"
+  "author": "Daniel Mies",
+  "main": "index.js",
+  "scripts": {
+    "build": "faucet --compact && NODE_ENV=production eleventy",
+    "dev": "faucet --watch & eleventy --serve"
   },
-  "homepage": "https://github.com/dmies/ready-for-review#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "@11ty/eleventy-plugin-rss": "^1.0.9",
+    "faucet-pipeline-sass": "^1.4.0",
+    "html-minifier": "^4.0.0"
   }
 }

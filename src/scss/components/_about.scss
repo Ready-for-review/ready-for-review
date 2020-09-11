@@ -1,0 +1,48 @@
+.about {
+  position: relative;
+  margin-top: 32px;
+  &__image {
+    background: purple url(/_assets/images/teaser.png) no-repeat scroll
+      center/cover;
+    height: 521px;
+    margin: 0 -16px;
+    width: auto;
+  }
+  &__rocket {
+    left: -130px;
+    padding: 0;
+    position: absolute;
+    top: -80px;
+    box-sizing: border-box;
+  }
+  &__description {
+    right: -16px;
+    width: 350px;
+    padding: 24px;
+    position: absolute;
+    bottom: -80px;
+    background: var(--orange);
+    color: var(--grey-brighter);
+    font-size: 0.875em;
+    box-sizing: border-box;
+
+    a {
+      color: var(--white);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    margin-top: 80px;
+    &__image {
+      width: 90%;
+      margin: 0 100px 0 0;
+    }
+    &__description {
+      right: 0;
+      width: 480px;
+      padding: 40px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+---
+layout: layout/base.njk
+eleventyNavigation:
+  key: Kontakt
+  order: 30
+---
+
+{%block content %}
+    <h2>Kontakt</h2>
+    <p>
+Wenn ihr uns kontaktieren wollt, könnt ihr dies gerne via Twitter tun (@readyforreview, @sandraparsick oder @danielmies) oder einfach dieses Formular nutzen.
+</p>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="favorite-color">
+        <div class="form-group">
+            <input type="text" required="required" name="name"/>
+            <label for="name" class="control-label">Name</label>
+            <i class="bar"></i>
+        </div>
+        <div class="form-group">
+            <input type="text" required="required" name="email"/>
+            <label for="email" class="control-label">E-Mail</label>
+            <i class="bar"></i>
+        </div>
+        <div class="form-group">
+            <textarea required="required" name="message"></textarea>
+            <label for="message" class="control-label">Nchricht</label>
+            <i class="bar"></i>
+        </div>
+
+        <div class="button-container">
+            <button class="button" type="submit">
+                <span>Senden<span></button>
+                </div>
+            </form>
+            {%endblock%}

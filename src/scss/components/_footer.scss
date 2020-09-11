@@ -1,0 +1,16 @@
+.footer {
+  padding: 1em 0 0;
+  position: relative;
+
+  &:before {
+    content: "";
+    height: 2px;
+    position: absolute;
+    background: var(--grey-bright);
+    top: 0;
+    width: 100%;
+    max-width: 20em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

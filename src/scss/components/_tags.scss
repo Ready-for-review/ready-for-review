@@ -1,0 +1,28 @@
+.taglist {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    background: var(--lemon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 100px;
+    font-size: 1em;
+    margin: 0 10px 0 0;
+    svg {
+      flex-shrink: 0;
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: 0.5em;
+    }
+    a {
+      text-decoration: none;
+      color: var(--color-text);
+    }
+  }
+}

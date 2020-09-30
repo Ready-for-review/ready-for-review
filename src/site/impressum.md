@@ -1,5 +1,5 @@
 ---
-layout: layout/base.njk
+layout: layout/content.njk
 eleventyNavigation:
   key: Impressum
   order: 40

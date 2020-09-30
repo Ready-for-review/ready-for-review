@@ -106,4 +106,6 @@ dist
 
 # eleventy
 _site/
+_tmp/
+_cache/
 src/site/_includes/css/

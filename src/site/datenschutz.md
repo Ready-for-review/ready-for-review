@@ -1,5 +1,5 @@
 ---
-layout: layout/base.njk
+layout: layout/content.njk
 eleventyNavigation:
   key: Datenschutz
   order: 50

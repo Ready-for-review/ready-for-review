@@ -1,35 +1,34 @@
 ---
-layout: layout/base.njk
+
 eleventyNavigation:
   key: Kontakt
   order: 30
 ---
-
+{% extends "layout/base.njk" %}
 {%block content %}
-    <h2>Kontakt</h2>
-    <p>
-Wenn ihr uns kontaktieren wollt, könnt ihr dies gerne via Twitter tun (@readyforreview, @sandraparsick oder @danielmies) oder einfach dieses Formular nutzen.
+    <section class="bg-white my-12 p-8 shadow rounded">
+        <h1 class="mt-12 text-6xl font-bold text-orange-400 leading-tight tracking-tight">Kontakt</h1>
+        <p class="my-4 text-gray-800">
+Wenn ihr uns kontaktieren wollt, könnt ihr dies gerne via Twitter tun (<a href="https://twitter.com/readyforreview">@readyforreview</a>, <a href="https://twitter.com/sandraparsick">@sandraparsick</a> oder <a href="https://twitter.com/danielmies">@danielmies</a>) oder einfach dieses Formular nutzen.
 </p>
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="favorite-color">
-        <div class="form-group">
-            <input type="text" required="required" name="name"/>
-            <label for="name" class="control-label">Name</label>
-            <i class="bar"></i>
-        </div>
-        <div class="form-group">
-            <input type="text" required="required" name="email"/>
-            <label for="email" class="control-label">E-Mail</label>
-            <i class="bar"></i>
-        </div>
-        <div class="form-group">
-            <textarea required="required" name="message"></textarea>
-            <label for="message" class="control-label">Nchricht</label>
-            <i class="bar"></i>
-        </div>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="favorite-color">
+            <p class="my-4">
+                <label class="label" for="name" >Name</label>
+                <input class="input" type="text" required="required" name="name"/>
 
-        <div class="button-container">
-            <button class="button" type="submit">
-                <span>Senden<span></button>
-                </div>
-            </form>
-            {%endblock%}
+            </p>
+            <p class="my-4">
+                <label for="email" class="label">E-Mail</label>
+                <input class="input" type="text" required="required" name="email"/>
+            </p>
+            <p class="my-4">
+                <label for="message" class="label">Nachricht</label>
+                <textarea class="input" required="required" name="message"></textarea>
+
+            </p>
+
+            <button class="btn" type="submit">Senden</button>
+
+        </form>
+    </section>
+    {%endblock%}

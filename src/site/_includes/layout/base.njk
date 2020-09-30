@@ -2,33 +2,28 @@
 <html lang="de">
     <head>
         <title>Ready for review</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            {% include "css/index.css" %}
-        </style>
+        <meta charset="utf-8"/>
+        {% if description %}
+            <meta name="description" content="{{description}}"/>
+        {% endif %}
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+        <link rel="stylesheet" href="/style.css?v={% version %}"/>
         <link rel="icon" href="/_assets/icons/favicon.svg">
-
+        {% block head %}{% endblock %}
     </head>
-    <body>
+    <body class="bg-gray-200">
         {%include "svgs.njk" %}
-        <div class="container">
-            <header class="header">
-                <a href="#main" class="skip-link">Direkt zum Inhalt</a>
-                {%- include "navigation.njk" -%}
 
-            </header>
-            <main id="main" class="main">
-                <div style="background:red;margin:1em 0;padding:1em;color:white;">
-                    <p>
-Seite befindet sich noch in Entwicklung.
-</p>
-                </div>
-                {% block content %}
-                    {{ content | safe }}
-                {% endblock %}
-            </main>
-            {%- include "footer.njk" -%}
-        </div>
+        {% include "header.njk" %}
+
+        <main id="main" class="mx-auto max-w-screen-lg">
+            {% block jumbo %}{% endblock %}
+            {% block content %}
+                {{ content | safe }}
+            {% endblock %}
+        </main>
+        {%- include "footer.njk" -%}
+
     </body>
 </html>

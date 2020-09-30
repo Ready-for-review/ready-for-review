@@ -1,47 +1,69 @@
 ---
-layout: layout/base.njk
 eleventyNavigation:
   key: Startseite
   order: 0
 ---
-{%block content %}
-  <h1 class="title">Ready for Review <span class="title_sub">mit Sandra Parsick und Daniel Mies</span></h1>
-  <section class="about">
-    <svg class="about__rocket">
-      <use xlink:href="#icon-rocket"></use>
-    </svg>
-    <div class="about__image"></div>
-    <article class="about__description">
-      <h2>Über Sandra &amp; Daniel</h2>
-      <p>
-        <a href="https://www.sandra-parsick.de/" title="Persönliche Webseite von Sandra Parsick">Sandra</a> ist als freiberufliche Softwareentwicklerin und Beraterin im Java Umfeld tätig. Seit 2008 beschäftigt sie sich mit agiler Softwareentwicklung in verschiedenen Rollen.
-      </p>
-      <p>
-        <a href="https://mies.me" title="Persönliche Webseite von Daniel Mies">Daniel</a> ist als IT Consultant bei der codecentric AG beschäftigt. Dort entwickelt er leidenschaftlich gerne moderne Frontend Anwendungen oder unterstützt Teams als Agiler Coach.
-      </p>
+{% extends "layout/base.njk" %}
+{%block jumbo%}
+  {% include "teaser.njk" %}
+  <section class="bg-white my-12 p-8 shadow rounded">
+    <h3 class="text-3xl font-bold text-center text-indigo-600">Ready for Review findet ihr auf:</h3>
+    <article class="mt-6 flex flex-row justify-around">
+      <a href="#" target=”_blank” class="flex flex-col items-center border-b-2 border-transparent hover:border-orange-500 no-underline hover:no-underline">
+        <img class="w-12 h-12 mr-2" src="/_assets/icons/apple.svg" alt="Apple Podcast Logo"/>
+        <span class="font-semibold ml-1">Apple Podcasts</span>
+      </a>
+      <a href="#" target=”_blank” class="flex flex-col items-center border-b-2 border-transparent hover:border-orange-500 no-underline hover:no-underline">
+        <img class="w-12 h-12" src="/_assets/icons/spotify.svg" alt="Spotify Logo"/>
+        <span class="font-semibold ml-1">Spotify</span>
+      </a>
+      <a href="#" target=”_blank” class="flex flex-col items-center border-b-2 border-transparent hover:border-orange-500 no-underline hover:no-underline">
+        <img class="w-12 h-12" src="/_assets/icons/google.svg" alt="Google Podcast Logo"/>
+        <span class="font-semibold ml-1">Google Podcasts</span>
+      </a>
     </article>
-  </section>
+    <article class="text-center text-gray-800 mt-6">
+      <h4 class="font-semibold inline">Und natürlich auch auf:</h4>
+      <a href="#" target="”_blank”">Overcast</a>
+      <a href="#" target="”_blank”">Stitcher</a>
+      <a href="#" target="”_blank”">Pocket Casts</a>
+      <a href="#" target="”_blank”">CastBox</a>
+      <a href="#" target="”_blank”">RadioPublic</a>
+      <a href="#" target="”_blank”">RSS</a>
 
-  {#
-  <section class="listen">
-    <h3>Ready for Review findet ihr auf (Links sind falsch!):</h3>
-    <article class="main-links">
-      <a href="https://podcasts.apple.com/us/podcast/overtime/id1068288639" target="”_blank”">Apple Podcast</a>
-      <a href="https://open.spotify.com/show/2zC32yHBh9Kyt73uKYUwNR" target="”_blank”">Spotify</a>
-      <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9yc3Muc2ltcGxlY2FzdC5jb20vcG9kY2FzdHMvMTUxNS9yc3M" target="”_blank”">Google Podcast</a>
-    </article>
-    <article>
-      <span>Und natürlich auch auf:</span>
-      <a href="https://overcast.fm/itunes1068288639/overtime" target="”_blank”">Overcast</a>
-      <a href="https://www.stitcher.com/podcast/dribbble/overtime-5" target="”_blank”">Stitcher</a>
-      <a href="https://pca.st/6HhD" target="”_blank”">Pocket Casts</a>
-      <a href="https://castbox.fm/channel/2591891" target="”_blank”">CastBox</a>
-      <a href="https://radiopublic.com/overtime-Gy0OOx" target="”_blank”">RadioPublic</a>
-      <a href="https://feeds.simplecast.com/ge7lYlnT" target="”_blank”">RSS</a>
     </article>
   </section>
+  {%endblock%}
+  {%block content %}
+
+    {% if episodes.items.length %}
+      <section class="bg-white my-12 p-8 shadow rounded">
+
+        {% set episode = episodes.items[0] %}
+
+        <article >
+          <time class="text-gray-800 text-sm" datetime="{{ episode.isoDate}}">{{ episode.isoDate | shortReadableDateFromISO }}</time>
+
+          <h2 class="text-3xl font-bold leading-tight tracking-tight">
+            <a class="no-underline" href="/{{episode | toEpisodeUrl }}/" title="{{ episode.title }}">{{episode.title}}</a>
+          </h2>
+
+          <audio class="shadow rounded bg-gray-500 w-full my-4" controls="controls" preload="auto">
+            <source type="audio/mpeg" src="{{episode.enclosure.url}}">
+          </audio>
+          <p class="my-4 text-right">
+            <a href="/{{episode | toEpisodeUrl }}/" title="{{ episode.title }}" class="btn">Shownotes <span>→</span></a>
+          </p>
+        </article>
+        <p class="my-4 text-gray-800">Alle Folgen findet ihr in der <a href="/episoden" title="Alle Podcast Episoden">Episoden</a>-&Uuml;bersicht.</p>
+
+      </section>
+    {% endif %}
+
+    {#
+
   #}
-  {#
+    {#
   <section class="feature-episode">
     <h3>Aktuelle Episode</h3>
     <div class="episode-wrapper">
@@ -112,4 +134,4 @@ eleventyNavigation:
     TODO: next button zur navigation
   </section>
   #}
-{%endblock %}
+  {%endblock %}

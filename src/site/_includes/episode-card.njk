@@ -1,0 +1,16 @@
+<li class="item">
+
+  <p class="item__time">
+    <time datetime="{{ episode.isoDate}}">{{ episode.isoDate | shortReadableDateFromISO }}</time>
+  </p>
+  <h2 class="item__title">
+    <a href="/{{episode | toEpisodeUrl }}/" title="{{ episode.title }}">{{ episode.title }}</a>
+  </h2>
+
+  <article class="item__content">
+    {% episodeContent episode %}
+  </article>
+
+  <a href="/{{episode | toEpisodeUrl }}/" title="{{ episode.title }}" class="item__more-link">Anhören <span class="meta-nav">→</span></a>
+
+</li>

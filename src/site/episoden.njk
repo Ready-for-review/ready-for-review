@@ -1,7 +1,17 @@
 ---
-layout: layout/base.njk
----
-{%block content %}
-Liste aller Episoden
 
-    {%endblock%}
+---
+{% extends "layout/base.njk" %}
+{% block content %}
+
+    <h2 class="headline">Episoden</h2>
+    <div class="content">
+        {% if episodes.items.length %}
+            <ul class="itemlist">
+                {% for episode in episodes.items %}
+                    {%- include "episode-card.njk" -%}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endblock %}

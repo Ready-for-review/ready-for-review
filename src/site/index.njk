@@ -6,6 +6,7 @@ eleventyNavigation:
 {% extends "layout/base.njk" %}
 {%block jumbo%}
   {% include "teaser.njk" %}
+  {#
   <section class="bg-white my-12 p-8 shadow rounded">
     <h3 class="text-3xl font-bold text-center text-indigo-600">Ready for Review findet ihr auf:</h3>
     <article class="mt-6 flex flex-row justify-around">
@@ -33,6 +34,7 @@ eleventyNavigation:
 
     </article>
   </section>
+  #}
   {%endblock%}
   {%block content %}
 
@@ -55,8 +57,9 @@ eleventyNavigation:
             <a href="/{{episode | toEpisodeUrl }}/" title="{{ episode.title }}" class="btn">Shownotes <span>→</span></a>
           </p>
         </article>
+        {#
         <p class="my-4 text-gray-800">Alle Folgen findet ihr in der <a href="/episoden" title="Alle Podcast Episoden">Episoden</a>-&Uuml;bersicht.</p>
-
+#}
       </section>
     {% endif %}
 

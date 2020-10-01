@@ -15,7 +15,7 @@ module.exports = async function () {
     console.log(">>> Checking for new episodes...");
     let parser = new Parser();
     const loadedEpisodes = await parser.parseURL(
-      "https://herrmies.podigee.io/feed/mp3"
+      "https://ready-for-review.podigee.io/feed/mp3"
     );
     if (loadedEpisodes) {
       const episodes = {

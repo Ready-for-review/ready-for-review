@@ -15,15 +15,22 @@ Die verwendeten Begriffe sind nicht geschlechtsspezifisch.
 
 Stand: 11\. September 2020
 
-## Verantwortlicher
+## Verantwortliche
 
-Daniel Mies  
-Hauptstraße 68  
+Sandra Parsick<br />
+Diplom-Informatiker<br />
+Münchener Str. 42c<br />
+41472 Neuss
+
+Daniel Mies<br/>
+Hauptstraße 68<br />
 42651 Solingen
 
-**Vertretungsberechtigte Personen:** Daniel Mies
+**Vertretungsberechtigte Personen:** Sandra Parsick und Daniel Mies
 
-**E-Mail-Adresse:** [daniel.mies@gmail.com](mailto:daniel.mies@gmail.com)
+### Kontakt
+
+**E-Mail-Adressen:** mail (at) sandra-parsick.de und daniel.mies (at) gmail.com
 
 **Impressum:** [https://ready-for-review.dev/impressum](https://ready-for-review.dev/impressum)
 

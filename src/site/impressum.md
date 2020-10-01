@@ -7,23 +7,30 @@ eleventyNavigation:
 
 # Impressum
 
-## Diensteanbieter
+## Angaben gemäß § 5 TMG:
 
-Daniel Mies
+Sandra Parsick<br />
+Diplom-Informatiker<br />
+Münchener Str. 42c<br />
+41472 Neuss
 
-Hauptstraße 68
+### Kontakt
 
-42651 Solingen
+Telefon: 0176/70056222<br />
+E-Mail: mail (at) sandra-parsick.de
 
-## Kontaktmöglichkeiten
+Daniel Mies<br />
+Hauptstraße 68<br />
+42651 Solingen<br />
 
-**E-Mail-Adresse:** [daniel.mies@gmail.com](mailto:daniel.mies@gmail.com)
+### Kontakt
 
-**Kontaktformular:** [https://ready-for-review.dev/kontakt](https://ready-for-review.dev/kontakt)
+Telefon: 0171/5331127<br />
+E-Mail: daniel.mies (at) gmail.com
 
 ## Journalistisch-redaktionelle Angebote
 
-**Inhaltlich verantwortlich:** Daniel Mies (Anschrift wie oben)
+**Inhaltlich verantwortlich:** Sandra Parsick und Daniel Mies (Anschrift wie oben)
 
 ## Social Media und andere Onlinepräsenzen
 

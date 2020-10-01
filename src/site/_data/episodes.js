@@ -14,16 +14,21 @@ module.exports = async function () {
   if (true || process.env.NODE_ENV === "production") {
     console.log(">>> Checking for new episodes...");
     let parser = new Parser();
-    const loadedEpisodes = await parser.parseURL(
-      "https://ready-for-review.podigee.io/feed/mp3"
-    );
-    if (loadedEpisodes) {
-      const episodes = {
-        lastFetched: new Date().toISOString(),
-        ...loadedEpisodes,
-      };
-      cacheHandler.writeToCache(episodes);
-      return episodes;
+    try {
+      const loadedEpisodes = await parser.parseURL(
+        "https://ready-for-review.podigee.io/feed/mp3"
+      );
+      if (loadedEpisodes) {
+        const episodes = {
+          lastFetched: new Date().toISOString(),
+          ...loadedEpisodes,
+        };
+        cacheHandler.writeToCache(episodes);
+        return episodes;
+      }
+    } catch (error) {
+      console.log("couldn't load episodes ", error);
+      return { items: [] };
     }
   }
 

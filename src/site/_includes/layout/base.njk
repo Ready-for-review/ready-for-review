@@ -11,14 +11,6 @@
         <link rel="stylesheet" href="/style.css?v={% version %}"/>
         <link rel="icon" href="/_assets/icons/favicon.svg">
         {% block head %}{% endblock %}
-        <style>
-            img {
-                display: block;
-                width: 100%;
-                max-width: 100%;
-                height: auto;
-            }
-        </style>
     </head>
     <body class="bg-gray-200">
         {%include "svgs.njk" %}
@@ -32,9 +24,5 @@
             {% endblock %}
         </main>
         {%- include "footer.njk" -%}
-        <script type="module" async>
-            import Lazyload from "https://cdn.skypack.dev/vanilla-lazyload";
-            const lazyload = new Lazyload();
-        </script>
     </body>
 </html>

@@ -39,7 +39,7 @@ module.exports = function (eleventyConfig) {
       outputDir: "./_site/images/",
     });
 
-    let lowestSrc = stats["jpeg"][0];
+    let lowestSrc = stats["jpeg"][3];
     let sizes = "100vw"; // Make sure you customize this!
 
     // return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;

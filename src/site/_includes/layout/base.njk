@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <title>Ready for review</title>
+        <meta charset="utf-8"/>
+        {% if description %}
+            <meta name="description" content="{{description}}"/>
+        {% endif %}
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+        <link rel="stylesheet" href="/style.css?v={% version %}"/>
+        <link rel="icon" href="/_assets/icons/favicon.svg">
+        {% block head %}{% endblock %}
+    </head>
+    <body class="bg-gray-200">
+        {%include "svgs.njk" %}
+
+        {% include "header.njk" %}
+
+        <main id="main" class="mx-auto max-w-screen-lg">
+            {% block jumbo %}{% endblock %}
+            {% block content %}
+                {{ content | safe }}
+            {% endblock %}
+        </main>
+        {%- include "footer.njk" -%}
+    </body>
+</html>

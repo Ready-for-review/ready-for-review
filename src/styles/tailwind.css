@@ -37,7 +37,7 @@ a:focus {
 
 /* teaser*/
 .teaser {
-  @apply bg-orange-500 py-4 px-8 absolute bottom-0 right-0 w-1/2 mx-8 -mb-8 shadow-xl rounded;
+  @apply bg-orange-500 py-4 px-8 shadow;
 }
 
 .teaser h2 {
@@ -49,6 +49,13 @@ a:focus {
 
 .teaser a {
   @apply text-white underline;
+}
+
+@screen lg {
+  /* teaser*/
+  .teaser {
+    @apply absolute bottom-0 right-0 w-1/2 mx-8 -mb-8 rounded;
+  }
 }
 
 /*markup  styles*/

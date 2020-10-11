@@ -1,52 +1,47 @@
 <header class="bg-white lg:py-0 py-2 shadow">
     <a class="sr-only" href="#main">Direkt zum Inhalt</a>
-    <div class="mx-auto max-w-screen-lg flex flex-wrap items-center ">
-        <div class="flex-1 flex justify-between items-center">
+
+    <nav class="mx-auto max-w-screen-lg flex items-center justify-between flex-wrap bg-white">
+        <div class="flex flex-1 items-center flex-shrink-0 mr-6">
             <a href="/" class="focus:border-indigo-400">
-                <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <svg class="fill-current h-8 w-8 mr-2" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#icon-microphone"></use>
                 </svg>
             </a>
         </div>
+        <div class="block md:hidden">
+            <button class="flex items-center px-3 py-2 border rounded text-orange-200 border-orange-400 hover:text-orange hover:border-orange">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            </button>
+        </div>
 
-        <label for="menu-toggle" class="hidden pointer-cursor block">
-            <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                <title>menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-            </svg>
-        </label>
-        <input class="hidden" type="checkbox" id="menu-toggle"/>
+        <div class="w-full block flex-grow md:flex md:items-center md:w-auto">
+            {% set navPages = collections.all | eleventyNavigation %}
 
-        <div class="lg:flex lg:items-center lg:w-auto w-full" >
-            <nav>
-                {% set navPages = collections.all | eleventyNavigation %}
+            <ul class="md:flex md:flex-grow items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
 
-                <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
+                {%- for entry in navPages %}
+                    <li>
+                        <a class="text-gray-800 py-4 px-2 block border-b-2 border-transparent hover:border-orange-500 no-underline hover:no-underline" href="{{ entry.url | url }}" data-title="{{ entry.title }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
+                    </li>
+                {%- endfor %}
+            </ul>
 
-                    {%- for entry in navPages %}
-                        <li>
-                            <a class="text-gray-800 lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-orange-500 no-underline hover:no-underline" href="{{ entry.url | url }}" data-title="{{ entry.title }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
-                        </li>
-                    {%- endfor %}
-
-                </ul>
-            </nav>
-
-            <a href="https://twitter.com/readyforreview" class="lg:ml-4 flex items-center justify-start lg:mb-0 mb-4 pointer-cursor">
+            <a href="https://twitter.com/readyforreview" class="md:ml-4 flex items-center justify-start md:mb-0 mb-4 pointer-cursor">
                 <svg width="32" height="32" viewBox="0 0 32 32" class="rounded-full w-10 h-10 border-2 border-transparent hover:bg-orange-200">
                     <use xlink:href="#icon-bird"></use>
                 </svg>
                 <span class="hidden">Twitter</span>
             </a>
 
-            <a href="https://ready-for-review.podigee.io/feed/mp3" class="lg:ml-4 flex items-center justify-start lg:mb-0 mb-4 pointer-cursor">
+            <a href="https://ready-for-review.podigee.io/feed/mp3" class="md:ml-4 flex items-center justify-start md:mb-0 mb-4 pointer-cursor">
                 <svg width="32" height="32" viewBox="0 0 32 32" class="rounded-full w-10 h-10 border-2 border-transparent hover:bg-orange-200">
                     <use xlink:href="#icon-feed"></use>
                 </svg>
                 <span class="hidden">RSS</span>
             </a>
-
         </div>
-    </div>
+    </nav>
 
 </header>

@@ -4,7 +4,7 @@
 
 /* Links */
 a {
-  @apply text-orange-500 underline;
+  @apply text-orange-600 underline;
 }
 a:hover {
   @apply underline;
@@ -65,7 +65,7 @@ a:focus {
 
 /* Headers */
 .content h1 {
-  @apply mt-12 text-6xl font-bold text-orange-500 leading-tight tracking-tight;
+  @apply mt-12 text-6xl font-bold text-orange-600 leading-tight tracking-tight;
 }
 .content h2 {
   @apply text-xl my-6 font-semibold;

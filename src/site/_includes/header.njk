@@ -9,14 +9,14 @@
                 </svg>
             </a>
         </div>
-        <div class="block md:hidden">
-            <button class="flex items-center px-3 py-2 border rounded text-orange-200 border-orange-400 hover:text-orange hover:border-orange">
+        <div class="block md:hidden mx-3">
+            <button id="menu" class="flex items-center px-3 py-2 border rounded text-gray-600 border-gray-800 hover:text-orange-400 hover:border-orange-500">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
             </button>
         </div>
 
-        <div class="w-full block flex-grow md:flex md:items-center md:w-auto">
+        <div id="navigation" class="hidden w-full flex-grow md:flex md:items-center md:w-auto">
             {% set navPages = collections.all | eleventyNavigation %}
 
             <ul class="md:flex md:flex-grow items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
@@ -28,6 +28,8 @@
                 {%- endfor %}
             </ul>
 
+        </div>
+        <div class="mt-4 flex items-center md:w-auto">
             <a href="https://twitter.com/readyforreview" class="md:ml-4 flex items-center justify-start md:mb-0 mb-4 pointer-cursor">
                 <svg width="32" height="32" viewBox="0 0 32 32" class="rounded-full w-10 h-10 border-2 border-transparent hover:bg-orange-200">
                     <use xlink:href="#icon-bird"></use>
@@ -45,3 +47,14 @@
     </nav>
 
 </header>
+<script>
+    let hamburger = document.getElementById('menu');
+
+    let mobileMenu = document.getElementById('navigation');
+
+    hamburger.addEventListener('click', function () {
+        mobileMenu
+            .classList
+            .toggle('hidden');
+    });
+</script>

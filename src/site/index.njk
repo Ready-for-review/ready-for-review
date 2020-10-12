@@ -6,11 +6,11 @@ eleventyNavigation:
 {% extends "layout/base.njk" %}
 {%block jumbo%}
   {% include "teaser.njk" %}
-  {#
+
   <section class="bg-white my-12 p-8 shadow rounded">
     <h3 class="text-3xl font-bold text-center text-indigo-600">Ready for Review findet ihr auf:</h3>
     <article class="mt-6 flex flex-row justify-around">
-      <a href="#" target=”_blank” class="flex flex-col items-center border-b-2 border-transparent hover:border-orange-500 no-underline hover:no-underline">
+      <a href="https://podcasts.apple.com/de/podcast/ready-for-review/id1535026156" target=”_blank” class="flex flex-col items-center border-b-2 border-transparent hover:border-orange-500 no-underline hover:no-underline">
         <img class="w-12 h-12 mr-2" src="/_assets/icons/apple.svg" alt="Apple Podcast Logo"/>
         <span class="font-semibold ml-1">Apple Podcasts</span>
       </a>
@@ -18,11 +18,12 @@ eleventyNavigation:
         <img class="w-12 h-12" src="/_assets/icons/spotify.svg" alt="Spotify Logo"/>
         <span class="font-semibold ml-1">Spotify</span>
       </a>
-      <a href="#" target=”_blank” class="flex flex-col items-center border-b-2 border-transparent hover:border-orange-500 no-underline hover:no-underline">
+      <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9yZWFkeS1mb3ItcmV2aWV3LnBvZGlnZWUuaW8vZmVlZC9tcDM=" target=”_blank” class="flex flex-col items-center border-b-2 border-transparent hover:border-orange-500 no-underline hover:no-underline">
         <img class="w-12 h-12" src="/_assets/icons/google.svg" alt="Google Podcast Logo"/>
         <span class="font-semibold ml-1">Google Podcasts</span>
       </a>
     </article>
+    {#
     <article class="text-center text-gray-800 mt-6">
       <h4 class="font-semibold mx-auto my-2">Und natürlich auch auf:</h4>
       <a href="#" target="_blank">Overcast</a>
@@ -33,8 +34,8 @@ eleventyNavigation:
       <a href="https://ready-for-review.podigee.io/feed/mp3" target="_blank">RSS</a>
 
     </article>
-  </section>
   #}
+  </section>
   {%endblock%}
   {%block content %}
 

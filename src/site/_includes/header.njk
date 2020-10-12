@@ -1,20 +1,19 @@
-<header class="bg-white lg:py-0 py-2 shadow">
+<header class="header">
     <a class="sr-only" href="#main">Direkt zum Inhalt</a>
-
-    <nav class="mx-auto max-w-screen-lg flex items-center justify-between flex-wrap bg-white">
-        <div class="flex flex-1 items-center flex-shrink-0 mr-6">
+    <div class="header__inner">
+        <div class="logo">
             <a href="/" class="focus:border-indigo-400">
-                <svg class="fill-current h-8 w-8 mr-2" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <svg class="logo__icon" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+
                     <use xlink:href="#icon-microphone"></use>
                 </svg>
             </a>
         </div>
-        <div class="block md:hidden mx-3">
-            <button id="menu" class="flex items-center px-3 py-2 border rounded text-gray-600 border-gray-800 hover:text-orange-600 hover:border-orange-500">
-                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-            </button>
-        </div>
+
+        <button id="menu" class="menubutton">
+            <svg class="menubutton__icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+        </button>
 
         <div id="navigation" class="hidden w-full flex-grow md:flex md:items-center md:w-auto">
             {% set navPages = collections.all | eleventyNavigation %}
@@ -29,29 +28,28 @@
             </ul>
 
         </div>
-        <div class="mt-4 flex items-center md:w-auto">
-            <a href="https://twitter.com/readyforreview" class="md:ml-4 flex items-center justify-start md:mb-0 mb-4 pointer-cursor">
-                <svg width="32" height="32" viewBox="0 0 32 32" class="rounded-full w-10 h-10 border-2 border-transparent hover:bg-orange-200">
+
+        <div class="social_icons">
+            <a href="https://twitter.com/readyforreview" class="social_icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" class="social_icon__icon">
                     <use xlink:href="#icon-bird"></use>
                 </svg>
                 <span class="hidden">Twitter</span>
             </a>
 
-            <a href="https://ready-for-review.podigee.io/feed/mp3" class="md:ml-4 flex items-center justify-start md:mb-0 mb-4 pointer-cursor">
-                <svg width="32" height="32" viewBox="0 0 32 32" class="rounded-full w-10 h-10 border-2 border-transparent hover:bg-orange-200">
+            <a href="https://ready-for-review.podigee.io/feed/mp3" class="social_icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" class="social_icon__icon">
                     <use xlink:href="#icon-feed"></use>
                 </svg>
                 <span class="hidden">RSS</span>
             </a>
         </div>
-    </nav>
+    </div>
 
 </header>
 <script>
     let hamburger = document.getElementById('menu');
-
     let mobileMenu = document.getElementById('navigation');
-
     hamburger.addEventListener('click', function () {
         mobileMenu
             .classList

@@ -63,7 +63,77 @@ a:focus {
   @apply leading-relaxed text-base bg-white my-12 p-8 shadow rounded text-gray-800;
 }
 
-/* Headers */
+/* navigation / header*/
+
+.header {
+  @apply bg-white py-2 shadow;
+}
+
+@screen lg {
+  .header {
+    @apply py-0;
+  }
+}
+
+.header__inner {
+  @apply mx-auto max-w-screen-lg flex items-center justify-between flex-wrap bg-white;
+}
+
+.logo {
+  @apply flex flex-1 items-center flex-shrink-0 mr-6;
+}
+
+.logo__icon {
+  @apply fill-current h-8 w-8 mr-2;
+}
+
+.menubutton {
+  @apply mx-3 flex items-center px-3 py-2 border rounded text-gray-600 border-gray-800;
+}
+
+.menubutton:hover {
+  @apply text-orange-600 border-orange-500;
+}
+
+@screen md {
+  .menubutton {
+    @apply hidden;
+  }
+}
+
+.menubutton__icon {
+  @apply fill-current h-3 w-3;
+}
+
+.social_icons {
+  @apply py-2 flex items-center;
+}
+
+@screen md {
+  .social_icons {
+    @apply w-auto;
+  }
+}
+
+.social_icon {
+  @apply flex items-center justify-items-center  rounded-full  border-2 border-transparent;
+}
+
+.social_icon svg {
+  @apply fill-current h-8 w-8;
+}
+
+.social_icon:hover {
+  @apply bg-orange-200;
+}
+
+@screen md {
+  .social_icon {
+    @apply ml-4 mb-0 cursor-pointer;
+  }
+}
+
+/* headlines */
 .content h1 {
   @apply mt-12 text-6xl font-bold text-orange-600 leading-tight tracking-tight;
 }

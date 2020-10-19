@@ -38,6 +38,6 @@
     "postcss-cli": "^8.1.0",
     "rss-parser": "^3.9.0",
     "string": "^3.3.3",
-    "tailwindcss": "^1.9.2"
+    "tailwindcss": "^1.9.4"
   }
 }

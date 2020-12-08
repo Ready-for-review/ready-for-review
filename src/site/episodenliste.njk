@@ -10,17 +10,16 @@ tags: ['episode']
 {% extends "layout/base.njk" %}
 {% block content %}
 
-  <div class="content">
+  <section class="bg-white my-12 p-8 shadow rounded">
     <article>
-      <h1>{{item.title}}</h1>
-
-      <time datetime="{{ item.isoDate}}">{{ item.isoDate | shortReadableDateFromISO }}</time>
+      <time class="text-gray-800 text-sm" datetime="{{ item.isoDate}}">{{ item.isoDate | shortReadableDateFromISO }}</time>
+      <h1 class="text-3xl font-bold text-indigo-600 mb-4">{{item.title}}</h1>
 
       <audio class="shadow rounded bg-gray-500 w-full my-4" controls="controls" preload="auto">
         <source type="audio/mpeg" src="{{item.enclosure.url}}">
       </audio>
-
-      {% episodeContent item %}
-
+      <div class="content">
+        {% episodeContent item %}
+      </div>
     </div>
   {% endblock %}

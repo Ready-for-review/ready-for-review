@@ -8,48 +8,47 @@ eleventyNavigation:
   {% include "teaser.njk" %}
 
   <section class="bg-white my-12 p-8 shadow rounded">
-    <h3 class="text-3xl font-bold text-center text-indigo-600">Ready for Review findet ihr auf:</h3>
+    <h2 class="text-3xl font-bold text-center text-indigo-600 mb-4">Ready for Review findet ihr auf</h2>
     <article class="mt-6 flex flex-row justify-around">
-      <a href="https://podcasts.apple.com/de/podcast/ready-for-review/id1535026156" target=”_blank” class="flex flex-col items-center border-b-2 border-transparent hover:border-orange-500 no-underline hover:no-underline">
+      <a href="https://podcasts.apple.com/de/podcast/ready-for-review/id1535026156" target=”_blank” class="flex flex-col items-center border-b-2 border-none hover:border-orange-500 no-underline hover:no-underline">
         <img class="w-12 h-12 mr-2" src="/_assets/icons/apple.svg" alt="Apple Podcast Logo"/>
         <span class="font-semibold ml-1">Apple Podcasts</span>
       </a>
-      <a href="https://open.spotify.com/show/7dxK2wi4ZMGEYO3UHhTSc4?si=N6NT3727RWK0PfntC4cQYQ" target=”_blank” class="flex flex-col items-center border-b-2 border-transparent hover:border-orange-500 no-underline hover:no-underline">
+      <a href="https://open.spotify.com/show/7dxK2wi4ZMGEYO3UHhTSc4?si=N6NT3727RWK0PfntC4cQYQ" target=”_blank” class="flex flex-col items-center border-b-2 border-none hover:border-orange-500 no-underline hover:no-underline">
         <img class="w-12 h-12" src="/_assets/icons/spotify.svg" alt="Spotify Logo"/>
         <span class="font-semibold ml-1">Spotify</span>
       </a>
-      <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9yZWFkeS1mb3ItcmV2aWV3LnBvZGlnZWUuaW8vZmVlZC9tcDM=" target=”_blank” class="flex flex-col items-center border-b-2 border-transparent hover:border-orange-500 no-underline hover:no-underline">
+      <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9yZWFkeS1mb3ItcmV2aWV3LnBvZGlnZWUuaW8vZmVlZC9tcDM=" target=”_blank” class="flex flex-col items-center border-b-2 border-none hover:border-orange-500 no-underline hover:no-underline">
         <img class="w-12 h-12" src="/_assets/icons/google.svg" alt="Google Podcast Logo"/>
         <span class="font-semibold ml-1">Google Podcasts</span>
       </a>
     </article>
-    {#
+
     <article class="text-center text-gray-800 mt-6">
       <h4 class="font-semibold mx-auto my-2">Und natürlich auch auf:</h4>
-      <a href="#" target="_blank">Overcast</a>
+      <a href="https://overcast.fm/itunes1535026156" target="_blank">Overcast</a>
       <a href="https://www.deezer.com/de/show/1836312" target="_blank">Deezer</a>
-      <a href="#" target="_blank">Pocket Casts</a>
-      <a href="#" target="_blank">CastBox</a>
-      <a href="#" target="_blank">RadioPublic</a>
+      <a href="https://pca.st/nansephz" target="_blank">Pocket Casts</a>
+
       <a href="https://ready-for-review.podigee.io/feed/mp3" target="_blank">RSS</a>
 
     </article>
-  #}
+
   </section>
   {%endblock%}
   {%block content %}
 
     {% if episodes.items.length %}
       <section class="bg-white my-12 p-8 shadow rounded">
-
+        <h2 class="text-3xl font-bold leading-tight tracking-tight text-center text-indigo-600 mb-4">Aktuelle Episode</h2>
         {% set episode = episodes.items[0] %}
 
         <article >
           <time class="text-gray-800 text-sm" datetime="{{ episode.isoDate}}">{{ episode.isoDate | shortReadableDateFromISO }}</time>
 
-          <h2 class="text-3xl font-bold leading-tight tracking-tight">
+          <h3 class="text-2xl font-bold leading-tight tracking-tight">
             <a class="no-underline" href="/{{episode | toEpisodeUrl }}/" title="{{ episode.title }}">{{episode.title}}</a>
-          </h2>
+          </h3>
 
           <audio class="shadow rounded bg-gray-500 w-full my-4" controls="controls" preload="auto">
             <source type="audio/mpeg" src="{{episode.enclosure.url}}">

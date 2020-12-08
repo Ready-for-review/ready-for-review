@@ -10,7 +10,7 @@ a:hover {
   @apply underline;
 }
 a:focus {
-  @apply shadow-outline;
+  @apply shadow;
 }
 
 /* forms */
@@ -23,7 +23,7 @@ a:focus {
 }
 
 .input:focus {
-  @apply outline-none shadow-outline;
+  @apply outline-none shadow;
 }
 
 /* button */
@@ -60,7 +60,7 @@ a:focus {
 
 /*markup  styles*/
 .content {
-  @apply leading-relaxed text-base bg-white my-12 p-8 shadow rounded text-gray-800;
+  @apply leading-relaxed text-base bg-white my-12 text-gray-800;
 }
 
 /* navigation / header*/
@@ -116,7 +116,7 @@ a:focus {
 }
 
 .social_icon {
-  @apply flex items-center justify-items-center  rounded-full  border-2 border-transparent;
+  @apply flex items-center justify-items-center  rounded-full  border-2 border-none;
 }
 
 .social_icon svg {
@@ -135,7 +135,7 @@ a:focus {
 
 /* headlines */
 .content h1 {
-  @apply mt-12 text-6xl font-bold text-orange-600 leading-tight tracking-tight;
+  @apply mt-12 text-4xl font-bold text-orange-600 leading-tight tracking-tight;
 }
 .content h2 {
   @apply text-xl my-6 font-semibold;

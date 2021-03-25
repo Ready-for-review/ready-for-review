@@ -26,23 +26,23 @@
     "maintained node versions"
   ],
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
-    "@11ty/eleventy-img": "^0.4.2",
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-img": "^0.8.2",
     "@11ty/eleventy-navigation": "^0.1.6",
-    "@11ty/eleventy-plugin-rss": "^1.0.9",
-    "date-fns": "^2.16.1",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "date-fns": "^2.19.0",
     "html-minifier": "^4.0.0",
     "jest": "^26.6.3",
     "node-sass": "^5.0.0",
-    "postcss-clean": "^1.1.0",
-    "postcss-cli": "^8.3.0",
-    "rss-parser": "^3.9.0",
+    "postcss-clean": "^1.2.2",
+    "postcss-cli": "^8.3.1",
+    "rss-parser": "^3.12.0",
     "string": "^3.3.3",
-    "tailwindcss": "^2.0.1"
+    "tailwindcss": "^2.0.4"
   },
   "dependencies": {
-    "autoprefixer": "^10.1.0",
-    "postcss": "^8.2.0",
-    "postcss-import": "^13.0.0"
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
+    "postcss-import": "^14.0.0"
   }
 }

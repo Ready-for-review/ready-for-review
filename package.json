@@ -15,32 +15,37 @@
   "author": "Daniel Mies",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve & postcss src/styles/tailwind.css --o _tmp/style.css --watch",
-    "build": "ELEVENTY_PRODUCTION=true eleventy & NODE_ENV=production postcss src/styles/tailwind.css --o _site/style.css",
-    "test": "jest"
+    "build": "cross-env NODE_ENV=production npm-run-all clean -p build:*",
+    "build:eleventy": "eleventy",
+    "build:webpack": "webpack",
+    "clean": "rm -rf dist",
+    "start": "npm-run-all clean -p build:* -p start:*",
+    "start:eleventy": "eleventy --serve --quiet",
+    "start:webpack": "cross-env NODE_ENV=development webpack --watch"
   },
-  "browserslist": [
-    "defaults",
-    "not IE 11",
-    "not IE_Mob 11",
-    "maintained node versions"
-  ],
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-img": "^0.8.2",
-    "@11ty/eleventy-navigation": "^0.1.6",
+    "@11ty/eleventy-img": "^0.9.0",
+    "@11ty/eleventy-navigation": "^0.2.0",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
-    "autoprefixer": "^10.2.5",
-    "date-fns": "^2.19.0",
+    "autoprefixer": "^10.2.6",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.6",
+    "cssnano": "^5.0.6",
+    "date-fns": "^2.22.1",
     "html-minifier": "^4.0.0",
-    "jest": "^26.6.3",
-    "node-sass": "^5.0.0",
-    "postcss": "^8.2.8",
-    "postcss-clean": "^1.2.2",
+    "jest": "^27.0.4",
+    "mini-css-extract-plugin": "^1.6.0",
+    "node-sass": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.4",
     "postcss-cli": "^8.3.1",
-    "postcss-import": "^14.0.0",
+    "postcss-loader": "^6.1.0",
     "rss-parser": "^3.12.0",
     "string": "^3.3.3",
-    "tailwindcss": "^2.0.4"
+    "style-loader": "^2.0.0",
+    "tailwindcss": "^2.1.4",
+    "webpack": "^5.39.0",
+    "webpack-cli": "^4.7.2"
   }
 }

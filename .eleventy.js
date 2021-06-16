@@ -27,7 +27,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   eleventyConfig.addNunjucksAsyncShortcode("Image", async (src, alt) => {
-    console.log("source ", src);
     if (!alt) {
       throw new Error(`Missing \`alt\` on myImage from: ${src}`);
     }

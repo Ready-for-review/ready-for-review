@@ -11,7 +11,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
         <link rel="stylesheet" href="/assets/main.bundle.css?v={% version %}"/>
-        <link rel="icon" href="/_assets/icons/favicon.svg">
+        <link rel="icon" href="/assets/icons/favicon.svg">
         <link rel="alternate" type="application/rss+xml" title="Ready for review" href="https://ready-for-review.podigee.io/feed/mp3"/>
         {% block head %}{% endblock %}
     </head>
@@ -27,5 +27,6 @@
             {% endblock %}
         </main>
         {%- include "footer.njk" -%}
+        <script src="/assets/main.bundle.js?v={% version %}"></script>
     </body>
 </html>

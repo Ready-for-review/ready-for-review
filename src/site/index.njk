@@ -5,6 +5,7 @@ eleventyNavigation:
 ---
 {% extends "layout/base.njk" %}
 {%block jumbo%}
+
   {% include "teaser.njk" %}
 
   <section class="bg-white my-12 p-8 shadow rounded">
@@ -27,6 +28,14 @@ eleventyNavigation:
         <span class="font-semibold ml-1">YouTube</span>
       </a>
 
+      <a href="https://discord.gg/4vWCyqEK" target=”_blank” class="flex flex-col items-center border-b-2 border-none hover:border-orange-500 no-underline hover:no-underline">
+
+        <svg class="w-12 h-12">
+          <use xlink:href="#icon-discord"></use>
+        </svg>
+        <span class="font-semibold ml-1">Discord</span>
+      </a>
+
     </article>
 
     <article class="text-center text-gray-800 mt-6">
@@ -40,6 +49,7 @@ eleventyNavigation:
     </article>
 
   </section>
+
   {%endblock%}
   {%block content %}
 
@@ -55,7 +65,7 @@ eleventyNavigation:
             <a class="no-underline" href="/{{episode | toEpisodeUrl }}/" title="{{ episode.title }}">{{episode.title}}</a>
           </h3>
 
-          <audio class="shadow rounded bg-gray-500 w-full my-4" controls="controls" preload="auto">
+          <audio class="rfr-player shadow rounded bg-gray-500 w-full my-4" controls preload="auto">
             <source type="audio/mpeg" src="{{episode.enclosure.url}}">
           </audio>
           <p class="my-4 text-right">

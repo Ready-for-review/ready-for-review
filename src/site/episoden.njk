@@ -7,12 +7,14 @@ eleventyNavigation:
 {% extends "layout/base.njk" %}
 {% block content %}
 
-    <section class="bg-white my-12 p-8 shadow rounded">
+    <section class="my-12 p-8">
         <h2 class="mt-12 my-4 text-4xl font-bold text-orange-600 leading-tight tracking-tight">Episoden</h2>
         {% if episodes.items.length %}
 
             {% for episode in episodes.items %}
-                {%- include "episode-card.njk" -%}
+                <div class="bg-white my-12 p-8 shadow rounded">
+                    {%- include "episode-card.njk" -%}
+                </div>
             {% endfor %}
 
         {% endif %}

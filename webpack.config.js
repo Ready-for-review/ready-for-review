@@ -7,6 +7,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        loader: "esbuild-loader",
+        options: {
+          target: "es2015",
+        },
+      },
+      {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },

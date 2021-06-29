@@ -6,124 +6,134 @@ eleventyNavigation:
 {% extends "layout/base.njk" %}
 {%block jumbo%}
 
-  {% include "teaser.njk" %}
-
   {%endblock%}
   {%block content %}
+    <div class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44 overflow-hidden">
 
-    {% if episodes.items.length %}
-      <h2 class="px-8 max-w-screen-lg xl:max-w-screen-xl mt-12 mb-4 mx-auto text-4xl font-semibold text-orange-500 leading-tight tracking-tight">Aktuelle Folge</h2>
-      <div class="bg-orange-500 py-6 shadow">
-        <section class="max-w-screen-lg xl:max-w-screen-xl mx-auto">
-          {% set episode = episodes.items[0] %}
-          <div class="flex items-center justify-center px-8">
-            <div class="bg-white shadow-lg rounded-lg" >
-              <div class="flex">
-                <div>
-                  <svg class="w-full rounded hidden md:block">
-                    <use xlink:href="#rfr"></use>
-                  </svg>
-                </div>
-                <div class="w-full p-8">
-                  <div class="flex justify-between">
+      <section class="relative z-10 max-w-screen-lg xl:max-w-screen-xl mx-auto px-8">
+        <h1 class="mt-24 text-6xl font-extrabold text-orange-500 leading-tight tracking-tight">Ready for Review</h1>
+        <svg class="hidden lg:block lg:absolute -mx-12 -mt-6 left-0 top-0 w-24 h-24">
+          <use xlink:href="#icon-rocket"></use>
+        </svg>
+        <p class="max-w-screen-lg text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11">
+  Sandra Parsick &amp; Daniel Mies präsentieren mit <strong class="font-semibold">Ready for Review</strong> einen bunten Mix aus aktuellen IT-Themen und ihrem täglichen Entwickler-Alltag.
+  </p>
+      </section>
+
+      <section>
+        {% if episodes.items.length %}
+          <h2 class="max-w-screen-lg xl:max-w-screen-xl px-8 mb-4 mx-auto text-4xl font-semibold text-orange-500 leading-tight tracking-tight">Aktuelle Folge</h2>
+          <div class="bg-orange-500 py-6 shadow">
+            <section class="max-w-screen-lg xl:max-w-screen-xl mx-auto">
+              {% set episode = episodes.items[0] %}
+              <div class="flex items-center justify-center px-8">
+                <div class="bg-white shadow-lg rounded-lg" >
+                  <div class="flex">
                     <div>
-                      <h3 class="text-2xl text-grey-darkest font-medium">
-                        <a class="no-underline" href="/{{episode | toEpisodeUrl }}/" title="{{ episode.title }}">{{episode.title}}</a>
-                      </h3>
+                      <svg class="w-full rounded hidden md:block">
+                        <use xlink:href="#rfr"></use>
+                      </svg>
+                    </div>
+                    <div class="w-full p-8">
+                      <div class="flex justify-between">
+                        <div>
+                          <h3 class="text-2xl text-grey-darkest font-medium">
+                            <a class="no-underline" href="/{{episode | toEpisodeUrl }}/" title="{{ episode.title }}">{{episode.title}}</a>
+                          </h3>
 
-                      <time class="text-sm text-grey mt-1" datetime="{{ episode.isoDate}}">{{ episode.isoDate | shortReadableDateFromISO }}</time>
+                          <time class="text-sm text-grey mt-1" datetime="{{ episode.isoDate}}">{{ episode.isoDate | shortReadableDateFromISO }}</time>
+                        </div>
+                      </div>
+                      <div class="flex justify-between items-center mt-8">
+                        <audio class="rfr-player w-full my-4" controls preload="auto">
+                          <source type="audio/mpeg" src="{{episode.enclosure.url}}">
+                        </audio>
+
+                      </div>
                     </div>
                   </div>
-                  <div class="flex justify-between items-center mt-8">
-                    <audio class="rfr-player w-full my-4" controls preload="auto">
-                      <source type="audio/mpeg" src="{{episode.enclosure.url}}">
-                    </audio>
 
-                  </div>
                 </div>
               </div>
 
-            </div>
+              <p class="mt-4 mx-8 text-white text-right">Alle Folgen findet ihr in der <a href="/episoden" class="text-white underline hover:no-underline" title="Alle Podcast Episoden">Episoden</a>-&Uuml;bersicht.</p>
+
+            </section>
           </div>
-
-          <p class="mt-4 mx-8 text-white text-right">Alle Folgen findet ihr in der <a href="/episoden" class="text-white underline hover:no-underline" title="Alle Podcast Episoden">Episoden</a>-&Uuml;bersicht.</p>
-
-        </section>
-      </div>
-    {% endif %}
-
-    <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto relative my-12 px-8">
-      <h2 class="mt-4 mb-4 text-4xl font-semibold text-orange-500 leading-tight tracking-tight">Ready for Review findet ihr auf</h2>
-      <section class="bg-white mt-6 mb-12 p-8 shadow rounded ">
-        <article class="mt-6 flex flex-row justify-around w-full">
-          <a href="https://podcasts.apple.com/de/podcast/ready-for-review/id1535026156" target=”_blank” class="flex flex-col items-center border-b-2 border-none hover:border-orange-500 no-underline hover:no-underline">
-            <img class="w-12 h-12 mr-2" src="/_assets/icons/apple.svg" alt="Apple Podcast Logo"/>
-            <span class="font-semibold ml-1">Apple Podcasts</span>
-          </a>
-          <a href="https://open.spotify.com/show/7dxK2wi4ZMGEYO3UHhTSc4?si=N6NT3727RWK0PfntC4cQYQ" target=”_blank” class="flex flex-col items-center border-b-2 border-none hover:border-orange-500 no-underline hover:no-underline">
-            <img class="w-12 h-12" src="/_assets/icons/spotify.svg" alt="Spotify Logo"/>
-            <span class="font-semibold ml-1">Spotify</span>
-          </a>
-          <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9yZWFkeS1mb3ItcmV2aWV3LnBvZGlnZWUuaW8vZmVlZC9tcDM=" target=”_blank” class="flex flex-col items-center border-b-2 border-none hover:border-orange-500 no-underline hover:no-underline">
-            <img class="w-12 h-12" src="/_assets/icons/google.svg" alt="Google Podcast Logo"/>
-            <span class="font-semibold ml-1">Google Podcasts</span>
-          </a>
-
-        </article>
-
-        <article class="text-center text-gray-800 mt-6">
-          <h4 class="font-semibold mx-auto my-2">Und natürlich auch auf:</h4>
-          <a href="https://overcast.fm/itunes1535026156" target="_blank">Overcast</a>
-          <a href="https://www.deezer.com/de/show/1836312" target="_blank">Deezer</a>
-          <a href="https://pca.st/nansephz" target="_blank">Pocket Casts</a>
-
-          <a href="https://ready-for-review.podigee.io/feed/mp3" target="_blank">RSS</a>
-
-        </article>
+        {% endif %}
       </section>
-      <hr class="border-0 bg-gray-400 text-gray-400 h-px mt-16 mb-16">
-    </div>
 
-    <section class="max-w-screen-lg xl:max-w-screen-xl mx-auto relative my-12 px-8">
+      <section class="max-w-screen-lg xl:max-w-screen-xl mx-auto relative px-8">
+        <h2 class="mb-4 text-4xl font-semibold text-orange-500 leading-tight tracking-tight">Ready for Review findet ihr auf</h2>
+        <section class="bg-white mt-6 mb-12 p-8 shadow rounded ">
+          <article class="mt-6 flex flex-row justify-around w-full">
+            <a href="https://podcasts.apple.com/de/podcast/ready-for-review/id1535026156" target=”_blank” class="flex flex-col items-center border-b-2 border-none hover:border-orange-500 no-underline hover:no-underline">
+              <img class="w-12 h-12 mr-2" src="/_assets/icons/apple.svg" alt="Apple Podcast Logo"/>
+              <span class="font-semibold ml-1">Apple Podcasts</span>
+            </a>
+            <a href="https://open.spotify.com/show/7dxK2wi4ZMGEYO3UHhTSc4?si=N6NT3727RWK0PfntC4cQYQ" target=”_blank” class="flex flex-col items-center border-b-2 border-none hover:border-orange-500 no-underline hover:no-underline">
+              <img class="w-12 h-12" src="/_assets/icons/spotify.svg" alt="Spotify Logo"/>
+              <span class="font-semibold ml-1">Spotify</span>
+            </a>
+            <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9yZWFkeS1mb3ItcmV2aWV3LnBvZGlnZWUuaW8vZmVlZC9tcDM=" target=”_blank” class="flex flex-col items-center border-b-2 border-none hover:border-orange-500 no-underline hover:no-underline">
+              <img class="w-12 h-12" src="/_assets/icons/google.svg" alt="Google Podcast Logo"/>
+              <span class="font-semibold ml-1">Google Podcasts</span>
+            </a>
 
-      <h2 class="mt-4 mb-6 text-4xl font-semibold text-orange-500 leading-tight tracking-tight">Die Hosts</h2>
-      {% Image "./images/teaser.jpg",
-      "Sandra Parsick und Daniel Mies" %}
-      <article class="teaser">
-        <h2>Über Sandra &amp; Daniel</h2>
-        <p>
-          <a href="https://www.sandra-parsick.de/" title="Persönliche Webseite von Sandra Parsick">Sandra</a> ist als freiberufliche Softwareentwicklerin und Beraterin im Java Umfeld tätig. Seit 2008 beschäftigt sie sich mit agiler Softwareentwicklung in verschiedenen Rollen.
+          </article>
+
+          <article class="text-center text-gray-800 mt-6">
+            <h4 class="font-semibold mx-auto my-2">Und natürlich auch auf:</h4>
+            <a href="https://overcast.fm/itunes1535026156" target="_blank">Overcast</a>
+            <a href="https://www.deezer.com/de/show/1836312" target="_blank">Deezer</a>
+            <a href="https://pca.st/nansephz" target="_blank">Pocket Casts</a>
+
+            <a href="https://ready-for-review.podigee.io/feed/mp3" target="_blank">RSS</a>
+
+          </article>
+        </section>
+
+      </section>
+
+      <section class="max-w-screen-lg xl:max-w-screen-xl mx-auto relative px-8">
+        <h2 class="mb-4 text-4xl font-semibold text-orange-500 leading-tight tracking-tight">Die Hosts</h2>
+        {% Image "./images/teaser.jpg",
+        "Sandra Parsick und Daniel Mies" %}
+        <article class="teaser">
+          <h2>Über Sandra &amp; Daniel</h2>
+          <p>
+            <a href="https://www.sandra-parsick.de/" title="Persönliche Webseite von Sandra Parsick">Sandra</a> ist als freiberufliche Softwareentwicklerin und Beraterin im Java Umfeld tätig. Seit 2008 beschäftigt sie sich mit agiler Softwareentwicklung in verschiedenen Rollen.
       </p>
-        <p>
-          <a href="https://mies.me" title="Persönliche Webseite von Daniel Mies">Daniel</a> ist als IT Consultant bei der codecentric AG beschäftigt. Dort entwickelt er leidenschaftlich gerne moderne Frontend Anwendungen oder unterstützt Teams als Agiler Coach.
+          <p>
+            <a href="https://mies.me" title="Persönliche Webseite von Daniel Mies">Daniel</a> ist als IT Consultant bei der codecentric AG beschäftigt. Dort entwickelt er leidenschaftlich gerne moderne Frontend Anwendungen oder unterstützt Teams als Agiler Coach.
       </p>
-      </article>
+        </article>
 
-    </section>
+      </section>
 
-    <section class="max-w-screen-lg xl:max-w-screen-xl mx-auto my-12 px-8">
-      <hr class="border-0 bg-gray-400 text-gray-400 h-px mt-16 mb-16">
-      <h2 class="mt-12 mb-6 text-4xl font-semibold text-orange-500 leading-tight tracking-tight">Ready for Stream</h2>
-      <section class="flex">
-        <div class="w-1/3">
-          <p class="text-base font-medium space-y-6 mb-6 text-gray-600">
+      <section class="max-w-screen-lg xl:max-w-screen-xl mx-auto my-12 px-8">
+
+        <h2 class="mt-12 mb-6 text-4xl font-semibold text-orange-500 leading-tight tracking-tight">Ready for Stream</h2>
+        <section class="flex">
+          <div class="w-1/3">
+            <p class="text-base font-medium space-y-6 mb-6 text-gray-600">
         Hin und wieder, zum Beispiel, wenn die beiden sich etwas neues ansehen wollen, reicht ein Podcast einfach nicht aus... Auf ihrem <a href="https://www.youtube.com/channel/UCnVCACzOxoOShe_69qo51hg" title="DEr Ready for review YouTube Kanal" target=”_blank”>YouTube Kanal</a> zeigen die beiden immer mal wieder live, wie sie neue Dinge ausprobieren.
         </p>
-        </div>
-        <div class="w-2/3 pl-8">
-          {% for video in videos %}
-            <div class="bg-white rounded-lg p-8 mb-8">
-              <div class="rfr-player" data-plyr-provider="youtube" data-plyr-embed-id="{{video.snippet.resourceId.videoId}}"></div>
-            </div>
-          {% endfor %}
-        </div>
+          </div>
+          <div class="w-2/3 pl-8">
+            {% for video in videos %}
+              <div class="bg-white rounded-lg p-8 mb-8">
+                <div class="rfr-player" data-plyr-provider="youtube" data-plyr-embed-id="{{video.snippet.resourceId.videoId}}"></div>
+              </div>
+            {% endfor %}
+          </div>
+        </section>
       </section>
-    </section>
 
-    {#
+      {#
 
   #}
-    {#
+      {#
   <section class="feature-episode">
     <h3>Aktuelle Episode</h3>
     <div class="episode-wrapper">
@@ -194,4 +204,5 @@ eleventyNavigation:
     TODO: next button zur navigation
   </section>
   #}
+    </div>
   {%endblock %}

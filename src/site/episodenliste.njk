@@ -9,17 +9,19 @@ tags: ['episode']
 ---
 {% extends "layout/base.njk" %}
 {% block content %}
+  <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto pt-12 px-8 ">
+    <time class="text-gray-800 text-sm" datetime="{{ item.isoDate}}">{{ item.isoDate | shortReadableDateFromISO }}</time>
+    <h1 class="max-w-screen-lg xl:max-w-screen-xl  mb-0 mx-auto text-4xl font-semibold text-orange-500 leading-tight tracking-tight">{{item.title}}</h1>
+    <section class="bg-white my-12 p-8 shadow rounded">
+      <article>
 
-  <section class="bg-white my-12 p-8 shadow rounded">
-    <article>
-      <time class="text-gray-800 text-sm" datetime="{{ item.isoDate}}">{{ item.isoDate | shortReadableDateFromISO }}</time>
-      <h1 class="text-3xl font-bold text-indigo-600 mb-4">{{item.title}}</h1>
-
-      <audio class="rfr-player shadow rounded bg-gray-500 w-full my-4" controls preload="auto">
-        <source type="audio/mpeg" src="{{item.enclosure.url}}">
-      </audio>
-      <div class="content">
-        {% episodeContent item %}
-      </div>
-    </div>
-  {% endblock %}
+        <audio class="rfr-player shadow rounded bg-gray-500 w-full my-4" controls preload="auto">
+          <source type="audio/mpeg" src="{{item.enclosure.url}}">
+        </audio>
+        <div class="content">
+          {% episodeContent item %}
+        </div>
+      </article>
+    </section>
+  </div>
+{% endblock %}

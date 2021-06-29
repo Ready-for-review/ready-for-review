@@ -1,3 +1,4 @@
+require("dotenv").config();
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
 

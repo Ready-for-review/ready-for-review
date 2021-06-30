@@ -58,7 +58,7 @@ a:focus {
 @screen lg {
   /* teaser*/
   .teaser {
-    @apply absolute bottom-0 right-0 w-1/2 mx-8 -mb-8 rounded;
+    @apply absolute -bottom-20 right-0 w-1/2 mx-8 -mb-8 rounded;
   }
 }
 

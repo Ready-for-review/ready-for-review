@@ -4,88 +4,13 @@ eleventyNavigation:
   order: 0
 ---
 {% extends "layout/base.njk" %}
-{%block jumbo%}
 
-  {%endblock%}
-  {%block content %}
-    <div class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44 overflow-hidden">
-
-      {% include "intro.njk" %}
-      {% include "latest-episode.njk" %}
-      {% include "available.njk" %}
-      {% include "hosts.njk" %}
-      {% include "stream.njk" %}
-
-      {#
-  <section class="feature-episode">
-    <h3>Aktuelle Episode</h3>
-    <div class="episode-wrapper">
-      <article class="feature-image">
-        <a href="/overtime/2020/08/26/a-party-for-one-can-still-be-fun">
-          <img alt="Overtime: A Party for One Can Still Be Fun" src="whatever">
-        </a>
-      </article>
-      <article class="feature-copy">
-        <ul class="taglist">
-          <li>
-            <svg>
-              <use xlink:href="#icon-microphone"></use>
-            </svg>
-            <a href="#">Podcast</a>
-          </li>
-          <li>
-            <svg>
-              <use xlink:href="#icon-coffee"></use>
-            </svg>
-            <a href="#">Java</a>
-          </li>
-          <li>
-            <svg>
-              <use xlink:href="#icon-technologist"></use>
-            </svg>
-            <a href="#">Mob Programming</a>
-          </li>
-        </ul>
-        <p class="pre-title">Episode 1</p>
-        <a href="/overtime/2020/08/26/a-party-for-one-can-still-be-fun">
-          <h2>Ein toller Titel für die Folge</h2>
-        </a>
-
-        <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        </p>
-
-        <a class="link-text" href="/overtime/2020/08/26/a-party-for-one-can-still-be-fun">
-					Mehr erfahren &amp; anhören ->
-
-        </a>
-      </article>
-    </div>
-  </section>
-  <section class="old-episodes">
-    <h3>Vergangene Episoden</h3>
-    <ul class="list-grid">
-      <li>
-        <article class="old-episodes__wrapper">
-          <p class="pre-title">Episode 123</p>
-          <h3>
-            <a href="#">Ein toller Titel</a>
-          </h3>
-          <div class="description">
-            <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        </p>
-
-            <a class="link-text" href="/overtime/2020/08/26/a-party-for-one-can-still-be-fun">
-					Mehr erfahren &amp; anhören ->
-
-        </a>
-          </div>
-        </article>
-      </li>
-    </ul>
-    TODO: next button zur navigation
-  </section>
-  #}
-    </div>
-  {%endblock %}
+{%block content %}
+  <div class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44 overflow-hidden">
+    {% include "intro.njk" %}
+    {% include "latest-episode.njk" %}
+    {% include "available.njk" %}
+    {% include "hosts.njk" %}
+    {% include "stream.njk" %}
+  </div>
+{%endblock %}

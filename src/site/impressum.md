@@ -1,11 +1,10 @@
 ---
+title: Datenschutzerklärung
 layout: layout/content.njk
 eleventyNavigation:
   key: Impressum
-  order: 40
+  order: 60
 ---
-
-# Impressum
 
 ## Angaben gemäß § 5 TMG:
 

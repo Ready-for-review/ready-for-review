@@ -12,7 +12,7 @@ module.exports = async () => {
       part: "id,snippet",
       order: "date",
       type: "video",
-      maxResults: 1,
+      maxResults: 30,
     });
 
     return response.data.items;

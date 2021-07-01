@@ -8,11 +8,13 @@
         </p>
         </div>
         <div class="w-2/3 pl-8">
-            {% for video in videos %}
-                <div class="bg-white rounded-lg p-8 mb-8">
-                    <div class="rfr-player" data-plyr-provider="youtube" data-plyr-embed-id="{{video.snippet.resourceId.videoId}}"></div>
-                </div>
-            {% endfor %}
+
+            <div class="bg-white rounded-lg p-8 mb-8 shadow-lg">
+                <div class="rfr-player" data-plyr-provider="youtube" data-plyr-embed-id="{{videos[0].snippet.resourceId.videoId}}"></div>
+            </div>
+
         </div>
     </section>
+    <p class="mt-4 mx-8 text-gray-500 text-right">Alle Streams findet ihr in der <a href="/streams" class="text-orange-500 underline hover:no-underline" title="Alle Podcast Episoden">Stream</a>-&Uuml;bersicht.</p>
+
 </section>

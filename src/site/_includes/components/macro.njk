@@ -1,0 +1,30 @@
+{% macro player(episode)%}
+
+    <div class="flex items-center justify-center px-8">
+        <div class="bg-white flex shadow-lg rounded-lg" >
+
+            <svg class="hidden md:block">
+                <use xlink:href="#rfr"></use>
+            </svg>
+
+            <div class="w-full p-8">
+                <div class="flex justify-between">
+                    <div>
+                        <h3 class="text-2xl text-grey-darkest font-medium">
+                            <a class="no-underline" href="/{{episode | toEpisodeUrl }}/" title="{{ episode.title }}">{{episode.title}}</a>
+                        </h3>
+
+                        <time class="text-sm text-grey mt-1" datetime="{{ episode.isoDate}}">{{ episode.isoDate | shortReadableDateFromISO }}</time>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-8">
+                    <audio class="rfr-player w-full my-4" controls preload="auto">
+                        <source type="audio/mpeg" src="{{episode.enclosure.url}}">
+                    </audio>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endmacro %}

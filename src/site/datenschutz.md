@@ -1,11 +1,10 @@
 ---
+title: Datenschutzerklärung
 layout: layout/content.njk
 eleventyNavigation:
   key: Datenschutz
-  order: 50
+  order: 70
 ---
-
-# Datenschutzerklärung
 
 ## Einleitung
 

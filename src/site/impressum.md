@@ -1,5 +1,5 @@
 ---
-title: Datenschutzerklärung
+title: Impressum
 layout: layout/content.njk
 eleventyNavigation:
   key: Impressum

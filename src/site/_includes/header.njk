@@ -20,7 +20,7 @@
 
                 {%- for entry in navPages %}
                     <li>
-                        <a class="text-gray-800 py-4 px-2 block border-b-2 border-none hover:border-orange-500 no-underline hover:no-underline" href="{{ entry.url | url }}" data-title="{{ entry.title }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
+                        <a class="text-gray-800 py-4 px-2 block border-b-2 border-none hover:border-orange-500 no-underline hover:underline{% if entry.url == page.url %} font-semibold{% endif %}" href="{{ entry.url | url }}" data-title="{{ entry.title }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
                     </li>
                 {%- endfor %}
             </ul>

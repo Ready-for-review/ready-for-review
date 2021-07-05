@@ -12,7 +12,7 @@ eleventyNavigation:
             {% if videos.length %}
                 {% for video in videos %}
 
-                    <article class="card">
+                    <article class="card p-8">
                         <time class="text-gray-800 text-sm" datetime="{{ video.snippet.publishedAt}}">{{ video.snippet.publishedAt | shortReadableDateFromISO }}</time>
 
                         <h3 class="text-2xl font-bold leading-tight tracking-tight">

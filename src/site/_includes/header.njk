@@ -1,63 +1,42 @@
-<header class="header">
+<header x-data="{ mobileMenuOpen : false }" class="flex flex-wrap flex-row justify-between md:items-center md:space-x-4 bg-white py-6 px-6 relative shadow-lg">
     <a class="sr-only" href="#main">Direkt zum Inhalt</a>
-    <div class="header__inner">
-        <div class="logo">
-            <a href="/" class="focus:border-indigo-400">
-                <svg class="logo__icon" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="#rfr"></use>
-                </svg>
-            </a>
-        </div>
-        <button id="menu" class="menubutton">
-            <svg class="menubutton__icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-        </button>
+    <a href="/" class="block">
+        <span class="sr-only">ready-for-review.dev</span>
+        <svg class="h-6 md:h-8" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" alt="ready-for-review.dev Logo" title="ready-for-review.dev Logo">
+            <use xlink:href="#rfr"></use>
+        </svg>
+    </a>
+    <button @click.prevent="mobileMenuOpen = !mobileMenuOpen" class="inline-block md:hidden w-8 h-8 bg-gray-200 text-gray-600 p-1">
+        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+        </svg>
+    </button>
+    <nav class="absolute md:relative top-16 left-0 md:top-0 z-20 md:flex flex-col md:flex-row md:space-x-6 font-semibold w-full md:w-auto bg-white shadow-md rounded-lg md:rounded-none md:shadow-none md:bg-transparent p-6 pt-0 md:p-0"
+  :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}"  @click.after="mobileMenuOpen = false"
+  >
+        {% set navPages = collections.all | eleventyNavigation %}
+        {%- for entry in navPages %}
+            <a class="block py-1 text-gray-600 no-underline hover:underline{% if entry.url == page.url %} text-orange-500{% endif %}" href="{{ entry.url | url }}" data-title="{{ entry.title }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
+        {%- endfor %}
+        <a href="https://twitter.com/readyforreview" >
+            <svg width="32" height="32" viewBox="0 0 32 32">
+                <use xlink:href="#icon-bird"></use>
+            </svg>
+            <span class="hidden">Twitter</span>
+        </a>
 
-        <div id="navigation" class="hidden w-full flex-grow md:flex md:items-center md:w-auto">
-            {% set navPages = collections.all | eleventyNavigation %}
+        <a href="https://discord.gg/4vWCyqEK" >
+            <svg width="32" height="32" viewBox="0 0 32 32">
+                <use xlink:href="#icon-discord"></use>
+            </svg>
+            <span class="hidden">Discord</span>
+        </a>
 
-            <ul class="md:flex md:flex-grow items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-
-                {%- for entry in navPages %}
-                    <li>
-                        <a class="text-gray-800 py-4 px-2 block border-b-2 border-none hover:border-orange-500 no-underline hover:underline{% if entry.url == page.url %} font-semibold{% endif %}" href="{{ entry.url | url }}" data-title="{{ entry.title }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
-                    </li>
-                {%- endfor %}
-            </ul>
-
-        </div>
-
-        <div class="social_icons">
-            <a href="https://twitter.com/readyforreview" class="social_icon">
-                <svg width="32" height="32" viewBox="0 0 32 32" class="social_icon__icon">
-                    <use xlink:href="#icon-bird"></use>
-                </svg>
-                <span class="hidden">Twitter</span>
-            </a>
-
-            <a href="https://discord.gg/4vWCyqEK" class="social_icon">
-                <svg width="32" height="32" viewBox="0 0 32 32" class="social_icon__icon">
-                    <use xlink:href="#icon-discord"></use>
-                </svg>
-                <span class="hidden">Discord</span>
-            </a>
-
-            <a href="https://ready-for-review.podigee.io/feed/mp3" class="social_icon">
-                <svg width="32" height="32" viewBox="0 0 32 32" class="social_icon__icon">
-                    <use xlink:href="#icon-feed"></use>
-                </svg>
-                <span class="hidden">RSS</span>
-            </a>
-        </div>
-    </div>
-
+        <a href="https://ready-for-review.podigee.io/feed/mp3" >
+            <svg width="32" height="32" viewBox="0 0 32 32">
+                <use xlink:href="#icon-feed"></use>
+            </svg>
+            <span class="hidden">RSS</span>
+        </a>
+    </nav>
 </header>
-<script>
-    let hamburger = document.getElementById('menu');
-    let mobileMenu = document.getElementById('navigation');
-    hamburger.addEventListener('click', function () {
-        mobileMenu
-            .classList
-            .toggle('hidden');
-    });
-</script>

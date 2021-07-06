@@ -28,7 +28,7 @@
         <meta name="msapplication-TileImage" content="/_assets/favicon/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
         <link rel="alternate" type="application/rss+xml" title="Ready for review" href="https://ready-for-review.podigee.io/feed/mp3"/>
-        <script  src="/assets/main.bundle.js?v={% version %}" type="module"></script>
+
         {% block head %}{% endblock %}
     </head>
     <body class="bg-gray-50">
@@ -46,5 +46,6 @@
             {%- include "footer.njk" -%}
 
         </div>
+        <script  src="/assets/main.bundle.js?v={% version %}"></script>
     </body>
 </html>

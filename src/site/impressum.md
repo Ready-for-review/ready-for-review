@@ -1,9 +1,6 @@
 ---
 title: Impressum
 layout: layout/content.njk
-eleventyNavigation:
-  key: Impressum
-  order: 60
 ---
 
 ## Angaben gemäß § 5 TMG:

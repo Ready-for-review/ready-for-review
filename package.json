@@ -29,6 +29,7 @@
     "@11ty/eleventy-img": "^0.9.0",
     "@11ty/eleventy-navigation": "^0.3.2",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "alpinejs": "^3.2.1",
     "autoprefixer": "^10.2.6",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.6",
@@ -38,9 +39,9 @@
     "esbuild-loader": "^2.13.1",
     "googleapis": "^80.1.0",
     "html-minifier": "^4.0.0",
-    "husky": "^7.0.0",
+    "husky": "^7.0.1",
     "jest": "^27.0.6",
-    "mini-css-extract-plugin": "^2.0.0",
+    "mini-css-extract-plugin": "^2.1.0",
     "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
     "plyr": "^3.6.8",
@@ -53,7 +54,7 @@
     "string": "^3.3.3",
     "style-loader": "^3.0.0",
     "tailwindcss": "^2.2.4",
-    "webpack": "^5.42.0",
+    "webpack": "^5.42.1",
     "webpack-cli": "^4.7.2"
   }
 }

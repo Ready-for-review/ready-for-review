@@ -1,9 +1,6 @@
 ---
 title: Datenschutzerklärung
 layout: layout/content.njk
-eleventyNavigation:
-  key: Datenschutz
-  order: 70
 ---
 
 ## Einleitung

@@ -1,7 +1,7 @@
 require("dotenv").config();
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
-
+const pluginPWA = require("eleventy-plugin-pwa");
 const filters = require("./_11ty/filters");
 const transforms = require("./_11ty/transforms");
 const shortcodes = require("./_11ty/shortcodes");
@@ -25,6 +25,12 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(pluginPWA, {
+    swDest: "./_site/service-worker.js",
+    globDirectory: "./_site",
+    clientsClaim: true,
+    skipWaiting: true,
+  });
 
   eleventyConfig.addNunjucksAsyncShortcode("Image", async (src, alt) => {
     if (!alt) {

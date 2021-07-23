@@ -16,7 +16,7 @@
   >
         {% set navPages = collections.all | eleventyNavigation %}
         {%- for entry in navPages %}
-            <a class="block py-1 text-gray-600 no-underline hover:underline{% if entry.url == page.url %} text-orange-500{% endif %}" href="{{ entry.url | url }}" data-title="{{ entry.title }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
+            <a class="block py-1 text-gray-600" href="{{ entry.url | url }}" data-title="{{ entry.title }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
         {%- endfor %}
         <a href="https://twitter.com/readyforreview" >
             <svg width="32" height="32" viewBox="0 0 32 32">

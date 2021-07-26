@@ -1,9 +1,6 @@
 {% macro player(episode)%}
     <div class="flex items-center justify-center px-8">
         <div class="card flex" >
-            <svg class="hidden md:block">
-                <use xlink:href="#rfr"></use>
-            </svg>
             <div class="w-full p-8">
                 <div class="flex justify-between">
                     <div>
@@ -14,9 +11,9 @@
                         <time class="text-sm text-grey mt-1" datetime="{{ episode.isoDate}}">{{ episode.isoDate | shortReadableDateFromISO }}</time>
                     </div>
                 </div>
-                <div class="flex justify-between items-center mt-8">
-                    <iframe src="{{episode.enclosure.url}}?iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
-                </div>
+                <audio class="rfr-player w-full my-4" controls preload="auto">
+                    <source type="audio/mpeg" src="{{episode.enclosure.url}}">
+                </audio>
             </div>
         </div>
     </div>

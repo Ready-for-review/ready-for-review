@@ -18,21 +18,21 @@
         {%- for entry in navPages %}
             <a class="block py-1 text-gray-600" href="{{ entry.url | url }}" data-title="{{ entry.title }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
         {%- endfor %}
-        <a href="https://twitter.com/readyforreview" >
+        <a href="https://twitter.com/readyforreview" name="ready for review bei Twitter">
             <svg width="32" height="32" viewBox="0 0 32 32">
                 <use xlink:href="#icon-bird"></use>
             </svg>
             <span class="hidden">Twitter</span>
         </a>
 
-        <a href="https://discord.gg/4vWCyqEK" >
+        <a href="https://discord.gg/4vWCyqEK"  name="ready for review auf Discrod">
             <svg width="32" height="32" viewBox="0 0 32 32">
                 <use xlink:href="#icon-discord"></use>
             </svg>
             <span class="hidden">Discord</span>
         </a>
 
-        <a href="https://ready-for-review.podigee.io/feed/mp3" >
+        <a href="https://ready-for-review.podigee.io/feed/mp3"  name="ready for review RSS Feed">
             <svg width="32" height="32" viewBox="0 0 32 32">
                 <use xlink:href="#icon-feed"></use>
             </svg>

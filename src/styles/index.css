@@ -83,13 +83,13 @@
     @apply mt-12 text-4xl font-bold text-orange-500 leading-tight tracking-tight;
   }
   .content h2 {
-    @apply text-xl my-6 font-semibold;
+    @apply sm:text-lg sm:leading-snug font-semibold tracking-wide uppercase text-indigo-600 mb-3;
   }
   .content h3,
   .content h4,
   .content h5,
   .content h6 {
-    @apply text-lg my-3 font-semibold;
+    @apply text-lg my-3 font-semibold text-gray-700;
   }
 
   /* Paragraph */

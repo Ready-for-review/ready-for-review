@@ -6,6 +6,7 @@ node_modules
 src/_site
 dist
 _cache/
+.cache/
 
 # secrets
 .env

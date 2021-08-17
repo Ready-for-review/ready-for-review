@@ -15,18 +15,18 @@ Münchener Str. 42c<br />
 Telefon: 0176/70056222<br />
 E-Mail: mail (at) sandra-parsick.de
 
-Daniel Mies<br />
+Daniel Zenzes<br />
 Hauptstraße 68<br />
 42651 Solingen<br />
 
 ### Kontakt
 
 Telefon: 0171/5331127<br />
-E-Mail: daniel.mies (at) gmail.com
+E-Mail: daniel (at) zenzes.me
 
 ## Journalistisch-redaktionelle Angebote
 
-**Inhaltlich verantwortlich:** Sandra Parsick und Daniel Mies (Anschrift wie oben)
+**Inhaltlich verantwortlich:** Sandra Parsick und Daniel Zenzes (Anschrift wie oben)
 
 ## Social Media und andere Onlinepräsenzen
 

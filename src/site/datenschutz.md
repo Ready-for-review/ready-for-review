@@ -18,15 +18,15 @@ Diplom-Informatiker<br />
 Münchener Str. 42c<br />
 41472 Neuss
 
-Daniel Mies<br/>
+Daniel Zenzes<br/>
 Hauptstraße 68<br />
 42651 Solingen
 
-**Vertretungsberechtigte Personen:** Sandra Parsick und Daniel Mies
+**Vertretungsberechtigte Personen:** Sandra Parsick und Daniel Zenzes
 
 ### Kontakt
 
-**E-Mail-Adressen:** mail (at) sandra-parsick.de und daniel.mies (at) gmail.com
+**E-Mail-Adressen:** mail (at) sandra-parsick.de und daniel (at) zenzes.me
 
 **Impressum:** [https://ready-for-review.dev/impressum](https://ready-for-review.dev/impressum)
 

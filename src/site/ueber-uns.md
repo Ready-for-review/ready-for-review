@@ -14,11 +14,9 @@ In ihrer Freizeit engagiert sie sich in der [Softwerkskammer Ruhrgebiet](https:/
 
 ## Über Daniel
 
-Daniel (geb. Mies) arbeitet als Software Architekt bei [bike24](https://bike24.de). Seit 2013 entwickelt er (mal mehr, mal weniger) agil Software und dies sowohl freiberuflich als auch später als Entwickler und hat ebenfalls Erfahrung als Product Owner und Agiler Coach. Seine Leidenschaft gilt hier modernen Frontendes die am besten auch testgetrieben entwickelt wurden.
+[Daniel](https://zenzes.me) (geb. Mies) arbeitet als Software Architekt bei [Bike24](https://bike24.de). Seit 2013 entwickelt er (mal mehr, mal weniger) agil Software und dies sowohl freiberuflich als auch später als Entwickler und hat ebenfalls Erfahrung als Product Owner und Agiler Coach. Seine Leidenschaft gilt hier modernen Frontends die idealerweise auch testgetrieben entwickelt wurden.
 
-Ich bin als Senior IT-Consultant seit 2015 Teil des [codecentric](https://codecentric.de) Teams. In agilen Dev-Teams bin ich sowohl als Product Owner als auch als Teil des Dev-Teams im Einsatz. Gerne unterstütze ich auch Teams als Agiler Coach. Wenn es um Entwicklung geht, entwickle ich leidenschaftlich gerne testgetrieben Code im Frontend aber auch im Backend bin ich zu Hause.
-
-Vor diesem Podcast produzierte er den Podcast "[Herr Mies will's wissen](https://mies.me)". In seiner Freizeit engagiert er sich zudem bei [Jugend hackt](https://jugendhackt.org) als Mentor.
+Vor "Ready for review" produzierte er den Podcast "[Herr Mies will's wissen](https://mies.me)".
 
 ## <a name="podcast"></a>Über den Podcast
 

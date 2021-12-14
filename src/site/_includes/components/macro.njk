@@ -1,17 +1,17 @@
 {% macro player(episode)%}
     <div class="flex items-center justify-center px-8">
-        <div class="card flex" >
+        <div class="flex card" >
             <div class="w-full p-8">
                 <div class="flex justify-between">
                     <div>
-                        <h3 class="text-2xl text-grey-darkest font-medium">
+                        <h3 class="text-2xl font-medium text-grey-darkest">
                             <a class="no-underline" href="/{{episode | toEpisodeUrl }}/" title="{{ episode.title }}">{{episode.title}}</a>
                         </h3>
 
-                        <time class="text-sm text-grey mt-1" datetime="{{ episode.isoDate}}">{{ episode.isoDate | shortReadableDateFromISO }}</time>
+                        <time class="mt-1 text-sm text-grey" datetime="{{ episode.isoDate}}">{{ episode.isoDate | shortReadableDateFromISO }}</time>
                     </div>
                 </div>
-                <audio class="rfr-player w-full my-4" controls preload="auto">
+                <audio class="w-full my-4 rfr-player" controls preload="false">
                     <source type="audio/mpeg" src="{{episode.enclosure.url}}">
                 </audio>
             </div>

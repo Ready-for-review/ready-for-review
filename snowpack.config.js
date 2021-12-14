@@ -7,7 +7,6 @@ module.exports = {
   },
   plugins: [
     "@snowpack/plugin-postcss",
-    "@jadex/snowpack-plugin-tailwindcss-jit",
     [
       "@snowpack/plugin-run-script",
       {

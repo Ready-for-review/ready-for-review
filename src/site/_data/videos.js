@@ -14,7 +14,6 @@ module.exports = async () => {
       type: "video",
       maxResults: 30,
     });
-    console.log(JSON.stringify(response.data));
     return response.data.items;
   } catch (error) {
     console.log(error.toString());

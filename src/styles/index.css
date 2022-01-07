@@ -7,6 +7,14 @@
 @tailwind components;
 @tailwind utilities;
 @layer components {
+  .gradient {
+    background: linear-gradient(
+      90deg,
+      rgba(3, 104, 159, 1) 0%,
+      rgba(99, 102, 241, 1) 42%,
+      rgba(249, 115, 22, 1) 100%
+    );
+  }
   /* Links */
   a {
     text-decoration: none;
@@ -22,33 +30,33 @@
 
   /* forms */
   .label {
-    @apply block text-gray-700 text-sm font-bold mb-2;
+    @apply block mb-2 text-sm font-bold text-gray-700;
   }
 
   .input {
-    @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
+    @apply w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none;
   }
 
   .input:focus {
-    @apply outline-none shadow;
+    @apply shadow outline-none;
   }
 
   /* button */
   .btn {
-    @apply bg-blue-500 text-white font-bold py-2 px-4 border-b-4 border-blue-700 rounded no-underline shadow-none;
+    @apply px-4 py-2 font-bold text-white no-underline bg-blue-500 border-b-4 border-blue-700 rounded shadow-none;
   }
 
   .btn:hover {
-    @apply bg-blue-400 border-blue-500 no-underline shadow-none;
+    @apply no-underline bg-blue-400 border-blue-500 shadow-none;
   }
 
   /* teaser*/
   .teaser {
-    @apply bg-orange-500 py-4 px-8 shadow-lg;
+    @apply px-8 py-4 bg-orange-500 shadow-lg;
   }
 
   .teaser h2 {
-    @apply text-white text-lg font-semibold leading-tight tracking-tight;
+    @apply text-lg font-semibold leading-tight tracking-tight text-white;
   }
   .teaser p {
     @apply text-gray-100;
@@ -61,35 +69,35 @@
   @screen lg {
     /* teaser*/
     .teaser {
-      @apply absolute -bottom-20 right-0 w-1/2 mx-8 -mb-8 rounded-lg;
+      @apply absolute right-0 w-1/2 mx-8 -mb-8 rounded-lg -bottom-20;
     }
   }
 
   .page_section {
-    @apply max-w-screen-lg xl:max-w-screen-xl mx-auto px-8;
+    @apply max-w-screen-lg px-8 mx-auto xl:max-w-screen-xl;
   }
 
   .card {
-    @apply bg-white shadow-lg rounded-lg;
+    @apply bg-white rounded-lg shadow-lg;
   }
 
   /*markup  styles*/
   .content {
-    @apply leading-relaxed text-base bg-white my-12 text-gray-800;
+    @apply my-12 text-base leading-relaxed text-gray-800 bg-white;
   }
 
   /* headlines */
   .content h1 {
-    @apply mt-12 text-4xl font-bold text-orange-500 leading-tight tracking-tight;
+    @apply mt-12 text-4xl font-bold leading-tight tracking-tight text-orange-500;
   }
   .content h2 {
-    @apply sm:text-lg sm:leading-snug font-semibold tracking-wide uppercase text-indigo-600 mb-3;
+    @apply mb-3 font-semibold tracking-wide text-indigo-600 uppercase sm:text-lg sm:leading-snug;
   }
   .content h3,
   .content h4,
   .content h5,
   .content h6 {
-    @apply text-lg my-3 font-semibold text-gray-700;
+    @apply my-3 text-lg font-semibold text-gray-700;
   }
 
   /* Paragraph */
@@ -114,7 +122,7 @@
   }
   /* Blockquotes */
   .content blockquote {
-    @apply p-2 mx-6 bg-gray-100 mb-4 border-l-4 border-gray-400 italic;
+    @apply p-2 mx-6 mb-4 italic bg-gray-100 border-l-4 border-gray-400;
   }
   .content blockquote > p {
     @apply mb-0;

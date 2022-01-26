@@ -45,7 +45,7 @@
     "css-loader": "^6.5.1",
     "cssnano": "^5.0.14",
     "date-fns": "^2.28.0",
-    "dotenv": "^11.0.0",
+    "dotenv": "^14.3.2",
     "googleapis": "^92.0.0",
     "html-minifier": "^4.0.0",
     "husky": "^7.0.4",

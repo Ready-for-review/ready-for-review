@@ -40,7 +40,7 @@
     "@tailwindcss/typography": "^0.5.2",
     "alpinejs": "^3.9.0",
     "autoprefixer": "10.4.2",
-    "browserslist": "^4.19.1",
+    "browserslist": "^4.19.2",
     "cross-env": "^7.0.3",
     "css-loader": "^6.6.0",
     "cssnano": "^5.0.17",

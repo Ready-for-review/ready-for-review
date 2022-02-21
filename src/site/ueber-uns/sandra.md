@@ -21,7 +21,7 @@ Seit 2019 ist sie Mitglied im [Oracle Groundbreaker Ambassador Programm](https:/
 - Maus: Logitech MX Master
 - Maus für unterwegs:Logitech MX2S SW
 - Webcam: Papalook Autofokus Webcam 1080P mit Mikrofon, AF925
-- Microphone: Blue Yeti mit RADIUS III Dämpfer und Blue Compass Armständer
+- Mikrofon: Blue Yeti mit RADIUS III Dämpfer und Blue Compass Armständer
 - Headset: Sony WH-1000X M3
 - Monitor: 2x Dell UltraSharp U2414H (24")
 - Schreibtisch: Ikea Bekant

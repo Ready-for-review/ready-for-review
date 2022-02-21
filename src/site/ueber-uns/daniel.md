@@ -12,3 +12,14 @@ eleventyNavigation:
 Vor "Ready for review" produzierte er den Podcast "[Herr Mies will's wissen](https://mies.me)".
 
 [Daniels Wunschliste bei Wishli](https://wishli.app/VQsEaoAm).
+
+## Benutzte Hardware
+
+- Laptop: MacBook Pro (15 Zoll, 2018) (privat)
+- Tastatur: Ducky One 3 SF mit Brown Switches und US-ANSI-Layout (EURKey-Layout)
+- Tastatur für unterwegs: Logitech K380
+- Maus: Logitech MX Master
+- Webcam: Logitech StreamCam
+- Mikrofon: Blue Yeti mit RØDE PSA1 Gelenkarmstativ
+- Monitor: LC-Power LC-M27-QHD-165 (27")
+- Stuhl: Nitro Concepts E250 Gaming Stuhl

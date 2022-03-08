@@ -10,6 +10,8 @@ eleventyNavigation:
 
 Seit 2020 produzieren Sandra und Daniel monatlich diesen Podcast und den zugehörigen [YouTube](https://www.youtube.com/channel/UCnVCACzOxoOShe_69qo51hg) Stream. Dabei geht es um aktuelle Themen und Diskussionen aus der IT, neue technologische Trends oder auch einfach mal den familiären Family IT Support, den beide regelmäßig leisten dürfen.
 
+Ihr könnt den Podcast [über Steady](https://steadyhq.com/ready-for-review) direkt unterstützen.
+
 ## Über Sandra
 
 Sandra ist als freiberufliche Softwareentwicklerin und Beraterin im Java Umfeld tätig. Seit 2008 beschäftigte sie sich mit agiler Softwareentwicklung in verschiedenen Rollen. Gerne unterstützt und beratet sie Ihre Kunden in den Bereichen der Java Enterprise Anwendungen, agilen Methoden, Software Craftsmanship und in der Automatisierung von Softwareentwicklungsprozessen.

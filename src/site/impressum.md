@@ -21,7 +21,7 @@ Hauptstraße 68<br />
 
 ### Kontakt
 
-Telefon: 0171/5331127<br />
+Telefon: 0172/9885001<br />
 E-Mail: daniel (at) zenzes.me
 
 ## Journalistisch-redaktionelle Angebote

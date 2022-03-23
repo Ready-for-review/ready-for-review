@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 20
 ---
 
-[Daniel](https://zenzes.me) (geb. Mies) arbeitet als Software Architekt bei [Bike24](https://bike24.de). Seit 2003 entwickelt er (mal mehr, mal weniger) agil Software und dies sowohl freiberuflich als auch später als Entwickler und hat ebenfalls Erfahrung als Product Owner und Agiler Coach. Seine Leidenschaft gilt hier modernen Frontends die idealerweise auch testgetrieben entwickelt wurden.
+[Daniel](https://zenzes.me) (geb. Mies) ist Software Craftsman mit einer Leidenschaft für moderne Frontend Entwicklung. Seit 2003 entwickelt er (mal mehr, mal weniger) agil Software und dies sowohl freiberuflich als auch später als Entwickler und hat ebenfalls Erfahrung als Product Owner und Agiler Coach. Neben seiner Leidenschaft für Frontends ist er auch ein Freund von Testgetriebener Entwicklung.
 
 Vor "Ready for review" produzierte er den Podcast "[Herr Mies will's wissen](https://mies.me)".
 

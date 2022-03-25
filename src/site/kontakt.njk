@@ -6,12 +6,15 @@ eleventyNavigation:
 ---
 {% extends "layout/base.njk" %}
 {%block content %}
-    <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto mt-36 px-8">
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight text-gray-700 mt-4 mb-8 sm:mb-10">{{title}}</h1>
-        <section class="card my-12 p-8">
+    <div class="max-w-screen-lg px-8 mx-auto xl:max-w-screen-xl mt-36">
+        <h1 class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">{{title}}</h1>
+        <section class="p-8 my-12 card">
 
             <p class="my-4 text-gray-800">
 Wenn ihr uns kontaktieren wollt, könnt ihr dies gerne via Twitter tun (<a href="https://twitter.com/readyforreview">@readyforreview</a>, <a href="https://twitter.com/sandraparsick">@sandraparsick</a> oder <a href="https://twitter.com/danielzenzes">@danielzenzes</a>) oder einfach dieses Formular nutzen.
+</p>
+            <p class="my-4 text-gray-800">
+Alternativ könnt ihr uns auch eine E-Mail senden an info[at] ready-for-review.dev.
 </p>
             <form name="contact" method="POST" data-netlify="true" netlify-honeypot="favorite-color">
                 <p class="my-4">

@@ -1,5 +1,8 @@
 module.exports = function () {
   return {
+    sandra: {
+      hardware: [],
+    },
     daniel: {
       hardware: [
         {

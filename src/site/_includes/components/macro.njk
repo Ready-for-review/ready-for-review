@@ -11,7 +11,7 @@
                         <time class="mt-1 text-sm text-grey" datetime="{{ episode.isoDate}}">{{ episode.isoDate | shortReadableDateFromISO }}</time>
                     </div>
                 </div>
-                <audio class="w-full my-4 rfr-player" controls preload="false">
+                <audio class="w-full my-4 rfr-player" controls preload="metadata">
                     <source type="audio/mpeg" src="{{episode.enclosure.url}}">
                 </audio>
             </div>

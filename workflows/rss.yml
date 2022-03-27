@@ -1,0 +1,13 @@
+on:
+  rss:
+    url: https://ready-for-review.podigee.io/feed/mp3
+jobs:
+  deploy:
+    name: Deploy RfR Homepage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Netflify Deployment
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLFY_APP_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: netlify deploy --prod

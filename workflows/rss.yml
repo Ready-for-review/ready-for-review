@@ -2,7 +2,7 @@ on:
   rss:
     url: https://ready-for-review.podigee.io/feed/mp3
 jobs:
-  depploy:
+  deploy:
     name: Deploy RfR Homepage
     runs-on: ubuntu-latest
     steps:

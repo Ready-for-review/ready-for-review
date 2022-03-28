@@ -6,8 +6,23 @@ jobs:
     name: Deploy RfR Homepage
     runs-on: ubuntu-latest
     steps:
-      - name: Run Netflify Deployment
+      # Get code from repo
+      - name: Checkout code
+        uses: actions/checkout@v1
+      # Install NodeJS
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+      # Run npm install and build on our code
+      - run: npm install
+      - run: npm run build --if-present
+      # Deploy to Netlify
+      - name: Deploy to netlify
+        uses: netlify/actions/cli@master
         env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLFY_APP_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: netlify deploy --prod
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy --dir=dist --prod
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]

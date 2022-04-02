@@ -47,11 +47,11 @@ https://coolors.co/ef6706-003552-5eb1bf-ecdcb0-efcb68
 
   /* button */
   .btn {
-    @apply px-4 py-2 font-bold text-white no-underline bg-maximumBlue border-b-4 border-maximumBlue rounded shadow-none;
+    @apply px-4 py-2 font-bold text-white no-underline bg-maximumBlue  rounded shadow-none;
   }
 
   .btn:hover {
-    @apply no-underline bg-prussian border-prussian shadow-none;
+    @apply no-underline bg-prussian  shadow-none;
   }
 
   /* teaser*/

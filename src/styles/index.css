@@ -1,3 +1,7 @@
+/* colors:
+https://coolors.co/ef6706-003552-5eb1bf-ecdcb0-efcb68
+*/
+
 :root {
   --plyr-color-main: #4f46e5;
 }
@@ -10,21 +14,21 @@
   .gradient {
     background: linear-gradient(
       90deg,
-      rgba(3, 104, 159, 1) 0%,
-      rgba(99, 102, 241, 1) 42%,
-      rgba(249, 115, 22, 1) 100%
+      rgb(249, 115, 22) 0%,
+      rgb(239, 203, 104) 42%,
+      rgb(249, 115, 22) 100%
     );
   }
   /* Links */
   a {
     text-decoration: none;
     transition: all 0.25s ease-out;
-    box-shadow: inset 0 -3px 0 0 rgba(249, 115, 22, 1);
+    box-shadow: inset 0 -3px 0 0 rgb(239, 203, 104);
   }
   a:focus,
   a:hover {
     text-devoration: none;
-    box-shadow: inset 0 -0.4em 0 0 rgba(249, 115, 22, 1);
+    box-shadow: inset 0 -0.4em 0 0 rgb(239, 203, 104);
     transition: all 0.25s ease-out;
   }
 
@@ -43,11 +47,11 @@
 
   /* button */
   .btn {
-    @apply px-4 py-2 font-bold text-white no-underline bg-blue-500 border-b-4 border-blue-700 rounded shadow-none;
+    @apply px-4 py-2 font-bold text-white no-underline bg-maximumBlue border-b-4 border-maximumBlue rounded shadow-none;
   }
 
   .btn:hover {
-    @apply no-underline bg-blue-400 border-blue-500 shadow-none;
+    @apply no-underline bg-prussian border-prussian shadow-none;
   }
 
   /* teaser*/
@@ -91,7 +95,7 @@
     @apply mt-12 text-4xl font-bold leading-tight tracking-tight text-orange-500;
   }
   .content h2 {
-    @apply mb-3 font-semibold tracking-wide text-indigo-600 uppercase sm:text-lg sm:leading-snug;
+    @apply mb-3 font-semibold tracking-wide text-prussian uppercase sm:text-lg sm:leading-snug;
   }
   .content h3,
   .content h4,

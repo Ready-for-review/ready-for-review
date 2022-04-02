@@ -10,6 +10,8 @@ module.exports = {
       indigo: colors.indigo,
       orange: colors.orange,
       white: colors.white,
+      prussian: "#003552",
+      maximumBlue: "#5eb1bf",
     },
     extend: {},
   },

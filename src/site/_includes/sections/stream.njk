@@ -1,21 +1,21 @@
 {%- from "components/macro.njk" import video -%}
 <section class="page_section">
 
-    <h2 class="sm:text-lg sm:leading-snug font-semibold tracking-wide uppercase text-indigo-600 mb-3">Ready for Stream</h2>
+    <h2 class="mb-3 font-semibold tracking-wide uppercase sm:text-lg sm:leading-snug text-prussian">Ready for Stream</h2>
     <section class="flex">
         <div class="w-1/3">
-            <p class="font-medium mb-8 sm:mb-6 text-gray-500">
+            <p class="mb-8 font-medium text-gray-500 sm:mb-6">
         Hin und wieder, zum Beispiel, wenn die beiden sich etwas neues ansehen wollen, reicht ein Podcast einfach nicht aus... Auf ihrem <a href="https://www.youtube.com/channel/UCnVCACzOxoOShe_69qo51hg" title="DEr Ready for review YouTube Kanal" target=”_blank”>YouTube Kanal</a> zeigen die beiden immer mal wieder live, wie sie neue Dinge ausprobieren.
         </p>
         </div>
         <div class="w-2/3 pl-8">
 
-            <div class="card mb-8">
+            <div class="mb-8 card">
                 {{video(videos[0])}}
             </div>
 
         </div>
     </section>
-    <p class="mt-4 mx-8 text-gray-500 text-right">Alle Streams findet ihr in der <a href="/streams" class="text-orange-500 underline hover:no-underline" title="Alle Podcast Episoden">Stream</a>-&Uuml;bersicht.</p>
+    <p class="mx-8 mt-4 text-right text-gray-500">Alle Streams findet ihr in der <a href="/streams" class="text-orange-500 underline hover:no-underline" title="Alle Podcast Episoden">Stream</a>-&Uuml;bersicht.</p>
 
 </section>

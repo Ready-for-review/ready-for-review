@@ -1,9 +1,13 @@
-/* colors:
-https://coolors.co/ef6706-003552-5eb1bf-ecdcb0-efcb68
+/* rfr colors
+ https://coolors.co/ef6706-003552-5eb1bf-ecdcb0-efcb68
 */
-
 :root {
   --plyr-color-main: #4f46e5;
+  --spanish-orange: #ef6706;
+  --prussian-blue: #003552;
+  --maximum-blue: #5eb1bf;
+  --dutch-white: #ecdcb0;
+  --orange-yellow-crayola: #efcb68;
 }
 
 @tailwind base;
@@ -14,21 +18,21 @@ https://coolors.co/ef6706-003552-5eb1bf-ecdcb0-efcb68
   .gradient {
     background: linear-gradient(
       90deg,
-      rgb(249, 115, 22) 0%,
-      rgb(239, 203, 104) 42%,
-      rgb(249, 115, 22) 100%
+      var(--spanish-orange) 0%,
+      var(--orange-yellow-crayola) 42%,
+      var(--spanish-orange) 100%
     );
   }
   /* Links */
   a {
     text-decoration: none;
     transition: all 0.25s ease-out;
-    box-shadow: inset 0 -3px 0 0 rgb(239, 203, 104);
+    box-shadow: inset 0 -3px 0 0 var(--orange-yellow-crayola);
   }
   a:focus,
   a:hover {
     text-devoration: none;
-    box-shadow: inset 0 -0.4em 0 0 rgb(239, 203, 104);
+    box-shadow: inset 0 -0.4em 0 0 var(--orange-yellow-crayola);
     transition: all 0.25s ease-out;
   }
 
@@ -56,18 +60,19 @@ https://coolors.co/ef6706-003552-5eb1bf-ecdcb0-efcb68
 
   /* teaser*/
   .teaser {
-    @apply px-8 py-4 bg-orange-500 shadow-lg;
+    @apply px-8 py-4 shadow-lg;
+    background-color: var(--dutch-white);
   }
 
-  .teaser h2 {
-    @apply text-lg font-semibold leading-tight tracking-tight text-white;
+  .teaser h3 {
+    @apply mb-3 font-semibold tracking-wide text-gray-700 sm:text-lg sm:leading-snug;
   }
   .teaser p {
-    @apply text-gray-100;
+    @apply text-gray-700;
   }
 
   .teaser a {
-    @apply text-white underline;
+    @apply text-gray-700 underline;
   }
 
   @screen lg {
@@ -95,7 +100,7 @@ https://coolors.co/ef6706-003552-5eb1bf-ecdcb0-efcb68
     @apply mt-12 text-4xl font-bold leading-tight tracking-tight text-orange-500;
   }
   .content h2 {
-    @apply mb-3 font-semibold tracking-wide text-prussian uppercase sm:text-lg sm:leading-snug;
+    @apply mb-3 font-semibold tracking-wide text-prussian uppercase text-2xl sm:leading-snug;
   }
   .content h3,
   .content h4,

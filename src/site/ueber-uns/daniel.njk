@@ -2,46 +2,52 @@
 title: Über Daniel
 
 eleventyNavigation:
-  key: Über Daniel
-  parent: Über uns
-  order: 20
+key: Über Daniel
+parent: Über uns
+order: 20
 ---
 {% extends "layout/base.njk" %}
 {% block content %}
 
-  <div class="page_section mt-36">
-    <h1 class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">{{title}}</h1>
-    <div class="p-8 my-12 card">
-
-      <p>
-        <a href="https://zenzes.me" title="Daniels private Seite">Daniel</a> (geb. Mies) ist Software Craftsman mit einer Leidenschaft für moderne Frontend Entwicklung. Seit 2003 entwickelt er (mal mehr, mal weniger) agil Software und dies sowohl freiberuflich als auch später als Entwickler und hat ebenfalls Erfahrung als Product Owner und Agiler Coach. Neben seiner Leidenschaft für Frontends ist er auch ein Freund von Testgetriebener Entwicklung.</p>
-      <p>Vor &quot;Ready for review&quot; produzierte er den Podcast &quot;<a href="https://mies.me">Herr Mies will&#39;s wissen</a>&quot;.
-      </p>
-
-    </div>
+<div class="page_section mt-36">
+  <h1
+    class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">
+    {{title}}</h1>
+  <div class="p-8 my-12 card">
 
     <p>
-      <svg class="inline-block w-12 h-12">
-        <use xlink:href="#icon-present"></use>
-      </svg>
-      <a href="https://wishli.app/VQsEaoAm">
-   
-        Daniels Wunschliste bei Wishli</a>
+      <a href="https://zenzes.me" title="Daniels private Seite">Daniel</a> (geb. Mies) ist Software Craftsman mit einer
+      Leidenschaft für moderne Frontend Entwicklung. Seit 2003 entwickelt er (mal mehr, mal weniger) agil Software und
+      dies sowohl freiberuflich als auch später als Entwickler und hat ebenfalls Erfahrung als Product Owner und Agiler
+      Coach. Neben seiner Leidenschaft für Frontends ist er auch ein Freund von Testgetriebener Entwicklung.
+    </p>
+    <p>Vor &quot;Ready for review&quot; produzierte er den Podcast &quot;<a href="https://mies.me">Herr Mies will&#39;s
+        wissen</a>&quot;.
     </p>
 
   </div>
 
-  {% if uses.daniel.hardware.length %}
-    <div class="page_section mt-36">
-      <h2
-    class="mb-3 font-semibold tracking-wide uppercase text-prussian sm:text-lg sm:leading-snug">Benutzte Hardware</h2>
-      <div class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+  <p>
+    <svg class="inline-block w-12 h-12">
+      <use xlink:href="#icon-present"></use>
+    </svg>
+    <a href="https://wishli.app/VQsEaoAm">
 
-        {% for item in uses.daniel.hardware %}
-          {%- include "uses-card.njk" -%}
-        {% endfor %}
+      Daniels Wunschliste bei Wishli</a>
+  </p>
 
-      </div>
-    </div>
-  {% endif %}
+</div>
+
+{% if uses.daniel.hardware.length %}
+<div class="page_section mt-36">
+  <h2 class="mb-3 text-2xl font-semibold tracking-wide uppercase text-prussian sm:leading-snug">Benutzte Hardware</h2>
+  <div class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+
+    {% for item in uses.daniel.hardware %}
+    {%- include "uses-card.njk" -%}
+    {% endfor %}
+
+  </div>
+</div>
+{% endif %}
 {% endblock %}

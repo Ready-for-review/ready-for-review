@@ -1,40 +1,47 @@
-<header x-data="{ mobileMenuOpen : false }" class="relative flex flex-row flex-wrap justify-between px-6 py-6 bg-white shadow-lg md:items-center md:space-x-4">
+<header x-data="{ mobileMenuOpen : false }"
+    class="relative flex flex-row flex-wrap justify-between px-6 py-6 bg-white shadow-lg md:items-center md:space-x-4">
     <a class="sr-only" href="#main">Direkt zum Inhalt</a>
     <a href="/" class="block">
         <span class="sr-only">ready-for-review.dev</span>
-        <svg class="h-6 md:h-8" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" alt="ready-for-review.dev Logo" title="ready-for-review.dev Logo">
+        <svg class="h-6 md:h-8" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+            alt="ready-for-review.dev Logo" title="ready-for-review.dev Logo">
             <use xlink:href="#rfr"></use>
         </svg>
     </a>
-    <button @click.prevent="mobileMenuOpen = !mobileMenuOpen" class="inline-block w-8 h-8 p-1 text-gray-600 bg-gray-200 md:hidden">
+    <button @click.prevent="mobileMenuOpen = !mobileMenuOpen"
+        class="inline-block w-8 h-8 p-1 text-gray-600 bg-gray-200 md:hidden">
         <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
         </svg>
     </button>
-    <nav class="absolute left-0 z-20 flex-col w-full p-6 pt-0 font-semibold bg-white rounded-lg shadow-md md:relative top-16 md:top-0 md:flex md:flex-row md:space-x-6 md:w-auto md:rounded-none md:shadow-none md:bg-transparent md:p-0" :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}"  @click.after="mobileMenuOpen = false">
+    <nav class="absolute left-0 z-20 flex-col w-full p-6 pt-0 font-semibold bg-white rounded-lg shadow-md md:relative top-16 md:top-0 md:flex md:flex-row md:space-x-6 md:w-auto md:rounded-none md:shadow-none md:bg-transparent md:p-0"
+        :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.after="mobileMenuOpen = false">
         {% set navPages = collections.all | eleventyNavigation %}
         {%- for entry in navPages %}
-            <a class="block py-1 text-gray-600" href="{{ entry.url | url }}" data-title="{{ entry.title }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
+        <a class="block py-1 text-gray-600" href="{{ entry.url | url }}" data-title="{{ entry.title }}" {% if
+            entry.url==page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
         {%- endfor %}
         <a href="https://twitter.com/readyforreview" name="ready for review bei Twitter">
             <svg width="32" height="32" viewBox="0 0 32 32">
                 <use xlink:href="#icon-bird"></use>
             </svg>
-            <span class="hidden">Twitter</span>
+            <span class="sr-only">Ready for review bei Twitter</span>
         </a>
 
-        <a href="https://discord.gg/fZbMbwjpjk"  name="ready for review auf Discrod">
+        <a href="https://discord.gg/fZbMbwjpjk" name="ready for review auf Discrod">
             <svg width="32" height="32" viewBox="0 0 32 32">
                 <use xlink:href="#icon-discord"></use>
             </svg>
-            <span class="hidden">Discord</span>
+            <span class="sr-only">Ready for Review Discord</span>
         </a>
 
-        <a href="https://ready-for-review.podigee.io/feed/mp3"  name="ready for review RSS Feed">
+        <a href="https://ready-for-review.podigee.io/feed/mp3" name="ready for review RSS Feed">
             <svg width="32" height="32" viewBox="0 0 32 32">
                 <use xlink:href="#icon-feed"></use>
             </svg>
-            <span class="hidden">RSS</span>
+            <span class="sr-only">Podcast RSS-Feed</span>
         </a>
     </nav>
 </header>

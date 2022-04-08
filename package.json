@@ -38,7 +38,7 @@
     "@snowpack/plugin-postcss": "1.4.3",
     "@snowpack/plugin-run-script": "2.3.0",
     "@tailwindcss/typography": "0.5.2",
-    "alpinejs": "3.9.5",
+    "alpinejs": "3.9.6",
     "autoprefixer": "10.4.4",
     "browserslist": "4.20.2",
     "cross-env": "7.0.3",

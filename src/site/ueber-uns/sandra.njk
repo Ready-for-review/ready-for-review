@@ -1,49 +1,49 @@
 ---
 title: Über Sandra
 eleventyNavigation:
-key: Über Sandra
-parent: Über uns
-order: 20
+  key: Über Sandra
+  parent: Über uns
+  order: 10
 ---
 
 {% extends "layout/base.njk" %}
 {% block content %}
 
-<div class="page_section mt-36">
-  <h1
+  <div class="page_section mt-36">
+    <h1
     class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">
-    {{title}}</h1>
-  <div class="p-8 my-12 card">
+      {{title}}</h1>
+    <div class="p-8 my-12 card">
 
-    <p>Sandra ist als freiberufliche Softwareentwicklerin und Beraterin im Java Umfeld tätig. Seit 2008 beschäftigte sie
+      <p>Sandra ist als freiberufliche Softwareentwicklerin und Beraterin im Java Umfeld tätig. Seit 2008 beschäftigte sie
       sich mit agiler Softwareentwicklung in verschiedenen Rollen. Gerne unterstützt und beratet sie Ihre Kunden in den
       Bereichen der Java Enterprise Anwendungen, agilen Methoden, Software Craftsmanship und in der Automatisierung von
       Softwareentwicklungsprozessen.</p>
-    <p>Seit 2019 ist sie Mitglied im <a href="https://apex.oracle.com/pls/apex/f?p=19297:3">Oracle Groundbreaker
+      <p>Seit 2019 ist sie Mitglied im <a href="https://apex.oracle.com/pls/apex/f?p=19297:3">Oracle Groundbreaker
         Ambassador Programm</a> und wurde 2020 zum Java Champion ernannt.</p>
 
-  </div>
+    </div>
 
-  <p>
-    <svg class="inline-block w-12 h-12">
-      <use xlink:href="#icon-present"></use>
-    </svg>
-    <a href="https://wishli.app/RcyJ5Tem">
+    <p>
+      <svg class="inline-block w-12 h-12">
+        <use xlink:href="#icon-present"></use>
+      </svg>
+      <a href="https://wishli.app/RcyJ5Tem">
       Sandra Wunschliste bei Wishli</a>
-  </p>
-
-</div>
-
-{% if uses.sandra.hardware.length %}
-<div class="page_section mt-36">
-  <h2 class="mb-3 text-2xl font-semibold tracking-wide uppercase text-prussian sm:leading-snug">Benutzte Hardware</h2>
-  <div class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-
-    {% for item in uses.sandra.hardware %}
-    {%- include "uses-card.njk" -%}
-    {% endfor %}
+    </p>
 
   </div>
-</div>
-{% endif %}
+
+  {% if uses.sandra.hardware.length %}
+    <div class="page_section mt-36">
+      <h2 class="mb-3 text-2xl font-semibold tracking-wide uppercase text-prussian sm:leading-snug">Benutzte Hardware</h2>
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+
+        {% for item in uses.sandra.hardware %}
+          {%- include "uses-card.njk" -%}
+        {% endfor %}
+
+      </div>
+    </div>
+  {% endif %}
 {% endblock %}

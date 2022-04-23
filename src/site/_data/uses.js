@@ -91,9 +91,15 @@ module.exports = function () {
       hardware: [
         {
           tags: ["notebook"],
-          name: "MacBook Pro (15 Zoll, 2018)",
-          link: "https://support.apple.com/kb/SP776",
-          description: "Läuft seit 4 Jahren problemlos.",
+          name: "MacBook Air (M1, 2020)",
+          link: "https://support.apple.com/kb/SP825",
+          description: "Mein privates Notebook. Der M1 ist unfassbar schnell.",
+        },
+        {
+          tags: ["notebook"],
+          name: 'MacBook Pro (14", 2021)',
+          link: "https://support.apple.com/kb/SP854",
+          description: "Für die Arbeit setze ich auf das aktuelle MacBook Pro.",
         },
         {
           tags: ["keyboard", "workspace"],
@@ -132,7 +138,6 @@ module.exports = function () {
         {
           tags: ["headset", "podcast"],
           name: "Superlux HMC 660",
-
           description:
             "Perfekt für den Podcast: niedriger Preis und sehr gute Qualität. Inzwischen kann man wohl problemlos zum Nachfolger greifen.",
         },
@@ -149,7 +154,6 @@ module.exports = function () {
           link: "https://www.home24.de/produkt/schreibtisch-manchester-i-akazie-massiv-metall",
           description: "Schöner, kompakter Schreibtisch.",
         },
-
         {
           tags: ["chair"],
           name: "Nitro Concepts E250",

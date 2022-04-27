@@ -9,4 +9,11 @@ module.exports = {
   buildInfo: function () {
     return `Version ${version}`;
   },
+  ingredient: function ({ name, quantity, units }) {
+    if (isNaN(quantity)) {
+      return name;
+    } else {
+      return `${name}, ${quantity} ${units ? units : ""} `;
+    }
+  },
 };

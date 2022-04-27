@@ -1,0 +1,41 @@
+---
+layout: layout/base.njk
+---
+<div class="page_section mt-36">
+    <h1
+    class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">{{ title | title }}</h1>
+    <div class="p-8 my-12 prose card">
+
+        <h2>Zutaten:</h2>
+        <ul>
+            {% for item in ingredients %}
+                <li>{% ingredient item %}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="p-8 my-12 prose card">
+        <h2>Utensilien:</h2>
+        <ul>
+            {% for item in cookware %}
+                <li>
+                    {{ item.name }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="p-8 my-12 prose card">
+        <h2>Anleitung</h2>
+        <ul>
+            {% for step in steps %}
+                <li>
+                    {%- for item in step -%}
+                        {{ item | safe }}
+                    {%- endfor -%}
+                </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+</div>

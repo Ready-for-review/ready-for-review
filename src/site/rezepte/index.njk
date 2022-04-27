@@ -1,0 +1,30 @@
+---
+title: Rezepte
+eleventyNavigation:
+  key: Rezepte
+  order: 50
+---
+{% extends "layout/base.njk" %}
+{% block content %}
+    <div class="max-w-screen-lg px-8 mx-auto xl:max-w-screen-xl mt-36">
+        <h1 class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">{{title}}</h1>
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+            {% if collections.recipes.length %}
+                {% for recipe in collections.recipes %}
+                    <article class="p-8 card">
+                        <h3 class="text-2xl font-bold leading-tight tracking-tight text-gray-700">
+                            {{ recipe.data.title }}
+                        </h3>
+                        <p class="my-8 font-medium text-gray-500 sm:my-6">
+                            {{recipe.data.description}}
+                        </p>
+
+                        <p class="my-4 text-right">
+                            <a href="{{ recipe.url | url }}" title="{{ recipe.data.title }}" class="btn">Rezept <span>→</span></a>
+                        </p>
+                    </article>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

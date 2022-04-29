@@ -68,9 +68,9 @@ module.exports = function () {
         },
         {
           tags: ["monitor", "workspace"],
-          name: '2x Dell UltraSharp U2414H (24")',
-          link: "https://www.dell.com/en-us/shop/dell-ultrasharp-24-monitor-u2414h/apd/860-bbcg/monitors-monitor-accessories",
-          description: "Solide Montitore, schon was älter.",
+          name: "2x Dell S2721DGFA 27 Zoll, Gaming Monitor QHD 2560 x 1440",
+          link: "https://www.dell.com/de-de/shop/dell-27-gamingmonitor-s2721dgfa/apd/210-axrq/monitore-und-monitorzubehör",
+          description: "Gute old School Monitor, auch zum Zocken geeignet",
         },
         {
           tags: ["microphone", "podcast"],

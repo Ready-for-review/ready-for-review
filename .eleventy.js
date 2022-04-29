@@ -1,4 +1,5 @@
 require("dotenv").config();
+const eleventyPluginCookLang = require("eleventy-plugin-cooklang");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
 const filters = require("./_11ty/filters");
@@ -60,9 +61,21 @@ module.exports = function (eleventyConfig) {
   Object.keys(shortcodes).forEach(function (shortcode) {
     eleventyConfig.addShortcode(shortcode, shortcodes[shortcode]);
   });
+  eleventyConfig.addNunjucksAsyncShortcode("Image", imageShortcode);
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addNunjucksAsyncShortcode("Image", imageShortcode);
+  eleventyConfig.addPlugin(eleventyPluginCookLang, {
+    limitIngredientDecimals: 2,
+  });
+
+  eleventyConfig.addCollection("recipes", function (collectionApi) {
+    return collectionApi
+      .getAll()
+      .filter((i) => i.data.layout == "templates/recipe.njk")
+      .sort((a, b) => {
+        return a.data.title > b.data.title ? 1 : -1;
+      });
+  });
 
   // make the prime target act like prod
   return {
@@ -71,7 +84,7 @@ module.exports = function (eleventyConfig) {
       output: "src/_site",
       data: `_data`,
     },
-    templateFormats: ["njk", "md", "html"],
+    templateFormats: ["njk", "md", "html", "cook"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
     passthroughFileCopy: true,

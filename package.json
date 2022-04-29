@@ -1,6 +1,6 @@
 {
   "name": "ready-for-review",
-  "version": "2.16.0",
+  "version": "2.18.0",
   "description": "homepage of podcast \"Ready for review\"",
   "keywords": [],
   "homepage": "https://github.com/ready-for-review/ready-for-review#readme",
@@ -46,6 +46,7 @@
     "cssnano": "5.1.7",
     "date-fns": "2.28.0",
     "dotenv": "16.0.0",
+    "eleventy-plugin-cooklang": "^0.0.5",
     "googleapis": "100.0.0",
     "html-minifier": "4.0.0",
     "husky": "7.0.4",

@@ -20,7 +20,7 @@
         :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.after="mobileMenuOpen = false">
         {% set navPages = collections.all | eleventyNavigation %}
         {%- for entry in navPages %}
-        <a class="block py-1 text-gray-600" href="{{ entry.url | url }}" data-title="{{ entry.title }}" {% if
+            <a class="block py-1 text-gray-600" href="{{ entry.url | url }}" data-title="{{ entry.title }}" {% if
             entry.url==page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
         {%- endfor %}
         <a href="https://twitter.com/readyforreview" name="ready for review bei Twitter">
@@ -28,6 +28,12 @@
                 <use xlink:href="#icon-bird"></use>
             </svg>
             <span class="sr-only">Ready for review bei Twitter</span>
+        </a>
+        <a href="https://chaos.social/@readyforreview" name="ready for review bei Mastodon">
+            <svg width="32" height="32" viewBox="0 0 32 32">
+                <use xlink:href="#icon-elephant"></use>
+            </svg>
+            <span class="sr-only">Ready for review bei Mastodon</span>
         </a>
 
         <a href="https://discord.gg/fZbMbwjpjk" name="ready for review auf Discrod">

@@ -12,6 +12,9 @@ module.exports = {
   shortReadableDateFromISO: function (dateStr) {
     return format(parseISO(dateStr), "dd.MM.yyyy");
   },
+  shortReadableDate: function (dateStr) {
+    return format(dateStr, "dd.MM.yyyy");
+  },
   toEpisodeUrl: function (episode) {
     return `${format(parseISO(episode.isoDate), "yyyy/MM/dd")}/${slug(
       episode.title

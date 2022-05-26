@@ -51,11 +51,19 @@
 
   /* button */
   .btn {
-    @apply px-4 py-2 font-bold text-white no-underline bg-maximumBlue  rounded shadow-none;
+    @apply px-4 py-2 font-bold text-white no-underline bg-maximumBlue border-2 border-maximumBlue rounded shadow-none;
   }
 
   .btn:hover {
-    @apply no-underline bg-prussian  shadow-none;
+    @apply no-underline bg-prussian border-prussian shadow-none;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 font-bold text-maximumBlue no-underline bg-white border-2 border-maximumBlue rounded shadow-none;
+  }
+
+  .btn-secondary:hover {
+    @apply no-underline text-prussian border-prussian  shadow-none;
   }
 
   /* teaser*/

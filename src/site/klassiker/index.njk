@@ -24,12 +24,11 @@ eleventyNavigation:
                         </h3>
                         <time class="text-sm text-gray-800" datetime="{{ klassiker.data.date}}">{{ klassiker.data.date | shortReadableDate }}</time>
                         <p class="my-8 font-medium text-gray-500 sm:my-6">
-                            {{klassiker.data.author}}
+                            {{klassiker.data.author}} (<a href="{{klassiker.data.url}}" title="Webseite zum Buch {{ klassiker.data.title }}" class="">Webseite zum Buch</a>)
                         </p>
-                        <p class="my-8 sm:my-6">
-                            <a href="{{klassiker.data.url}}" title="Webseite zum Buch {{ klassiker.data.title }}" class="btn-secondary">Webseite zum Buch <span>→</span></a>
-                            <a href="{{klassiker.data.episodeLink}}" title="Podcast zum Buch {{ klassiker.data.title }}" class="btn">Episode <span>→</span></a>
-                        </p>
+                        <div class="my-8 sm:my-6">
+                            <a href="{{klassiker.data.episodeLink}}" title="Podcast Folge zum Buch {{ klassiker.data.title }}" class="btn">Episode <span>→</span></a>
+                        </div>
                     </article>
                 {% endfor %}
             </div>

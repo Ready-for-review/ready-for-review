@@ -3,8 +3,7 @@ node_modules
 
 
 # build artefacts
-src/_site
-dist
+_site/
 _cache/
 .cache/
 

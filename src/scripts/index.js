@@ -1,7 +1,17 @@
 import "plyr/dist/plyr.css";
 import Plyr from "plyr";
-import Alpine from "alpinejs";
 
 Plyr.setup(".rfr-player");
-window.Alpine = Alpine;
-Alpine.start();
+
+// Mobile menu
+const btn = document.querySelector("button.hamburger-menu");
+const menu = document.querySelector(".mobile-menu");
+const open = document.querySelector(".open");
+const closed = document.querySelector(".closed");
+
+// Add Event Listeners
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+  open.classList.toggle("hidden");
+  closed.classList.toggle("hidden");
+});

@@ -3,8 +3,8 @@ const eleventyPluginCookLang = require("eleventy-plugin-cooklang");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
 const filters = require("./_11ty/filters");
-const transforms = require("./_11ty/transforms");
 const shortcodes = require("./_11ty/shortcodes");
+const { postcss } = require("./_11ty/postcss");
 
 const LOCAL_DIR = "src/_site";
 
@@ -19,6 +19,9 @@ async function imageShortcode(src, alt, sizes = "100vw") {
     formats: ["jpeg", "webp", "png"],
     urlPath: "/images/",
     outputDir: `${LOCAL_DIR}/images/`,
+
+    outputDir: "_site/images",
+    urlPath: "/images",
   });
 
   let lowsrc = metadata.jpeg[0];
@@ -47,20 +50,18 @@ async function imageShortcode(src, alt, sizes = "100vw") {
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setPugOptions({ debug: true });
+  eleventyConfig.addWatchTarget("./src/_includes/styles/tailwind.css");
 
-  eleventyConfig.addPassthroughCopy("./src/images");
+  eleventyConfig.addPassthroughCopy({ "./src/images": "/images" });
 
   Object.keys(filters).forEach(function (filterName) {
     eleventyConfig.addFilter(filterName, filters[filterName]);
   });
 
-  Object.keys(transforms).forEach(function (transformName) {
-    eleventyConfig.addTransform(transformName, transforms[transformName]);
-  });
-
   Object.keys(shortcodes).forEach(function (shortcode) {
     eleventyConfig.addShortcode(shortcode, shortcodes[shortcode]);
   });
+  eleventyConfig.addNunjucksAsyncFilter("postcss", postcss);
   eleventyConfig.addNunjucksAsyncShortcode("Image", imageShortcode);
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -81,10 +82,10 @@ module.exports = function (eleventyConfig) {
   return {
     dir: {
       input: "src/site",
-      output: "src/_site",
+      output: "_site",
       data: `_data`,
     },
-    templateFormats: ["njk", "md", "html", "cook"],
+    templateFormats: ["njk", "md", "html", "cook", "11ty.js"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
     passthroughFileCopy: true,

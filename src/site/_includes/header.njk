@@ -1,53 +1,70 @@
-<header x-data="{ mobileMenuOpen : false }"
-    class="relative flex flex-row flex-wrap justify-between px-6 py-6 bg-white shadow-lg md:items-center md:space-x-4">
+<header
+    class="w-full no-shrink px-6 py-6 bg-white shadow-lg">
     <a class="sr-only" href="#main">Direkt zum Inhalt</a>
-    <a href="/" class="block">
-        <span class="sr-only">ready-for-review.dev</span>
-        <svg class="h-6 md:h-8" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+
+    <nav class="page_section justify-between flex bg-white text-black">
+
+        <a href="/" class="px-2 py-4">
+            <span class="sr-only">ready-for-review.dev</span>
+            <svg class="h-6 md:h-8" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
             alt="ready-for-review.dev Logo" title="ready-for-review.dev Logo">
-            <use xlink:href="#rfr"></use>
-        </svg>
-    </a>
-    <button @click.prevent="mobileMenuOpen = !mobileMenuOpen"
-        class="inline-block w-8 h-8 p-1 text-gray-600 bg-gray-200 md:hidden">
-        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"></path>
-        </svg>
-    </button>
-    <nav class="absolute left-0 z-20 flex-col w-full p-6 pt-0 font-semibold bg-white rounded-lg shadow-md md:relative top-16 md:top-0 md:flex md:flex-row md:space-x-6 md:w-auto md:rounded-none md:shadow-none md:bg-transparent md:p-0"
-        :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.after="mobileMenuOpen = false">
-        {% set navPages = collections.all | eleventyNavigation %}
-        {%- for entry in navPages %}
-            <a class="block py-1 text-gray-600" href="{{ entry.url | url }}" data-title="{{ entry.title }}" {% if
-            entry.url==page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
-        {%- endfor %}
-        <a href="https://twitter.com/readyforreview" name="ready for review bei Twitter">
-            <svg width="32" height="32" viewBox="0 0 32 32">
-                <use xlink:href="#icon-bird"></use>
+                <use xlink:href="#rfr"></use>
             </svg>
-            <span class="sr-only">Ready for review bei Twitter</span>
         </a>
-        <a href="https://chaos.social/@readyforreview" name="ready for review bei Mastodon">
-            <svg width="32" height="32" viewBox="0 0 32 32">
-                <use xlink:href="#icon-elephant"></use>
-            </svg>
-            <span class="sr-only">Ready for review bei Mastodon</span>
-        </a>
+        <div class="flex">
+            <div class="items-center hidden md:flex space-x-1n">
+                {% set navPages = collections.all | eleventyNavigation %}
+                {%- for entry in navPages %}
+                    <a class="py-1 mx-2 text-gray-600 {% if entry.url==page.url %} font-semibold{% endif %}" href="{{ entry.url | url }}" {% if entry.url==page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
+                {%- endfor %}
+            </div>
+            <!-- Mobile menu button -->
+            <div class="flex items-center md:hidden">
+                <button type="button" class="block px-2 hamburger-menu lg:hidden  focus:outline-none focus:text-white"  aria-label="Menü anzeigen">
+                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                        <path class="hidden open" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+                        <path class="closed" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-around hidden md:flex">
+                <a class="py-1 mx-2" href="https://twitter.com/readyforreview" name="ready for review bei Twitter">
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                        <use xlink:href="#icon-bird"></use>
+                    </svg>
+                    <span class="sr-only">Ready for review bei Twitter</span>
+                </a>
+                <a class="py-1 mx-2" href="https://chaos.social/@readyforreview" name="ready for review bei Mastodon">
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                        <use xlink:href="#icon-elephant"></use>
+                    </svg>
+                    <span class="sr-only">Ready for review bei Mastodon</span>
+                </a>
 
-        <a href="https://discord.gg/fZbMbwjpjk" name="ready for review auf Discrod">
-            <svg width="32" height="32" viewBox="0 0 32 32">
-                <use xlink:href="#icon-discord"></use>
-            </svg>
-            <span class="sr-only">Ready for Review Discord</span>
-        </a>
+                <a class="py-1 mx-2" href="https://discord.gg/fZbMbwjpjk" name="ready for review auf Discrod">
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                        <use xlink:href="#icon-discord"></use>
+                    </svg>
+                    <span class="sr-only">Ready for Review Discord</span>
+                </a>
 
-        <a href="https://ready-for-review.podigee.io/feed/mp3" name="ready for review RSS Feed">
-            <svg width="32" height="32" viewBox="0 0 32 32">
-                <use xlink:href="#icon-feed"></use>
-            </svg>
-            <span class="sr-only">Podcast RSS-Feed</span>
-        </a>
+                <a class="py-1 mx-2" href="https://ready-for-review.podigee.io/feed/mp3" name="ready for review RSS Feed">
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                        <use xlink:href="#icon-feed"></use>
+                    </svg>
+                    <span class="sr-only">Podcast RSS-Feed</span>
+                </a>
+            </div>
+
+        </div>
+
     </nav>
+    <!-- mobile menu -->
+    <ul class="hidden mobile-menu md:hidden">
+        {%- for entry in navPages %}
+            <li>
+                <a class="block text-sm px-2 py-4 text-gray-600 {% if entry.url==page.url %} font-semibold{% endif %}" href="{{ entry.url | url }}" {% if entry.url==page.url %} aria-current="page" {% endif %} >{{entry.title}}</a >
+            </li>
+        {%- endfor %}
+    </ul>
 </header>

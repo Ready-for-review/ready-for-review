@@ -42,7 +42,6 @@
     "eleventy-plugin-cooklang": "0.0.5",
     "esbuild": "^0.14.43",
     "googleapis": "101.0.0",
-    "html-minifier": "4.0.0",
     "husky": "8.0.1",
     "jest": "28.1.1",
     "lint-staged": "13.0.1",

@@ -3,7 +3,6 @@ const eleventyPluginCookLang = require("eleventy-plugin-cooklang");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
 const filters = require("./_11ty/filters");
-const transforms = require("./_11ty/transforms");
 const shortcodes = require("./_11ty/shortcodes");
 const { postcss } = require("./_11ty/postcss");
 
@@ -57,10 +56,6 @@ module.exports = function (eleventyConfig) {
 
   Object.keys(filters).forEach(function (filterName) {
     eleventyConfig.addFilter(filterName, filters[filterName]);
-  });
-
-  Object.keys(transforms).forEach(function (transformName) {
-    eleventyConfig.addTransform(transformName, transforms[transformName]);
   });
 
   Object.keys(shortcodes).forEach(function (shortcode) {

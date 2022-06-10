@@ -18,7 +18,7 @@ module.exports = class {
       minify: isProduction,
       outdir: "_site/scripts",
       sourcemap: !isProduction,
-      target: isProduction ? "es6" : "esnext",
+      target: ["chrome58", "firefox57", "safari11", "edge16"],
     });
   }
 };

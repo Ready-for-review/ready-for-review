@@ -36,6 +36,11 @@ layout: layout/base.njk
                 </li>
             {% endfor %}
         </ul>
+        {% if source %}
+            <p>
+                <a href="{{source}}" title="Quelle zu {{title}}">Quelle</a>
+            </p>
+        {% endif %}
 
     </div>
 </div>

@@ -15,9 +15,10 @@
   "author": "Daniel Zenzes",
   "main": "index.js",
   "scripts": {
+    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
+    "build": "ELEVENTY_PRODUCTION=true eleventy",
     "start": "eleventy --serve",
     "debug": "DEBUG=Eleventy* eleventy --serve",
-    "build": "ELEVENTY_PRODUCTION=true eleventy",
     "prepare": "husky install"
   },
   "browserslist": [
@@ -26,7 +27,7 @@
     "> 5%"
   ],
   "devDependencies": {
-    "@11ty/eleventy": "1.0.1",
+    "@11ty/eleventy": "1.0.2",
     "@11ty/eleventy-img": "2.0.1",
     "@11ty/eleventy-navigation": "0.3.4",
     "@11ty/eleventy-plugin-rss": "1.2.0",
@@ -34,7 +35,6 @@
     "autoprefixer": "10.4.8",
     "browserslist": "4.21.3",
     "cross-env": "7.0.3",
-    "css-loader": "6.7.1",
     "cssnano": "5.1.13",
     "date-fns": "2.29.1",
     "dotenv": "16.0.1",

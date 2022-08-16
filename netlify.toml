@@ -1,16 +1,4 @@
 [build]
-  command = "npm run build"
+  command = "pnpm build || ( npm install pnpm && pnpm build )"
   publish = "_site"
 
-[context.production]
-  environment = { NODE_VERSION = "16.15.1" }
-
-[context.deploy-preview]
-  environment = { NODE_VERSION = "16.15.1" }
-
-[dev]
-  command = "npm run dev"
-  publish = "build"
-  port = 3000
-  targetPort = 8080
-  framework = "#custom"

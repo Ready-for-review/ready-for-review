@@ -10,7 +10,7 @@ specifiers:
   browserslist: 4.21.3
   cross-env: 7.0.3
   cssnano: 5.1.13
-  date-fns: 2.29.1
+  date-fns: 2.29.2
   dotenv: 16.0.1
   eleventy-plugin-cooklang: 0.0.5
   esbuild: 0.15.5
@@ -37,7 +37,7 @@ devDependencies:
   browserslist: 4.21.3
   cross-env: 7.0.3
   cssnano: 5.1.13_postcss@8.4.16
-  date-fns: 2.29.1
+  date-fns: 2.29.2
   dotenv: 16.0.1
   eleventy-plugin-cooklang: 0.0.5
   esbuild: 0.15.5
@@ -52,7 +52,7 @@ devDependencies:
   pretty-quick: 3.1.3_prettier@2.7.1
   rss-parser: 3.12.0
   string: 3.3.3
-  tailwindcss: 3.1.8
+  tailwindcss: 3.1.8_postcss@8.4.16
 
 packages:
 
@@ -833,7 +833,7 @@ packages:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
-      tailwindcss: 3.1.8
+      tailwindcss: 3.1.8_postcss@8.4.16
     dev: true
 
   /@trysound/sax/0.2.0:
@@ -1828,8 +1828,8 @@ packages:
     resolution: {integrity: sha512-TDDkd5DkaZxZFM8p+1I3yAlvM3rSr1wbrOliG4yJiwinMZN8z/iGL7BTlDkrJcYTmgUSb4ywVCc3ZaUtOtC76w==}
     dev: true
 
-  /date-fns/2.29.1:
-    resolution: {integrity: sha512-dlLD5rKaKxpFdnjrs+5azHDFOPEu4ANy/LTh04A1DTzMM7qoajmKCBc8pkKRFT41CNzw+4gQh79X5C+Jq27HAw==}
+  /date-fns/2.29.2:
+    resolution: {integrity: sha512-0VNbwmWJDS/G3ySwFSJA3ayhbURMTJLtwM2DTxf9CWondCnh6DTNlO9JgRSq6ibf4eD0lfMJNBxUdEAHHix+bA==}
     engines: {node: '>=0.11'}
     dev: true
 
@@ -5948,10 +5948,12 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /tailwindcss/3.1.8:
+  /tailwindcss/3.1.8_postcss@8.4.16:
     resolution: {integrity: sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g==}
     engines: {node: '>=12.13.0'}
     hasBin: true
+    peerDependencies:
+      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3

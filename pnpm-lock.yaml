@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@11ty/eleventy': 1.0.2
   '@11ty/eleventy-img': 2.0.1
-  '@11ty/eleventy-navigation': 0.3.4
+  '@11ty/eleventy-navigation': 0.3.5
   '@11ty/eleventy-plugin-rss': 1.2.0
   '@tailwindcss/typography': 0.5.4
   autoprefixer: 10.4.8
@@ -30,7 +30,7 @@ specifiers:
 devDependencies:
   '@11ty/eleventy': 1.0.2
   '@11ty/eleventy-img': 2.0.1
-  '@11ty/eleventy-navigation': 0.3.4
+  '@11ty/eleventy-navigation': 0.3.5
   '@11ty/eleventy-plugin-rss': 1.2.0
   '@tailwindcss/typography': 0.5.4_tailwindcss@3.1.8
   autoprefixer: 10.4.8_postcss@8.4.16
@@ -86,8 +86,8 @@ packages:
       - supports-color
     dev: true
 
-  /@11ty/eleventy-navigation/0.3.4:
-    resolution: {integrity: sha512-Hf4Q1Igb0Vza2wW3rnM1AL6jaJ/APuk8OACUP6/sL1n6rHpf6N5iekkgGv7dx4LRzxLWNLwg3bsgYR+DcLLXOw==}
+  /@11ty/eleventy-navigation/0.3.5:
+    resolution: {integrity: sha512-4aKW5aIQDFed8xs1G1pWcEiFPcDSwZtA4IH1eERtoJ+Xy+/fsoe0pzbDmw84bHZ9ACny5jblENhfZhcCxklqQw==}
     dependencies:
       dependency-graph: 0.11.0
     dev: true

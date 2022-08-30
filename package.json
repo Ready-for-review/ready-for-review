@@ -37,7 +37,7 @@
     "cross-env": "7.0.3",
     "cssnano": "5.1.13",
     "date-fns": "2.29.2",
-    "dotenv": "16.0.1",
+    "dotenv": "16.0.2",
     "eleventy-plugin-cooklang": "0.0.5",
     "esbuild": "0.15.6",
     "googleapis": "105.0.0",

@@ -40,7 +40,7 @@
     "dotenv": "16.0.2",
     "eleventy-plugin-cooklang": "0.0.5",
     "esbuild": "0.15.7",
-    "googleapis": "105.0.0",
+    "googleapis": "107.0.0",
     "husky": "8.0.1",
     "jest": "28.1.3",
     "lint-staged": "13.0.3",

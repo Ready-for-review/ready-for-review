@@ -10,7 +10,7 @@ specifiers:
   browserslist: 4.21.3
   cross-env: 7.0.3
   cssnano: 5.1.13
-  date-fns: 2.29.2
+  date-fns: 2.29.3
   dotenv: 16.0.2
   eleventy-plugin-cooklang: 0.0.5
   esbuild: 0.15.7
@@ -37,7 +37,7 @@ devDependencies:
   browserslist: 4.21.3
   cross-env: 7.0.3
   cssnano: 5.1.13_postcss@8.4.16
-  date-fns: 2.29.2
+  date-fns: 2.29.3
   dotenv: 16.0.2
   eleventy-plugin-cooklang: 0.0.5
   esbuild: 0.15.7
@@ -1843,8 +1843,8 @@ packages:
     resolution: {integrity: sha512-TDDkd5DkaZxZFM8p+1I3yAlvM3rSr1wbrOliG4yJiwinMZN8z/iGL7BTlDkrJcYTmgUSb4ywVCc3ZaUtOtC76w==}
     dev: true
 
-  /date-fns/2.29.2:
-    resolution: {integrity: sha512-0VNbwmWJDS/G3ySwFSJA3ayhbURMTJLtwM2DTxf9CWondCnh6DTNlO9JgRSq6ibf4eD0lfMJNBxUdEAHHix+bA==}
+  /date-fns/2.29.3:
+    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
     engines: {node: '>=0.11'}
     dev: true
 

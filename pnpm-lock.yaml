@@ -6,7 +6,7 @@ specifiers:
   '@11ty/eleventy-navigation': 0.3.5
   '@11ty/eleventy-plugin-rss': 1.2.0
   '@tailwindcss/typography': 0.5.7
-  autoprefixer: 10.4.10
+  autoprefixer: 10.4.11
   browserslist: 4.21.3
   cross-env: 7.0.3
   cssnano: 5.1.13
@@ -33,7 +33,7 @@ devDependencies:
   '@11ty/eleventy-navigation': 0.3.5
   '@11ty/eleventy-plugin-rss': 1.2.0
   '@tailwindcss/typography': 0.5.7_tailwindcss@3.1.8
-  autoprefixer: 10.4.10_postcss@8.4.16
+  autoprefixer: 10.4.11_postcss@8.4.16
   browserslist: 4.21.3
   cross-env: 7.0.3
   cssnano: 5.1.13_postcss@8.4.16
@@ -1135,8 +1135,8 @@ packages:
     resolution: {integrity: sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==}
     dev: true
 
-  /autoprefixer/10.4.10_postcss@8.4.16:
-    resolution: {integrity: sha512-nMaiDARyp1e74c8IeAXkr+BmFKa8By4Zak7tyaNPF09Iu39WFpNXOWrVirmXjKr+5cOyERwvtbMOLYz6iBJYgQ==}
+  /autoprefixer/10.4.11_postcss@8.4.16:
+    resolution: {integrity: sha512-5lHp6DgRodxlBLSkzHOTcufWFflH1ewfy2hvFQyjrblBFlP/0Yh4O/Wrg4ow8WRlN3AAUFFLAQwX8hTptzqVHg==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:

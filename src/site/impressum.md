@@ -16,8 +16,8 @@ Telefon: 0176/70056222<br />
 E-Mail: mail (at) sandra-parsick.de
 
 Daniel Zenzes<br />
-Hauptstraße 68<br />
-42651 Solingen<br />
+Sassenfeld 61<br />
+41334 Nettetal<br />
 
 ### Kontakt
 

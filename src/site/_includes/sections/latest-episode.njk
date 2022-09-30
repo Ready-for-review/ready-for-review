@@ -1,15 +1,15 @@
 {%- from "components/macro.njk" import player -%}
 <div>
   {% if episodes.items.length and episodes.items.length > 0 %}
-  <h2 class="px-8 mb-3 text-2xl font-semibold tracking-wide uppercase text-prussian page_section sm:leading-snug">
+    <h2 class="px-8 mb-3 text-2xl font-semibold tracking-wide uppercase text-prussian page_section sm:leading-snug">
     Aktuelle Folge
   </h2>
-  <section class="py-20 shadow-lg gradient sm:py-16">
-    <section class="page_section">
-      {{ player(episodes.items[0]) }}
+    <section class="py-20 shadow-lg gradient sm:py-16">
+      <section class="page_section">
+        {{ player(episodes.items[0], "rfr") }}
+      </section>
     </section>
-  </section>
-  <p class="mt-4 text-right page_section">
+    <p class="mt-4 text-right page_section">
     Alle Folgen findet ihr in der
     <a href="/episoden" title="Alle Podcast Episoden">Episoden</a>-&Uuml;bersicht.
   </p>

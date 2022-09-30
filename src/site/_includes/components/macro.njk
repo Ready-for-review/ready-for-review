@@ -1,4 +1,4 @@
-{% macro player(episode)%}
+{% macro player(episode, source)%}
     <div class="flex items-center justify-center px-8">
         <div class="flex card" >
             <div class="w-full p-8">
@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <audio class="w-full my-4 rfr-player" controls preload="metadata">
-                    <source type="audio/mpeg" src="{{episode.enclosure.url}}">
+                    <source type="audio/mpeg" src="{{episode.enclosure.url}}&source={{source}}">
                 </audio>
             </div>
         </div>

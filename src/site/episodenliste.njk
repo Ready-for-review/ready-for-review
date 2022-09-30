@@ -16,7 +16,7 @@ tags: ['episode']
       <article>
 
         <audio class="w-full my-4 bg-gray-500 rounded shadow rfr-player" controls preload="metadata">
-          <source type="audio/mpeg" src="{{item.enclosure.url}}">
+          <source type="audio/mpeg" src="{{item.enclosure.url}}&source=rfr_details">
         </audio>
         <div class="content">
           {% episodeContent item %}

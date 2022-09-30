@@ -19,11 +19,23 @@ module.exports = async function () {
         "https://ready-for-review.podigee.io/feed/mp3"
       );
       if (loadedEpisodes) {
+        const items = loadedEpisodes.items.map((episode) => {
+          return {
+            ...episode,
+            enclosure: {
+              ...episode.enclosure,
+              url: episode.enclosure.url.replace("&source=feed", ""),
+            },
+          };
+        });
+
         const episodes = {
           lastFetched: new Date().toISOString(),
           ...loadedEpisodes,
+          items,
         };
         cacheHandler.writeToCache(episodes);
+
         return episodes;
       }
     } catch (error) {

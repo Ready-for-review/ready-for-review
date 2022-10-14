@@ -19,7 +19,8 @@
     "build": "ELEVENTY_PRODUCTION=true eleventy",
     "start": "eleventy --serve",
     "debug": "DEBUG=Eleventy* eleventy --serve",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format": "prettier --write ."
   },
   "browserslist": [
     "defaults",

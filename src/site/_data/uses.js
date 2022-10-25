@@ -36,9 +36,9 @@ module.exports = function () {
         },
         {
           tags: ["webcam"],
-          name: "Papalook Autofokus Webcam 1080P mit Mikrofon, AF925",
-          link: "https://www.papalook.com/products/webcam-1080p-full-hd-papalook-af925-computer-camera-with-microphone-",
-          description: "Gute, günstige Webcam.",
+          name: "Razer Kiyo",
+          link: "https://www.razer.com/de-de/streaming-cameras/razer-kiyo",
+          description: "HD Webcam mit Licht",
         },
         {
           tags: ["dock", "workspace"],

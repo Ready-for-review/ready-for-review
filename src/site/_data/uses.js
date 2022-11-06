@@ -123,6 +123,12 @@ module.exports = function () {
             "Solide Maus. Gerade der Support für mehrere Geräte gefällt mir und macht die Arbeit leichter.",
         },
         {
+          tags: ["mouse", "workspace"],
+          name: "Magic Trackpad (schwarz)",
+          link: "https://www.apple.com/de/shop/product/MMMP3Z/A/magic-trackpad-schwarze-multi-touch-oberfl%C3%A4che",
+          description: "Meine Standard-Maus, wenn ich arbeite",
+        },
+        {
           tags: ["screen", "workspace"],
           name: 'LC-M27-QHD-165 - 27"',
           link: "https://www.lc-power.com/produkte/pc-monitore/flachbildschirme/lc-m27-qhd-165/",

@@ -23,9 +23,9 @@ module.exports = function () {
         },
         {
           tags: ["mouse", "workspace"],
-          name: "Logitech MX Master",
-          link: "https://support.logi.com/hc/de/articles/360025265054--Produktgalerie-MX-Master-Wireless-Mouse",
-          description: "Schöne, ergonomische Bluetooth-Maus.",
+          name: "Logitech G502 Hero",
+          link: "https://www.logitechg.com/de-de/products/gaming-mice/g502-hero-gaming-mouse.910-005470.html",
+          description: "Gute, günstige Gaming Mouse",
         },
         {
           tags: ["mouse"],
@@ -121,6 +121,12 @@ module.exports = function () {
           link: "https://www.logitech.com/de-de/products/mice/mx-master-3.910-005695.html",
           description:
             "Solide Maus. Gerade der Support für mehrere Geräte gefällt mir und macht die Arbeit leichter.",
+        },
+        {
+          tags: ["mouse", "workspace"],
+          name: "Magic Trackpad (schwarz)",
+          link: "https://www.apple.com/de/shop/product/MMMP3Z/A/magic-trackpad-schwarze-multi-touch-oberfl%C3%A4che",
+          description: "Meine Standard-Maus, wenn ich arbeite",
         },
         {
           tags: ["screen", "workspace"],

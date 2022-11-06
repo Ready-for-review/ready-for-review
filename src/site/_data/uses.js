@@ -23,9 +23,9 @@ module.exports = function () {
         },
         {
           tags: ["mouse", "workspace"],
-          name: "Logitech MX Master",
-          link: "https://support.logi.com/hc/de/articles/360025265054--Produktgalerie-MX-Master-Wireless-Mouse",
-          description: "Schöne, ergonomische Bluetooth-Maus.",
+          name: "Logitech G502 Hero",
+          link: "https://www.logitechg.com/de-de/products/gaming-mice/g502-hero-gaming-mouse.910-005470.html",
+          description: "Gute, günstige Gaming Mouse",
         },
         {
           tags: ["mouse"],

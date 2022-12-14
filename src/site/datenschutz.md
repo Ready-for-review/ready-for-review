@@ -19,8 +19,8 @@ Münchener Str. 42c<br />
 41472 Neuss
 
 Daniel Zenzes<br/>
-Hauptstraße 68<br />
-42651 Solingen
+Sassenfeld 61<br />
+41334 Nettetal
 
 **Vertretungsberechtigte Personen:** Sandra Parsick und Daniel Zenzes
 

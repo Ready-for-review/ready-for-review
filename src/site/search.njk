@@ -1,0 +1,13 @@
+---
+title: Suche
+
+---
+{% extends "layout/base.njk" %}
+{%block content %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+    <script type="text/javascript">
+        algoliasearchNetlify({appId: '79330M8CF4', apiKey: 'a65019700af3bcb233d509e09194a3fc', siteId: 'bcee87cb-da03-4191-9706-395f3afd5ec5', branch: 'main', selector: 'div#search'});
+    </script>
+    <div id="search"></div>
+    {%endblock%}

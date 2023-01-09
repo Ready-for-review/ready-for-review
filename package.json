@@ -40,7 +40,7 @@
     "date-fns": "2.29.3",
     "dotenv": "16.0.3",
     "eleventy-plugin-cooklang": "0.0.5",
-    "esbuild": "0.16.15",
+    "esbuild": "0.16.16",
     "googleapis": "110.0.0",
     "husky": "8.0.3",
     "jest": "29.3.1",

@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@11ty/eleventy': 1.0.2
-  '@11ty/eleventy-img': 2.0.1
+  '@11ty/eleventy-img': 3.0.0
   '@11ty/eleventy-navigation': 0.3.5
   '@11ty/eleventy-plugin-rss': 1.2.0
   '@tailwindcss/typography': 0.5.9
@@ -29,7 +29,7 @@ specifiers:
 
 devDependencies:
   '@11ty/eleventy': 1.0.2
-  '@11ty/eleventy-img': 2.0.1
+  '@11ty/eleventy-img': 3.0.0
   '@11ty/eleventy-navigation': 0.3.5
   '@11ty/eleventy-plugin-rss': 1.2.0
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
@@ -73,14 +73,16 @@ packages:
       - supports-color
     dev: true
 
-  /@11ty/eleventy-img/2.0.1:
-    resolution: {integrity: sha512-l30E+TszoovF/NK0WRc1oQoI42VxmYyM3O9cPiS20alSBHucX92RFdwl9HMDyRoh1g+App3+PomFIa5FKkb1Dw==}
+  /@11ty/eleventy-img/3.0.0:
+    resolution: {integrity: sha512-qMotOn0ywxwuRd2zF2gNfJSwVQNbSBdzVQ2N1UPQeiXNZrxPGIitfraSf/OfWJbgGI9Cje12AtXdzr3Qc6wctw==}
+    engines: {node: '>=14.15.0'}
     dependencies:
       '@11ty/eleventy-fetch': 3.0.0
       debug: 4.3.4
+      entities: 4.4.0
       image-size: 1.0.2
       p-queue: 6.6.2
-      sharp: 0.30.7
+      sharp: 0.31.3
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -2334,6 +2336,11 @@ packages:
     engines: {node: '>=0.12'}
     dev: true
 
+  /entities/4.4.0:
+    resolution: {integrity: sha512-oYp7156SP8LkeGD0GF85ad1X9Ai79WtRsZ2gxJqtBuzH+98YUV6jkHEKlZkMbcrjJjIVJNIDP/3WL9wQkoPbWA==}
+    engines: {node: '>=0.12'}
+    dev: true
+
   /errno/0.1.8:
     resolution: {integrity: sha512-dJ6oBr5SQ1VSd9qkk7ByRgb/1SH4JZjCHSW/mr63/QcXO9zLVxvJ6Oy13nio03rxpSnVDDjFor75SjVeZWPW/A==}
     hasBin: true
@@ -3675,7 +3682,7 @@ packages:
       jest-resolve: 29.4.1
       jest-snapshot: 29.4.1
       jest-util: 29.4.1
-      semver: 7.3.7
+      semver: 7.3.8
       slash: 3.0.0
       strip-bom: 4.0.0
     transitivePeerDependencies:
@@ -3709,7 +3716,7 @@ packages:
       jest-util: 29.4.1
       natural-compare: 1.4.0
       pretty-format: 29.4.1
-      semver: 7.3.7
+      semver: 7.3.8
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4264,7 +4271,7 @@ packages:
     resolution: {integrity: sha512-YPG3Co0luSu6GwOBsmIdGW6Wx0NyNDLg/hriIyDllVsNwnI6UeqaWShxC3lbH4LtEQUgoLP3XR1ndXiDAWvmRw==}
     engines: {node: '>=10'}
     dependencies:
-      semver: 7.3.7
+      semver: 7.3.8
     dev: true
 
   /node-addon-api/5.0.0:
@@ -5473,6 +5480,14 @@ packages:
       lru-cache: 6.0.0
     dev: true
 
+  /semver/7.3.8:
+    resolution: {integrity: sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      lru-cache: 6.0.0
+    dev: true
+
   /send/0.16.2:
     resolution: {integrity: sha512-E64YFPUssFHEFBvpbbjr44NCLtI1AohxQ8ZSiJjQLskAdKuriYEP6VyGEsRDH8ScozGpkaX1BGvhanqCwkcEZw==}
     engines: {node: '>= 0.8.0'}
@@ -5533,16 +5548,16 @@ packages:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
     dev: true
 
-  /sharp/0.30.7:
-    resolution: {integrity: sha512-G+MY2YW33jgflKPTXXptVO28HvNOo9G3j0MybYAHeEmby+QuD2U98dT6ueht9cv/XDqZspSpIhoSW+BAKJ7Hig==}
-    engines: {node: '>=12.13.0'}
+  /sharp/0.31.3:
+    resolution: {integrity: sha512-XcR4+FCLBFKw1bdB+GEhnUNXNXvnt0tDo4WsBsraKymuo/IAuPuCBVAL2wIkUw2r/dwFW5Q5+g66Kwl2dgDFVg==}
+    engines: {node: '>=14.15.0'}
     requiresBuild: true
     dependencies:
       color: 4.2.3
       detect-libc: 2.0.1
       node-addon-api: 5.0.0
       prebuild-install: 7.1.1
-      semver: 7.3.7
+      semver: 7.3.8
       simple-get: 4.0.1
       tar-fs: 2.1.1
       tunnel-agent: 0.6.0

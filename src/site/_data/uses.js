@@ -73,17 +73,29 @@ module.exports = function () {
           description: "Gute old School Monitor, auch zum Zocken geeignet",
         },
         {
-          tags: ["microphone", "podcast"],
+          tags: ["microphone", "workspace"],
           name: "Blue Yeti mit RADIUS III Dämpfer und Blue Compass Armständer",
           link: "https://www.bluemic.com/de-de/products/yeti/",
           description: "USB Microphone mit gutem Preis-Leistungsverhältnis",
         },
         {
-          tags: ["headphone", "podcast", "workspace"],
+          tags: ["headphone", "workspace"],
           name: "Sony WH-1000X M3",
           link: "https://www.sony.de/electronics/kopfband-kopfhoerer/wh-1000xm3",
           description:
             "Super bequeme Noise-Chanceling Kopfhörer, die den Namen verdienen. Wireless via Bluetooth.",
+        },
+        {
+          tags: ["headset", "podcast"],
+          name: "Beyerdynamic DT 797 PV",
+          link: "https://www.beyerdynamic.de/dt-797.html",
+          description: "Wohl der Standard Headset unter dem Podcaster",
+        },
+        {
+          tags: ["audio-interface", "podcast"],
+          name: "Focusrite Scarlett 2i2",
+          link: "https://focusrite.com/en/usb-audio-interface/scarlett/scarlett-2i2",
+          description: "Audio Interface mit gutem Preis-Leistungsverhältnis",
         },
       ],
     },

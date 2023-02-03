@@ -89,7 +89,7 @@ module.exports = function () {
           tags: ["headset", "podcast"],
           name: "Beyerdynamic DT 797 PV",
           link: "https://www.beyerdynamic.de/dt-797.html",
-          description: "Wohl der Standard Headset unter dem Podcaster",
+          description: "Wohl das Standard-Headset unter den Podcastern",
         },
         {
           tags: ["audio-interface", "podcast"],

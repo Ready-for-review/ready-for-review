@@ -111,7 +111,7 @@ module.exports = function () {
           tags: ["notebook"],
           name: 'MacBook Pro (14", 2021)',
           link: "https://support.apple.com/kb/SP854",
-          description: "Für die Arbeit setze ich auf das aktuelle MacBook Pro.",
+          description: "Für die Arbeit setze ich auf ein MacBook Pro.",
         },
         {
           tags: ["keyboard", "workspace"],
@@ -155,9 +155,10 @@ module.exports = function () {
         },
         {
           tags: ["headset", "podcast"],
-          name: "Superlux HMC 660",
+          name: "Beyerdynamics DT 297",
           description:
-            "Perfekt für den Podcast: niedriger Preis und sehr gute Qualität. Inzwischen kann man wohl problemlos zum Nachfolger greifen.",
+            "Nachdem mein altes Superlux HMC 660 in Folge 44 den Geist aufgegeben hat, nutze ich ein Beyerdynamics DT 297",
+          link: "https://www.beyerdynamic.de/dt-297.html",
         },
         {
           tags: ["recorder", "podcast"],

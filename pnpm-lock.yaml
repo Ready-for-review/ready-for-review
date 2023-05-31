@@ -36,8 +36,8 @@ devDependencies:
     specifier: 2.30.0
     version: 2.30.0
   dotenv:
-    specifier: 16.1.0
-    version: 16.1.0
+    specifier: 16.1.1
+    version: 16.1.1
   eleventy-plugin-cooklang:
     specifier: 0.0.5
     version: 0.0.5
@@ -2069,8 +2069,8 @@ packages:
       domhandler: 5.0.3
     dev: true
 
-  /dotenv@16.1.0:
-    resolution: {integrity: sha512-XiwP/4cqatBNLEnKe169vPZCrovUmYngyVA4DgZ3uIVLJfZaBgr4uT0EF2TrEQqgWDDlekGo0muEYme5SR78Ww==}
+  /dotenv@16.1.1:
+    resolution: {integrity: sha512-UGmzIqXU/4b6Vb3R1Vrfd/4vGgVlB+mO+vEixOdfRhLeppkyW2BMhuK7TL8d0el+q9c4lW9qK2wZYhNLFhXYLA==}
     engines: {node: '>=12'}
     dev: true
 

@@ -34,7 +34,7 @@
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@tailwindcss/typography": "0.5.9",
     "autoprefixer": "10.4.14",
-    "browserslist": "4.21.8",
+    "browserslist": "4.21.9",
     "cross-env": "7.0.3",
     "cssnano": "6.0.1",
     "date-fns": "2.30.0",

@@ -17,7 +17,7 @@ module.exports = {
   },
   toEpisodeUrl: function (episode) {
     return `${format(parseISO(episode.isoDate), "yyyy/MM/dd")}/${slug(
-      episode.title
+      episode.title,
     )}`;
   },
 };

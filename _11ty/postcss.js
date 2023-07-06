@@ -31,7 +31,7 @@ module.exports = {
       .process(cssCode)
       .then(
         (r) => done(null, r.css),
-        (e) => done(e, null)
+        (e) => done(e, null),
       );
   },
 };

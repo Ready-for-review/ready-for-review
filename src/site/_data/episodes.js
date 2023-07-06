@@ -16,7 +16,7 @@ module.exports = async function () {
     let parser = new Parser();
     try {
       const loadedEpisodes = await parser.parseURL(
-        "https://ready-for-review.podigee.io/feed/mp3"
+        "https://ready-for-review.podigee.io/feed/mp3",
       );
       if (loadedEpisodes) {
         const items = loadedEpisodes.items.map((episode) => {

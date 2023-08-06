@@ -13,7 +13,14 @@ module.exports = function () {
           name: "Sharkoon Purewriter RGB mit Khalil Red Switches und US-ANSI-Layout (EURKey-Layout)",
           link: "https://de.sharkoon.com/product/PWRGB",
           description:
-            "Meine mechanische Tastatur mit Low Profile und Blinki Blinki.",
+            "Meine erste mechanische Tastatur mit Low Profile und Blinki Blinki nach langer Zeit.",
+        },
+        {
+          tags: ["keyboard", "workspace"],
+          name: "Keychron K3 mit Brown Switches Hot Swap und US-ANSI-Layout (EURKey-Layout)",
+          link: "https://www.keychron.com/products/keychron-k3-wireless-mechanical-keyboard",
+          description:
+            "Meine aktuelle mechanische Tastatur mit Low Profile und Blinki Blinki.",
         },
         {
           tags: ["keyboard"],

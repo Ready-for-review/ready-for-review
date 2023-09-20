@@ -33,7 +33,7 @@
     "@11ty/eleventy-navigation": "0.3.5",
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@tailwindcss/typography": "0.5.10",
-    "autoprefixer": "10.4.15",
+    "autoprefixer": "10.4.16",
     "browserslist": "4.21.10",
     "cross-env": "7.0.3",
     "cssnano": "6.0.1",

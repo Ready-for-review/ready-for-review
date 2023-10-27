@@ -9,8 +9,8 @@ devDependencies:
     specifier: 2.0.1
     version: 2.0.1
   '@11ty/eleventy-img':
-    specifier: 3.1.1
-    version: 3.1.1
+    specifier: 3.1.6
+    version: 3.1.6
   '@11ty/eleventy-navigation':
     specifier: 0.3.5
     version: 0.3.5
@@ -119,8 +119,8 @@ packages:
       - supports-color
     dev: true
 
-  /@11ty/eleventy-img@3.1.1:
-    resolution: {integrity: sha512-0UxJ5vSYZD/7bdS237j5d4YY5Nyv280/YJo+gMAE6ASeMn/FZiv3iXc1jf2extSSzmdsW3TjWHf1oojs6WSYrg==}
+  /@11ty/eleventy-img@3.1.6:
+    resolution: {integrity: sha512-tARr0DvoYzeIdasUZ9n8sViK68A2mKQa2En2j+eAad9bpdz27D4gyQ1oihP0ran1LwXkV6bokDKjTRNcuIiODg==}
     engines: {node: '>=14.15.0'}
     dependencies:
       '@11ty/eleventy-fetch': 4.0.0
@@ -2036,7 +2036,7 @@ packages:
     dependencies:
       domelementtype: 2.3.0
       domhandler: 5.0.3
-      entities: 4.4.0
+      entities: 4.5.0
     dev: true
 
   /domelementtype@2.3.0:
@@ -2140,11 +2140,6 @@ packages:
 
   /entities@3.0.1:
     resolution: {integrity: sha512-WiyBqoomrwMdFG1e0kqvASYfnlb0lp8M5o5Fw2OFq1hNZxxcNk8Ik0Xm7LxzBhuidnZB/UtBqVCgUz3kBOP51Q==}
-    engines: {node: '>=0.12'}
-    dev: true
-
-  /entities@4.4.0:
-    resolution: {integrity: sha512-oYp7156SP8LkeGD0GF85ad1X9Ai79WtRsZ2gxJqtBuzH+98YUV6jkHEKlZkMbcrjJjIVJNIDP/3WL9wQkoPbWA==}
     engines: {node: '>=0.12'}
     dev: true
 

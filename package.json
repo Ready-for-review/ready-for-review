@@ -51,7 +51,7 @@
     "prettier": "3.1.1",
     "rss-parser": "3.13.0",
     "string": "3.3.3",
-    "tailwindcss": "3.3.7"
+    "tailwindcss": "3.4.0"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"

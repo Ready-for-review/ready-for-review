@@ -5,6 +5,7 @@ const Image = require("@11ty/eleventy-img");
 const filters = require("./_11ty/filters");
 const shortcodes = require("./_11ty/shortcodes");
 const { postcss } = require("./_11ty/postcss");
+const { execSync } = require("child_process");
 
 const LOCAL_DIR = "src/_site";
 
@@ -76,6 +77,12 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => {
         return a.data.title > b.data.title ? 1 : -1;
       });
+  });
+
+  eleventyConfig.on("eleventy.after", () => {
+    execSync(`npx pagefind --site _site --glob \"**/*.html\"`, {
+      encoding: "utf-8",
+    });
   });
 
   // make the prime target act like prod

@@ -1,0 +1,35 @@
+---
+title: Suche
+eleventyNavigation:
+  key: Suche
+  order: 70
+---
+{% extends "layout/base.njk" %}
+{%block head %}
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --pagefind-ui-primary: #eeeeee;
+                --pagefind-ui-text: #eeeeee;
+                --pagefind-ui-background: #152028;
+                --pagefind-ui-border: #152028;
+                --pagefind-ui-tag: #152028;
+            }
+        }
+    </style>
+
+    {%endblock%}
+    {%block content %}
+        <div class="page_section mt-36">
+            <h1
+    class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">
+                {{title}}</h1>
+            <div class="p-8 my-12 card">
+                <div id="search" class="search"></div>
+            </div>
+        </div>
+        <script src="/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
+
+        {%endblock%}

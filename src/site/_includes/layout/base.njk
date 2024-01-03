@@ -36,6 +36,20 @@
         <meta name="theme-color" content="#ffffff"/>
         <link rel="alternate" type="application/rss+xml" title="Ready for review" href="https://ready-for-review.podigee.io/feed/mp3"/>
         <meta name="apple-itunes-app" content="app-id=1535026156"/>
+
+        <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+
+        <style>
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --pagefind-ui-primary: #eeeeee;
+                    --pagefind-ui-text: #eeeeee;
+                    --pagefind-ui-background: #152028;
+                    --pagefind-ui-border: #152028;
+                    --pagefind-ui-tag: #152028;
+                }
+            }
+        </style>
         {% block head %}{% endblock %}
     </head>
     <body class="bg-gray-50">
@@ -43,7 +57,7 @@
         <div class="flex flex-col justify-between h-screen">
             {% include "header.njk" %}
 
-            <main id="main mb-auto">
+            <main id="main mb-auto" data-pagefind-body>
                 {% block jumbo %}{% endblock %}
                 {% block content %}
                     {{ content | safe }}

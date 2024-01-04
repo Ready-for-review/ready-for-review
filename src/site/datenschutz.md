@@ -1,6 +1,7 @@
 ---
 title: Datenschutzerklärung
 layout: layout/content.njk
+nosearch: true
 ---
 
 ## Einleitung

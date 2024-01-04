@@ -1,6 +1,7 @@
 ---
 title: Impressum
 layout: layout/content.njk
+nosearch: true
 ---
 
 ## Angaben gemäß § 5 TMG:

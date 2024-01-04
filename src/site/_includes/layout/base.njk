@@ -57,7 +57,7 @@
         <div class="flex flex-col justify-between h-screen">
             {% include "header.njk" %}
 
-            <main id="main mb-auto" data-pagefind-body>
+            <main id="main mb-auto"{% if not nosearch %}data-pagefind-body{%endif%}>
                 {% block jumbo %}{% endblock %}
                 {% block content %}
                     {{ content | safe }}

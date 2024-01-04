@@ -6,4 +6,5 @@ date: 2022-09-05
 episodeLink: /2022/09/05/rfr030-zahlenwirrwarr/
 tags: klassiker
 layout: layout/content.njk
+isbn: "9780134686073"
 ---

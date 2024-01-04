@@ -17,22 +17,29 @@ nosearch: true
         </section>
 
         {% if collections.klassiker.length %}
-            <div class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
                 {% for klassiker in collections.klassiker %}
-                    <article class="p-8 mb-8 card">
-                        <h3 class="text-2xl font-bold leading-tight tracking-tight text-gray-700">
-                            {{ klassiker.data.title }}
-                        </h3>
-                        <time class="text-sm text-gray-800" datetime="{{ klassiker.data.date}}">{{ klassiker.data.date | shortReadableDate }}</time>
-                        <p class="my-8 font-medium text-gray-500 sm:my-6">
-                            {{klassiker.data.author}} (<a href="{{klassiker.data.url}}" title="Webseite zum Buch {{ klassiker.data.title }}" class="">Webseite zum Buch</a>)
+                    <article class="mb-8 card flex ">
+                        {% if klassiker.data.isbn %}
+                            <img class="w-auto h-auto rounded-l-lg mx-auto" src="https://covers.openlibrary.org/b/isbn/{{klassiker.data.isbn}}-M.jpg"/>
+                        {%endif %}
+                        <section class="p-8">
+                            <h3 class="text-2xl font-bold leading-tight tracking-tight text-gray-700">
+                                {{ klassiker.data.title }}
+                            </h3>
+                            <time class="text-sm text-gray-800" datetime="{{ klassiker.data.date}}">{{ klassiker.data.date | shortReadableDate }}</time>
+                            <p class="my-8 font-medium text-gray-500 sm:my-6">
+                                {{klassiker.data.author}} (<a href="{{klassiker.data.url}}" title="Webseite zum Buch {{ klassiker.data.title }}" class="">Webseite zum Buch</a>
+                                {% if klassiker.data.isbn %},&nbsp;<a href="https://openlibrary.org/isbn/{{klassiker.data.isbn}}" title="{{ klassiker.data.title }} bei OpenLibrary" class="">OpenLibrary</a>{%endif%})
                         </p>
-                        <div class="my-8 sm:my-6">
-                            <a href="{{klassiker.data.episodeLink}}" title="Podcast Folge zum Buch {{ klassiker.data.title }}" class="btn">Episode <span>→</span></a>
-                        </div>
-                    </article>
-                {% endfor %}
-            </div>
-        {% endif %}
-    </div>
-{% endblock %}
+
+                                <div class="my-8 sm:my-6">
+                                    <a href="{{klassiker.data.episodeLink}}" title="Podcast Folge zum Buch {{ klassiker.data.title }}" class="btn">Episode <span>→</span></a>
+                                </div>
+                            </section>
+                        </article>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    {% endblock %}

@@ -6,4 +6,5 @@ date: 2022-02-20
 episodeLink: /2022/02/20/rfr018-follow-ab-18/
 tags: klassiker
 layout: layout/content.njk
+isbn: "9780134434421"
 ---

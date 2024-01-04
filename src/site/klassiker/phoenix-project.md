@@ -6,4 +6,5 @@ date: 2022-05-25
 episodeLink: /2022/05/25/rfr024-phonix-aus-der-asche/
 tags: klassiker
 layout: layout/content.njk
+isbn: "9781942788294"
 ---

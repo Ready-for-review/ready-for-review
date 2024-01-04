@@ -6,4 +6,5 @@ date: 2022-01-23
 episodeLink: /2022/01/23/rfr017-click-clack-clean-code-comics/
 tags: klassiker
 layout: layout/content.njk
+isbn: "9780132350884"
 ---

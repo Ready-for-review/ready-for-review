@@ -6,4 +6,5 @@ date: 2022-01-07
 episodeLink: /2022/01/07/rfr016-abenteuer-im-tdd-land/
 tags: klassiker
 layout: layout/content.njk
+isbn: "0321146530"
 ---

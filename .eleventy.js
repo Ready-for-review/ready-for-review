@@ -1,10 +1,10 @@
 require("dotenv").config();
-const eleventyPluginCookLang = require("eleventy-plugin-cooklang");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
 const filters = require("./_11ty/filters");
 const shortcodes = require("./_11ty/shortcodes");
 const { postcss } = require("./_11ty/postcss");
+const { CookLangPlugin } = require("./_11ty/plugins");
 const { execSync } = require("child_process");
 
 const LOCAL_DIR = "src/_site";
@@ -66,7 +66,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("Image", imageShortcode);
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPlugin(eleventyPluginCookLang, {
+  eleventyConfig.addPlugin(CookLangPlugin, {
     limitIngredientDecimals: 2,
   });
 

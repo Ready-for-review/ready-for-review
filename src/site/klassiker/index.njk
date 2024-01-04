@@ -30,7 +30,7 @@ nosearch: true
                             <time class="text-sm text-gray-800" datetime="{{ klassiker.data.date}}">{{ klassiker.data.date | shortReadableDate }}</time>
                             <p class="my-8 font-medium text-gray-500 sm:my-6">
                                 {{klassiker.data.author}} (<a href="{{klassiker.data.url}}" title="Webseite zum Buch {{ klassiker.data.title }}" class="">Webseite zum Buch</a>
-                                {% if klassiker.data.isbn %},&nbsp;<a href="https://openlibrary.org/isbn/{{klassiker.data.isbn}}" title="{{ klassiker.data.title }} bei OpenLibrary" class="">OpenLibrary</a>{%endif%})
+                                {% if klassiker.data.isbn %}&nbsp;<a href="https://openlibrary.org/isbn/{{klassiker.data.isbn}}" title="{{ klassiker.data.title }} bei OpenLibrary" class="">OpenLibrary</a>{%endif%})
                         </p>
 
                                 <div class="my-8 sm:my-6">

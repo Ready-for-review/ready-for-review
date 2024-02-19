@@ -41,7 +41,7 @@
     "date-fns": "3.3.1",
     "dotenv": "16.4.4",
     "esbuild": "0.20.1",
-    "googleapis": "130.0.0",
+    "googleapis": "133.0.0",
     "husky": "8.0.3",
     "jest": "29.7.0",
     "lint-staged": "15.2.2",

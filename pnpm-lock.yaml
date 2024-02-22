@@ -45,8 +45,8 @@ devDependencies:
     specifier: 0.20.1
     version: 0.20.1
   googleapis:
-    specifier: 130.0.0
-    version: 130.0.0
+    specifier: 133.0.0
+    version: 133.0.0
   husky:
     specifier: 8.0.3
     version: 8.0.3
@@ -2786,8 +2786,8 @@ packages:
       - supports-color
     dev: true
 
-  /googleapis@130.0.0:
-    resolution: {integrity: sha512-+ZSOowVv+vGBTueu1Ot9O7EqC0U4PS9l7fUjzc0ThCT4w4g+r78Vgn17q7eGBB5JMu4hxYC1hbbm1U/MCnYFdg==}
+  /googleapis@133.0.0:
+    resolution: {integrity: sha512-6xyc49j+x7N4smawJs/q1i7mbSkt6SYUWWd9RbsmmDW7gRv+mhwZ4xT+XkPihZcNyo/diF//543WZq4szdS74w==}
     engines: {node: '>=14.0.0'}
     dependencies:
       google-auth-library: 9.0.0

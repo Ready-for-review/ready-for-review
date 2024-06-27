@@ -48,8 +48,8 @@ importers:
         specifier: 0.21.5
         version: 0.21.5
       googleapis:
-        specifier: 137.1.0
-        version: 137.1.0
+        specifier: 140.0.1
+        version: 140.0.1
       husky:
         specifier: 9.0.11
         version: 9.0.11
@@ -1465,8 +1465,8 @@ packages:
     resolution: {integrity: sha512-58iSybJPQZ8XZNMpjrklICefuOuyJ0lMxfKmBqmaC0/xGT4SiOs4BE60LAOOGtBURy1n8fHa2X2YUNFEWWbXyQ==}
     engines: {node: '>=14.0.0'}
 
-  googleapis@137.1.0:
-    resolution: {integrity: sha512-2L7SzN0FLHyQtFmyIxrcXhgust77067pkkduqkbIpDuj9JzVnByxsRrcRfUMFQam3rQkWW2B0f1i40IwKDWIVQ==}
+  googleapis@140.0.1:
+    resolution: {integrity: sha512-ZGvBX4mQcFXO9ACnVNg6Aqy3KtBPB5zTuue43YVLxwn8HSv8jB7w+uDKoIPSoWuxGROgnj2kbng6acXncOQRNA==}
     engines: {node: '>=14.0.0'}
 
   graceful-fs@4.2.11:
@@ -4458,7 +4458,7 @@ snapshots:
       - encoding
       - supports-color
 
-  googleapis@137.1.0:
+  googleapis@140.0.1:
     dependencies:
       google-auth-library: 9.0.0
       googleapis-common: 7.0.0

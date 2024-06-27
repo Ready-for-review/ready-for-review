@@ -9,18 +9,24 @@ module.exports = function () {
           description: "Solider und schneller Rechner mit AMD Prozessor.",
         },
         {
-          tags: ["keyboard", "workspace"],
+          tags: ["keyboard"],
           name: "Sharkoon Purewriter RGB mit Khalil Red Switches und US-ANSI-Layout (EURKey-Layout)",
           link: "https://de.sharkoon.com/product/PWRGB",
           description:
             "Meine erste mechanische Tastatur mit Low Profile und Blinki Blinki nach langer Zeit.",
         },
         {
-          tags: ["keyboard", "workspace"],
+          tags: ["keyboard"],
           name: "Keychron K3 mit Brown Switches Hot Swap und US-ANSI-Layout (EURKey-Layout)",
           link: "https://www.keychron.com/products/keychron-k3-wireless-mechanical-keyboard",
           description:
-            "Meine aktuelle mechanische Tastatur mit Low Profile und Blinki Blinki.",
+            "Sehr gute mechanische Tastatur mit Low Profile und Blinki Blinki.",
+        },
+        {
+          tags: ["keyboard", "workspace"],
+          name: "Ducky One 3 Cosmic Blue TKL Gaming Tastatur, RGB LED - MX-Brown mit US-ANSI-Layout (EURKey-Layout)",
+          link: "https://www.duckychannel.com.tw/en/One3-Cosmic-Blue",
+          description: "Meine aktuelle mechanische Tastatur und Blinki Blinki.",
         },
         {
           tags: ["keyboard"],
@@ -87,8 +93,8 @@ module.exports = function () {
         },
         {
           tags: ["headphone", "workspace"],
-          name: "Sony WH-1000X M3",
-          link: "https://www.sony.de/electronics/kopfband-kopfhoerer/wh-1000xm3",
+          name: "Sony WH-1000X M4",
+          link: "https://www.sony.de/electronics/kopfband-kopfhoerer/wh-1000xm4",
           description:
             "Super bequeme Noise-Chanceling Kopfhörer, die den Namen verdienen. Wireless via Bluetooth.",
         },
@@ -133,6 +139,12 @@ module.exports = function () {
           link: "https://www.logitech.com/de-de/products/keyboards/k380-multi-device.html",
           description:
             "Solide Tastatur, wenn ich mal unterwegs bin, oder auf dem Tablet was schreiben möchte.",
+        },
+        {
+          tags: ["keyboard"],
+          name: "Nuphy Halo65",
+          link: "https://nuphy.com/products/halo65",
+          description: "",
         },
         {
           tags: ["mouse", "workspace"],

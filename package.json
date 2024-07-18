@@ -42,7 +42,7 @@
     "dotenv": "16.4.5",
     "esbuild": "0.23.0",
     "googleapis": "140.0.1",
-    "husky": "9.1.0",
+    "husky": "9.1.1",
     "jest": "29.7.0",
     "lint-staged": "15.2.7",
     "pagefind": "^1.1.0",

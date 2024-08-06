@@ -47,7 +47,7 @@
     "lint-staged": "15.2.8",
     "pagefind": "^1.1.0",
     "plyr": "3.7.8",
-    "postcss": "8.4.40",
+    "postcss": "8.4.41",
     "prettier": "3.3.3",
     "rss-parser": "3.13.0",
     "string": "3.3.3",

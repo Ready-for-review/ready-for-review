@@ -22,7 +22,7 @@ importers:
         version: 2.0.2
       '@cooklang/cooklang-ts':
         specifier: ^1.2.6
-        version: 1.2.6
+        version: 1.2.7
       '@tailwindcss/typography':
         specifier: 0.5.15
         version: 0.5.15(tailwindcss@3.4.13)
@@ -299,8 +299,8 @@ packages:
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
 
-  '@cooklang/cooklang-ts@1.2.6':
-    resolution: {integrity: sha512-W1a7hFMDgZtVtMvVbQGMegMoWjFGqA17ZD8rGsEBA7WUhTjlGeI/758DtUhxT36uFXFwGMc3LZF6TPFeIXAgGw==}
+  '@cooklang/cooklang-ts@1.2.7':
+    resolution: {integrity: sha512-eVjyZ7HUbboP4y76L+OvsoEvY+oncIAqLr4vbXG5c0DuZEroRz1q+7JxYX8EEoa1ZKbIk5We0CHkUH6N49JMLw==}
 
   '@emnapi/runtime@1.2.0':
     resolution: {integrity: sha512-bV21/9LQmcQeCPEg3BDFtvwL6cwiTMksYNWQQ4KOxCZikEGalWtenoZ0wCiukJINlGCIi2KXx01g4FoH/LxpzQ==}
@@ -3323,7 +3323,7 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@cooklang/cooklang-ts@1.2.6': {}
+  '@cooklang/cooklang-ts@1.2.7': {}
 
   '@emnapi/runtime@1.2.0':
     dependencies:

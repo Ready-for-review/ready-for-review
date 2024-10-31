@@ -1,6 +1,7 @@
 {
   "name": "ready-for-review",
   "version": "2.30.0",
+  "type": "commonjs",
   "description": "homepage of podcast \"Ready for review\"",
   "keywords": [],
   "homepage": "https://github.com/ready-for-review/ready-for-review#readme",
@@ -28,11 +29,11 @@
     "> 5%"
   ],
   "devDependencies": {
-    "@11ty/eleventy": "2.0.1",
-    "@11ty/eleventy-img": "4.0.2",
+    "@11ty/eleventy": "3.0.0",
+    "@11ty/eleventy-img": "5.0.0",
     "@11ty/eleventy-navigation": "0.3.5",
     "@11ty/eleventy-plugin-rss": "2.0.2",
-    "@cooklang/cooklang-ts": "^1.2.6",
+    "@cooklang/cooklang-ts": "^1.2.7",
     "@tailwindcss/typography": "0.5.15",
     "autoprefixer": "10.4.20",
     "browserslist": "4.24.2",

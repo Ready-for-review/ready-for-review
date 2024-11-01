@@ -1,9 +1,9 @@
-const esbuild = require("esbuild");
-const { NODE_ENV = "production" } = process.env;
+import esbuild from "esbuild";
 
+const { NODE_ENV = "production" } = process.env;
 const isProduction = NODE_ENV === "production";
 
-module.exports = class {
+export default class {
   data() {
     return {
       permalink: false,
@@ -21,4 +21,4 @@ module.exports = class {
       target: "es2015",
     });
   }
-};
+}

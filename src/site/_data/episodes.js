@@ -1,15 +1,16 @@
-const Parser = require("rss-parser");
-const cacheUtil = require("../../util/cache");
+import Parser from "rss-parser";
+import cacheUtil from "../../util/cache.js";
 
 const CACHE_FILE_PATH = "_cache/episodes.json";
 const cacheHandler = cacheUtil(CACHE_FILE_PATH);
 
-module.exports = async function () {
+export default async function () {
   console.log(">>> Reading episodes from cache...");
   const cache = cacheHandler.readFromCache();
   if (cache && cache.items && cache.items.length) {
     console.log(`>>> ${cache.items.length} episodes loaded from cache`);
   }
+
   // Only fetch new mentions in production
   if (true || process.env.NODE_ENV === "production") {
     console.log(">>> Checking for new episodes...");
@@ -45,4 +46,4 @@ module.exports = async function () {
   }
 
   return cache;
-};
+}

@@ -10,39 +10,27 @@ import * as shortcodes from "./_11ty/shortcodes.js";
 const LOCAL_DIR = "src/_site";
 
 async function imageShortcode(src, alt, sizes = "100vw") {
-  let sourcePath = `./src/images/${src}`;
   if (alt === undefined) {
     throw new Error(`Missing \`alt\` on responsive image from: ${src}`);
   }
+  let sourcePath = `./src/images/${src}`;
 
   let metadata = await Image(sourcePath, {
     widths: [320, 640, 960, 1200, 1800, 2400],
-    formats: ["jpeg", "webp", "png"],
+
     urlPath: "/images/",
     outputDir: `${LOCAL_DIR}/images/`,
+    formats: ["avif", "jpeg"],
   });
 
-  let lowsrc = metadata.jpeg[0];
-  let highsrc = metadata.jpeg[4];
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+  };
 
-  return `<picture>
-    ${Object.values(metadata)
-      .map((imageFormat) => {
-        return `  <source type="${
-          imageFormat[0].sourceType
-        }" srcset="${imageFormat
-          .map((entry) => entry.srcset)
-          .join(", ")}" sizes="${sizes}">`;
-      })
-      .join("\n")}
-      <img
-        src="${lowsrc.url}"
-        width="${highsrc.width}"
-        height="${highsrc.height}"
-        alt="${alt}"
-        loading="lazy"
-        decoding="async">
-    </picture>`;
+  return Image.generateHTML(metadata, imageAttributes);
 }
 
 export default function (eleventyConfig) {

@@ -21,7 +21,7 @@ nosearch: true
                 {% for klassiker in collections.klassiker %}
                     <article class="mb-8 card flex ">
                         {% if klassiker.data.isbn %}
-                            <img class="w-auto h-auto rounded-l-lg mx-auto" src="https://covers.openlibrary.org/b/isbn/{{klassiker.data.isbn}}-M.jpg"/>
+                            <img eleventy:ignore class="w-auto h-auto rounded-l-lg mx-auto" src="https://covers.openlibrary.org/b/isbn/{{klassiker.data.isbn}}-M.jpg"/>
                         {%endif %}
                         <section class="p-8">
                             <h3 class="text-2xl font-bold leading-tight tracking-tight text-gray-700">

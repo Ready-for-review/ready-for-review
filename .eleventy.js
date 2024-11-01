@@ -1,4 +1,4 @@
-import Image from "@11ty/eleventy-img";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import { execSync } from "child_process";
 import "dotenv/config";
@@ -9,33 +9,9 @@ import * as shortcodes from "./_11ty/shortcodes.js";
 
 const LOCAL_DIR = "src/_site";
 
-async function imageShortcode(src, alt, sizes = "100vw") {
-  if (alt === undefined) {
-    throw new Error(`Missing \`alt\` on responsive image from: ${src}`);
-  }
-  let sourcePath = `./src/images/${src}`;
-
-  let metadata = await Image(sourcePath, {
-    widths: [320, 640, 960, 1200, 1800, 2400],
-
-    urlPath: "/images/",
-    outputDir: `./_site/images/`,
-    formats: ["avif", "jpeg", "webp"],
-  });
-
-  let imageAttributes = {
-    alt,
-    sizes,
-    loading: "lazy",
-    decoding: "async",
-  };
-
-  return Image.generateHTML(metadata, imageAttributes);
-}
-
 export default function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
-  eleventyConfig.setPugOptions({ debug: true });
+
   eleventyConfig.addWatchTarget("./src/_includes/styles/tailwind.css");
 
   eleventyConfig.addPassthroughCopy({ "./src/images": "/images" });
@@ -49,11 +25,18 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksAsyncFilter("postcss", postcss);
-  eleventyConfig.addNunjucksAsyncShortcode("Image", imageShortcode);
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(CookLangPlugin, {
     limitIngredientDecimals: 2,
+  });
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    extensions: "html",
+    formats: ["auto"],
+    defaultAttributes: {
+      loading: "lazy",
+      decoding: "async",
+    },
   });
 
   eleventyConfig.addCollection("recipes", (collectionApi) => {

@@ -1,11 +1,11 @@
-const { Recipe } = require("@cooklang/cooklang-ts");
-const fs = require("fs");
+import { Recipe } from "@cooklang/cooklang-ts";
+import fs from "fs";
 
 const frontmatterRegex = /^(\-\-\-\n)(.*\n)*(\-\-\-)$/gm;
 let config = {};
 
 const cookExtension = {
-  getData: async function (inputPath) {
+  async getData(inputPath) {
     const content = fs.readFileSync(inputPath, "utf-8");
     const charsToTrim = content.match(frontmatterRegex)[0].length;
     // Trim out frontmatter
@@ -23,7 +23,7 @@ const cookExtension = {
       const { quantity, units, name, value, type } = token;
       let tagContent = "";
 
-      if (token.type == "timer") {
+      if (token.type === "timer") {
         tagContent = `${quantity} ${units}`;
       } else {
         tagContent = token.name || token.value;
@@ -40,7 +40,7 @@ const cookExtension = {
       if (!steps[i]) steps[i] = [];
 
       stepTokens.forEach((token) => {
-        if (token.type == "ingredient") {
+        if (token.type === "ingredient") {
           let { name, quantity, units } = token;
 
           if (
@@ -54,7 +54,7 @@ const cookExtension = {
           ingredients.push({ name, quantity, units });
         }
 
-        if (token.type == "cookware") {
+        if (token.type === "cookware") {
           const { name } = token;
           cookware.push({ name });
         }
@@ -71,7 +71,8 @@ const cookExtension = {
       recipeTags,
     };
   },
-  compile: async (inputContent) => {
+
+  async compile(inputContent) {
     // We probably don't need the raw content but it's here if we want
     return async () => {
       return inputContent;
@@ -79,10 +80,8 @@ const cookExtension = {
   },
 };
 
-function CookLangPlugin(eleventyConfig, userConfig = {}) {
+export function CookLangPlugin(eleventyConfig, userConfig = {}) {
   config = userConfig;
   eleventyConfig.addTemplateFormats("cook");
   eleventyConfig.addExtension("cook", cookExtension);
 }
-
-module.exports = { CookLangPlugin };

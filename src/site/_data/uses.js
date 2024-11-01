@@ -1,4 +1,4 @@
-module.exports = function () {
+export default function () {
   return {
     sandra: {
       hardware: [
@@ -201,4 +201,4 @@ module.exports = function () {
       ],
     },
   };
-};
+}

@@ -1,18 +1,18 @@
-require("dotenv").config();
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const Image = require("@11ty/eleventy-img");
-const filters = require("./_11ty/filters");
-const shortcodes = require("./_11ty/shortcodes");
-const { postcss } = require("./_11ty/postcss");
-const { CookLangPlugin } = require("./_11ty/plugins");
-const { execSync } = require("child_process");
+import Image from "@11ty/eleventy-img";
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import { execSync } from "child_process";
+import "dotenv/config";
+import * as filters from "./_11ty/filters.js";
+import { CookLangPlugin } from "./_11ty/plugins.js";
+import { postcss } from "./_11ty/postcss.js";
+import * as shortcodes from "./_11ty/shortcodes.js";
 
 const LOCAL_DIR = "src/_site";
 
 async function imageShortcode(src, alt, sizes = "100vw") {
   let sourcePath = `./src/images/${src}`;
   if (alt === undefined) {
-    throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
+    throw new Error(`Missing \`alt\` on responsive image from: ${src}`);
   }
 
   let metadata = await Image(sourcePath, {
@@ -20,9 +20,6 @@ async function imageShortcode(src, alt, sizes = "100vw") {
     formats: ["jpeg", "webp", "png"],
     urlPath: "/images/",
     outputDir: `${LOCAL_DIR}/images/`,
-
-    outputDir: "_site/images",
-    urlPath: "/images",
   });
 
   let lowsrc = metadata.jpeg[0];
@@ -48,20 +45,21 @@ async function imageShortcode(src, alt, sizes = "100vw") {
     </picture>`;
 }
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setPugOptions({ debug: true });
   eleventyConfig.addWatchTarget("./src/_includes/styles/tailwind.css");
 
   eleventyConfig.addPassthroughCopy({ "./src/images": "/images" });
 
-  Object.keys(filters).forEach(function (filterName) {
+  Object.keys(filters).forEach((filterName) => {
     eleventyConfig.addFilter(filterName, filters[filterName]);
   });
 
-  Object.keys(shortcodes).forEach(function (shortcode) {
+  Object.keys(shortcodes).forEach((shortcode) => {
     eleventyConfig.addShortcode(shortcode, shortcodes[shortcode]);
   });
+
   eleventyConfig.addNunjucksAsyncFilter("postcss", postcss);
   eleventyConfig.addNunjucksAsyncShortcode("Image", imageShortcode);
 
@@ -70,7 +68,7 @@ module.exports = function (eleventyConfig) {
     limitIngredientDecimals: 2,
   });
 
-  eleventyConfig.addCollection("recipes", function (collectionApi) {
+  eleventyConfig.addCollection("recipes", (collectionApi) => {
     return collectionApi
       .getAll()
       .filter((i) => i.data.layout == "templates/recipe.njk")
@@ -97,4 +95,4 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: "njk",
     passthroughFileCopy: true,
   };
-};
+}

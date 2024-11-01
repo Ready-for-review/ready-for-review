@@ -1,11 +1,11 @@
-const { google } = require("googleapis");
+import { google } from "googleapis";
 
 const youTubeClient = google.youtube({
   version: "v3",
   auth: process.env.YOUTUBE_API_KEY,
 });
 
-module.exports = async () => {
+export default async () => {
   try {
     const response = await youTubeClient.playlistItems.list({
       playlistId: "UUnVCACzOxoOShe_69qo51hg",

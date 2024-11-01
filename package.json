@@ -1,7 +1,7 @@
 {
   "name": "ready-for-review",
-  "version": "3.0.0",
-  "type": "commonjs",
+  "version": "3.1.0",
+  "type": "module",
   "description": "homepage of podcast \"Ready for review\"",
   "keywords": [],
   "homepage": "https://github.com/ready-for-review/ready-for-review#readme",

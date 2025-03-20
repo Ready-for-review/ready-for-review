@@ -15,8 +15,8 @@ importers:
         specifier: 6.0.1
         version: 6.0.1
       '@11ty/eleventy-navigation':
-        specifier: 0.3.5
-        version: 0.3.5
+        specifier: 1.0.1
+        version: 1.0.1
       '@11ty/eleventy-plugin-rss':
         specifier: 2.0.3
         version: 2.0.3
@@ -102,8 +102,8 @@ packages:
     resolution: {integrity: sha512-Ktr1C42cu7rHR7M0lT+JfMjWaOIwS2rXqzrXkNfKAEljgJxCPVg2vsWr5iyPBg2IL7OY8ipPCr5jbovMAz6B9w==}
     engines: {node: '>=18'}
 
-  '@11ty/eleventy-navigation@0.3.5':
-    resolution: {integrity: sha512-4aKW5aIQDFed8xs1G1pWcEiFPcDSwZtA4IH1eERtoJ+Xy+/fsoe0pzbDmw84bHZ9ACny5jblENhfZhcCxklqQw==}
+  '@11ty/eleventy-navigation@1.0.1':
+    resolution: {integrity: sha512-Im4KPmn6GlOtOr5RwDOcp+mrySp815RAIJXNKzhIMbM4QxQfhLGfw2abzaus2ceM5NV0JlWyPcJeDuclY12ROg==}
 
   '@11ty/eleventy-plugin-bundle@3.0.0':
     resolution: {integrity: sha512-JSnqehT+sWSPi6e44jTXUW+KiV9284YF9fzPQvfGB4cXlk/m/SJk17CavHCleIvKXDN+jrUw9TZkwAwr85ONWQ==}
@@ -3005,9 +3005,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@11ty/eleventy-navigation@0.3.5':
+  '@11ty/eleventy-navigation@1.0.1':
     dependencies:
-      dependency-graph: 0.11.0
+      dependency-graph: 1.0.0
 
   '@11ty/eleventy-plugin-bundle@3.0.0(posthtml@0.16.6)':
     dependencies:

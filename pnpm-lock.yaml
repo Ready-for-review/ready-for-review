@@ -15,8 +15,8 @@ importers:
         specifier: 6.0.1
         version: 6.0.1
       '@11ty/eleventy-navigation':
-        specifier: 0.3.5
-        version: 0.3.5
+        specifier: 1.0.1
+        version: 1.0.1
       '@11ty/eleventy-plugin-rss':
         specifier: 2.0.3
         version: 2.0.3
@@ -48,8 +48,8 @@ importers:
         specifier: 0.25.1
         version: 0.25.1
       googleapis:
-        specifier: 144.0.0
-        version: 144.0.0
+        specifier: 146.0.0
+        version: 146.0.0
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -102,8 +102,8 @@ packages:
     resolution: {integrity: sha512-Ktr1C42cu7rHR7M0lT+JfMjWaOIwS2rXqzrXkNfKAEljgJxCPVg2vsWr5iyPBg2IL7OY8ipPCr5jbovMAz6B9w==}
     engines: {node: '>=18'}
 
-  '@11ty/eleventy-navigation@0.3.5':
-    resolution: {integrity: sha512-4aKW5aIQDFed8xs1G1pWcEiFPcDSwZtA4IH1eERtoJ+Xy+/fsoe0pzbDmw84bHZ9ACny5jblENhfZhcCxklqQw==}
+  '@11ty/eleventy-navigation@1.0.1':
+    resolution: {integrity: sha512-Im4KPmn6GlOtOr5RwDOcp+mrySp815RAIJXNKzhIMbM4QxQfhLGfw2abzaus2ceM5NV0JlWyPcJeDuclY12ROg==}
 
   '@11ty/eleventy-plugin-bundle@3.0.0':
     resolution: {integrity: sha512-JSnqehT+sWSPi6e44jTXUW+KiV9284YF9fzPQvfGB4cXlk/m/SJk17CavHCleIvKXDN+jrUw9TZkwAwr85ONWQ==}
@@ -1539,8 +1539,8 @@ packages:
     resolution: {integrity: sha512-/fhDZEJZvOV3X5jmD+fKxMqma5q2Q9nZNSF3kn1F18tpxmA86BcTxAGBQdM0N89Z3bEaIs+HVznSmFJEAmMTjA==}
     engines: {node: '>=14.0.0'}
 
-  googleapis@144.0.0:
-    resolution: {integrity: sha512-ELcWOXtJxjPX4vsKMh+7V+jZvgPwYMlEhQFiu2sa9Qmt5veX8nwXPksOWGGN6Zk4xCiLygUyaz7xGtcMO+Onxw==}
+  googleapis@146.0.0:
+    resolution: {integrity: sha512-NewqvhnBZOJsugCAOo636O0BGE/xY7Cg/v8Rjm1+5LkJCjcqAzLleJ6igd5vrRExJLSKrY9uHy9iKE7r0PrfhQ==}
     engines: {node: '>=14.0.0'}
 
   gopd@1.0.1:
@@ -3005,9 +3005,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@11ty/eleventy-navigation@0.3.5':
+  '@11ty/eleventy-navigation@1.0.1':
     dependencies:
-      dependency-graph: 0.11.0
+      dependency-graph: 1.0.0
 
   '@11ty/eleventy-plugin-bundle@3.0.0(posthtml@0.16.6)':
     dependencies:
@@ -4586,7 +4586,7 @@ snapshots:
       - encoding
       - supports-color
 
-  googleapis@144.0.0:
+  googleapis@146.0.0:
     dependencies:
       google-auth-library: 9.14.1
       googleapis-common: 7.2.0

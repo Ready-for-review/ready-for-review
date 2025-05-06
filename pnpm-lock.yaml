@@ -48,8 +48,8 @@ importers:
         specifier: 0.25.4
         version: 0.25.4
       googleapis:
-        specifier: 146.0.0
-        version: 146.0.0
+        specifier: 148.0.0
+        version: 148.0.0
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -1543,8 +1543,8 @@ packages:
     resolution: {integrity: sha512-/fhDZEJZvOV3X5jmD+fKxMqma5q2Q9nZNSF3kn1F18tpxmA86BcTxAGBQdM0N89Z3bEaIs+HVznSmFJEAmMTjA==}
     engines: {node: '>=14.0.0'}
 
-  googleapis@146.0.0:
-    resolution: {integrity: sha512-NewqvhnBZOJsugCAOo636O0BGE/xY7Cg/v8Rjm1+5LkJCjcqAzLleJ6igd5vrRExJLSKrY9uHy9iKE7r0PrfhQ==}
+  googleapis@148.0.0:
+    resolution: {integrity: sha512-8PDG5VItm6E1TdZWDqtRrUJSlBcNwz0/MwCa6AL81y/RxPGXJRUwKqGZfCoVX1ZBbfr3I4NkDxBmeTyOAZSWqw==}
     engines: {node: '>=14.0.0'}
 
   gopd@1.0.1:
@@ -4592,7 +4592,7 @@ snapshots:
       - encoding
       - supports-color
 
-  googleapis@146.0.0:
+  googleapis@148.0.0:
     dependencies:
       google-auth-library: 9.14.1
       googleapis-common: 7.2.0

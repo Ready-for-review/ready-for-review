@@ -18,8 +18,8 @@ importers:
         specifier: 1.0.4
         version: 1.0.4
       '@11ty/eleventy-plugin-rss':
-        specifier: 2.0.3
-        version: 2.0.3
+        specifier: 2.0.4
+        version: 2.0.4
       '@cooklang/cooklang-ts':
         specifier: ^1.2.7
         version: 1.2.7
@@ -109,16 +109,12 @@ packages:
     resolution: {integrity: sha512-JSnqehT+sWSPi6e44jTXUW+KiV9284YF9fzPQvfGB4cXlk/m/SJk17CavHCleIvKXDN+jrUw9TZkwAwr85ONWQ==}
     engines: {node: '>=18'}
 
-  '@11ty/eleventy-plugin-rss@2.0.3':
-    resolution: {integrity: sha512-ubK97uahCLpKhORLfblgxLcoaNqTcKde1cH8CeRKNTFoUuuDSEjWZtodV9fKrg+uOp5X74dO43z1/io6hhs5Bw==}
+  '@11ty/eleventy-plugin-rss@2.0.4':
+    resolution: {integrity: sha512-LF60sGVlxGTryQe3hTifuzrwF8R7XbrNsM2xfcDcNMSliLN4kmB+7zvoLRySRx0AQDjqhPTAeeeT0ra6/9zHUQ==}
 
   '@11ty/eleventy-utils@1.0.3':
     resolution: {integrity: sha512-nULO91om7vQw4Y/UBjM8i7nJ1xl+/nyK4rImZ41lFxiY2d+XUz7ChAj1CDYFjrLZeu0utAYJTZ45LlcHTkUG4g==}
     engines: {node: '>=12'}
-
-  '@11ty/eleventy-utils@2.0.0':
-    resolution: {integrity: sha512-rKny6X7+ARuke0TaA6FwNv2PWJCNSdPQqbqDgaZgi+bPXwnPRTEi3CWzvr6vVgh/1XpO1G4FhRPreLhtcwHUyg==}
-    engines: {node: '>=18'}
 
   '@11ty/eleventy-utils@2.0.7':
     resolution: {integrity: sha512-6QE+duqSQ0GY9rENXYb4iPR4AYGdrFpqnmi59tFp9VrleOl0QSh8VlBr2yd6dlhkdtj7904poZW5PvGr9cMiJQ==}
@@ -3000,9 +2996,9 @@ snapshots:
       - posthtml
       - supports-color
 
-  '@11ty/eleventy-plugin-rss@2.0.3':
+  '@11ty/eleventy-plugin-rss@2.0.4':
     dependencies:
-      '@11ty/eleventy-utils': 2.0.0
+      '@11ty/eleventy-utils': 2.0.7
       '@11ty/posthtml-urls': 1.0.1
       debug: 4.4.0
       posthtml: 0.16.6
@@ -3012,8 +3008,6 @@ snapshots:
   '@11ty/eleventy-utils@1.0.3':
     dependencies:
       normalize-path: 3.0.0
-
-  '@11ty/eleventy-utils@2.0.0': {}
 
   '@11ty/eleventy-utils@2.0.7': {}
 

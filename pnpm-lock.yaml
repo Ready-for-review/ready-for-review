@@ -42,8 +42,8 @@ importers:
         specifier: 4.1.0
         version: 4.1.0
       dotenv:
-        specifier: 16.6.0
-        version: 16.6.0
+        specifier: 16.6.1
+        version: 16.6.1
       esbuild:
         specifier: 0.25.5
         version: 0.25.5
@@ -1234,8 +1234,8 @@ packages:
   domutils@3.1.0:
     resolution: {integrity: sha512-H78uMmQtI2AhgDJjWeQmHwJJ2bLPD3GMmO7Zja/ZZh84wkm+4ut+IUnUdRa8uCGX88DiVx1j6FRe1XfxEgjEZA==}
 
-  dotenv@16.6.0:
-    resolution: {integrity: sha512-Omf1L8paOy2VJhILjyhrhqwLIdstqm1BvcDPKg4NGAlkwEu9ODyrFbvk8UymUOMCT+HXo31jg1lArIrVAAhuGA==}
+  dotenv@16.6.1:
+    resolution: {integrity: sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==}
     engines: {node: '>=12'}
 
   duplexer@0.1.1:
@@ -4144,7 +4144,7 @@ snapshots:
       domelementtype: 2.3.0
       domhandler: 5.0.3
 
-  dotenv@16.6.0: {}
+  dotenv@16.6.1: {}
 
   duplexer@0.1.1: {}
 

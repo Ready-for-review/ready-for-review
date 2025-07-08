@@ -12,7 +12,7 @@ pagination:
 ---
 {% extends "layout/base.njk" %}
 {% block content %}
-    <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto mt-36 px-8">
+    <div class="max-w-(--breakpoint-lg) xl:max-w-(--breakpoint-xl) mx-auto mt-36 px-8">
         <h1 class="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight text-gray-700 mt-4 mb-8 sm:mb-10">{{ title }}</h1>
         <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
             {% if pagination.items.length %}
@@ -30,7 +30,7 @@ pagination:
                 {%- for pageEntry in pagination.pages %}
                     <li>
                         <a href="{{ pagination.hrefs[ loop.index0 ] }}" 
-                   class="px-4 py-2 rounded-md text-white bg-maximumBlue hover:bg-prussian
+                   class="px-4 py-2 rounded-md text-white bg-maximum-blue hover:bg-prussian
                           transition duration-300 ease-in-out 
                           {% if page.url == pagination.hrefs[ loop.index0 ] %} bg-prussian{% endif %}"
                    {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>

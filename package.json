@@ -33,7 +33,8 @@
     "@11ty/eleventy-img": "6.0.4",
     "@11ty/eleventy-navigation": "1.0.4",
     "@11ty/eleventy-plugin-rss": "2.0.4",
-    "@cooklang/cooklang-ts": "^1.2.7",
+    "@cooklang/cooklang-ts": "1.2.7",
+    "@tailwindcss/postcss": "4.1.11",
     "@tailwindcss/typography": "0.5.16",
     "autoprefixer": "10.4.21",
     "browserslist": "4.25.1",
@@ -52,7 +53,7 @@
     "prettier": "3.6.2",
     "rss-parser": "3.13.0",
     "string": "3.3.3",
-    "tailwindcss": "3.4.17"
+    "tailwindcss": "4.1.11"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"

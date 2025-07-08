@@ -8,13 +8,13 @@ tags: ['episode']
 ---
 {% extends "layout/base.njk" %}
 {% block content %}
-  <div class="max-w-screen-lg px-8 pt-12 mx-auto xl:max-w-screen-xl ">
+  <div class="max-w-(--breakpoint-lg) px-8 pt-12 mx-auto xl:max-w-(--breakpoint-xl) ">
     <time class="text-sm text-gray-800" datetime="{{ item.isoDate}}">{{ item.isoDate | shortReadableDateFromISO }}</time>
-    <h1 class="max-w-screen-lg mx-auto mb-0 text-4xl font-semibold leading-tight tracking-tight text-orange-500 xl:max-w-screen-xl">{{item.title}}</h1>
+    <h1 class="max-w-(--breakpoint-lg) mx-auto mb-0 text-4xl font-semibold leading-tight tracking-tight text-orange-500 xl:max-w-(--breakpoint-xl)">{{item.title}}</h1>
     <section class="p-8 my-12 card">
       <article>
 
-        <audio class="w-full my-4 bg-gray-500 rounded shadow rfr-player" controls preload="metadata">
+        <audio class="w-full my-4 bg-gray-500 rounded-sm shadow-sm rfr-player" controls preload="metadata">
           <source type="audio/mpeg" src="{{item.enclosure.url}}&source=rfr_details">
         </audio>
         <div class="content">

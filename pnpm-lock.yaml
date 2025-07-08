@@ -20,10 +20,10 @@ importers:
         specifier: 2.0.4
         version: 2.0.4
       "@cooklang/cooklang-ts":
-        specifier: ^1.2.7
+        specifier: 1.2.7
         version: 1.2.7
       "@tailwindcss/postcss":
-        specifier: ^4.1.11
+        specifier: 4.1.11
         version: 4.1.11
       "@tailwindcss/typography":
         specifier: 0.5.16
@@ -7637,7 +7637,7 @@ snapshots:
 
   lightningcss@1.30.1:
     dependencies:
-      detect-libc: 2.0.3
+      detect-libc: 2.0.4
     optionalDependencies:
       lightningcss-darwin-arm64: 1.30.1
       lightningcss-darwin-x64: 1.30.1

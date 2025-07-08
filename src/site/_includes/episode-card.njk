@@ -5,7 +5,7 @@
     <a href="/{{episode | toEpisodeUrl }}/" title="{{ episode.title }}">{{episode.title}}</a>
   </h3>
 
-  <audio class="w-full my-4 bg-gray-500 rounded shadow rfr-player" controls preload="none">
+  <audio class="w-full my-4 bg-gray-500 rounded-sm shadow-sm rfr-player" controls preload="none">
     <source type="audio/mpeg" src="{{episode.enclosure.url}}&source=rfr_episodes">
   </audio>
   <p class="my-4 text-right">

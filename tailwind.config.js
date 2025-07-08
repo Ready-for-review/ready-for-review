@@ -1,7 +1,7 @@
 import typography from "@tailwindcss/typography";
 import colors from "tailwindcss/colors.js";
 
-module.exports = {
+export default {
   content: ["./src/**/*.njk", "./src/**/*.md"],
   darkMode: "media",
   theme: {

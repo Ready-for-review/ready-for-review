@@ -41,7 +41,7 @@
     "cross-env": "7.0.3",
     "cssnano": "7.1.0",
     "date-fns": "4.1.0",
-    "dotenv": "17.2.0",
+    "dotenv": "17.2.1",
     "esbuild": "0.25.8",
     "googleapis": "153.0.0",
     "husky": "9.1.7",

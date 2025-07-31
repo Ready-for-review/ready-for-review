@@ -51,8 +51,8 @@ importers:
         specifier: 0.25.8
         version: 0.25.8
       googleapis:
-        specifier: 154.0.0
-        version: 154.0.0
+        specifier: 154.1.0
+        version: 154.1.0
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -1682,8 +1682,8 @@ packages:
     resolution: {integrity: sha512-66if47It7y+Sab3HMkwEXx1kCq9qUC9px8ZXoj1CMrmLmUw81GpbnsNlXnlyZyGbGPGcj+tDD9XsZ23m7GLaJQ==}
     engines: {node: '>=18.0.0'}
 
-  googleapis@154.0.0:
-    resolution: {integrity: sha512-P5N9366ORj7O3vPPdZRH0Bw+CEa177XUxq0lOw4w/2o8CViyp24Vc6SdQYMwijEq1WmFgmlf4jDOQMzhnDgBNQ==}
+  googleapis@154.1.0:
+    resolution: {integrity: sha512-lsgKftflkjR+PNdKDjy5e4zZUQO3BMaNLO0Q91uvr9YCy3aOqtEwkDtfhcBguFtFLsqj+XjdfDu2on6rtHNvYg==}
     engines: {node: '>=18'}
 
   gopd@1.0.1:
@@ -4701,7 +4701,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  googleapis@154.0.0:
+  googleapis@154.1.0:
     dependencies:
       google-auth-library: 10.1.0
       googleapis-common: 8.0.0

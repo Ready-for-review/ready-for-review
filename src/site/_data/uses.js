@@ -4,8 +4,8 @@ export default function () {
       hardware: [
         {
           tags: ["notebook"],
-          name: "Lenovo Thinkpad T14 Gen 1 mit Kubuntu",
-          link: "https://www.lenovo.com/de/de/laptops/thinkpad/t-series/ThinkPad-T14-AMD-G1/p/22TPT14T4A2",
+          name: "Tuxedo InfinityBook Pro 14 - Gen 10 mit Tuxedo OS",
+          link: "https://www.tuxedocomputers.com/en/TUXEDO-InfinityBook-Pro-14-Gen10.tuxedo",
           description: "Solider und schneller Rechner mit AMD Prozessor.",
         },
         {

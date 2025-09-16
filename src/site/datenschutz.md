@@ -157,8 +157,6 @@ Auch im Fall von Auskunftsanfragen und der Geltendmachung von Betroffenenrechten
 
 **Eingesetzte Dienste und Diensteanbieter:**
 
-- **Twitter:** Soziales Netzwerk; Dienstanbieter: Twitter Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, USA; Datenschutzerklärung: [https://twitter.com/de/privacy](https://twitter.com/de/privacy), (Einstellungen) [https://twitter.com/personalization](https://twitter.com/personalization).
-
 ## Löschung von Daten
 
 Die von uns verarbeiteten Daten werden nach Maßgabe der gesetzlichen Vorgaben gelöscht, sobald deren zur Verarbeitung erlaubten Einwilligungen widerrufen werden oder sonstige Erlaubnisse entfallen (z.B., wenn der Zweck der Verarbeitung dieser Daten entfallen ist oder sie für den Zweck nicht erforderlich sind).

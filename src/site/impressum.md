@@ -33,7 +33,7 @@ E-Mail: daniel (at) zenzes.me
 
 **Dieses Impressum gilt auch für die folgenden Social-Media-Präsenzen und Onlineprofile:**
 
-[https://twitter.com/readyforreview](https://twitter.com/readyforreview)
+[https://podcasts.social/@readyforreview](https://podcasts.social/@readyforreview)
 
 ## Haftungs- und Schutzrechtshinweise
 

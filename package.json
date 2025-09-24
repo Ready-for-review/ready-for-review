@@ -35,7 +35,7 @@
     "@11ty/eleventy-plugin-rss": "2.0.4",
     "@cooklang/cooklang-ts": "1.2.7",
     "@tailwindcss/postcss": "4.1.11",
-    "@tailwindcss/typography": "0.5.16",
+    "@tailwindcss/typography": "0.5.19",
     "autoprefixer": "10.4.21",
     "browserslist": "4.25.2",
     "cross-env": "10.0.0",

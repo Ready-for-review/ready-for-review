@@ -2,53 +2,63 @@
 layout: layout/base.njk
 ---
 
-<div class="page_section mt-36">
-    <h1
-    class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">{{ title }}</h1>
-
-    <div class="container mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-                <div class="p-8 mx-auto my-12 prose card">
-
-                    <h2>Zutaten:</h2>
-                    <ul>
-                        {% for item in ingredients %}
-                            <li>{% ingredient item %}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-
-                <div class="p-8 mx-auto my-12 prose card">
-                    <h2>Utensilien:</h2>
-                    <ul>
-                        {% for item in cookware %}
-                            <li>
-                                {{ item.name }}
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-
-            <div class="p-8 mx-auto my-12 prose card">
-                <h2>Anleitung</h2>
-                <ul>
-                    {% for step in steps %}
-                        <li>
-                            {%- for item in step -%}
-                                {{ item | safe }}
-                            {%- endfor -%}
-                        </li>
-                    {% endfor %}
-                </ul>
-                {% if source %}
-                    <p>
-                        <a href="{{source}}" title="Quelle zu {{title}}">Quelle</a>
-                    </p>
-                {% endif %}
-
-            </div>
+<div class="page-hero">
+    <div class="container">
+        <h1 class="title-1">{{ title }}</h1>
+        <div class="page-hero__description">
+            <p>{{description}}</p>
         </div>
     </div>
+</div>
+
+<div class="page-container">
+    <div class="grid">
+        <!-- Zutaten -->
+        <div class="card card--bordered-left">
+            <h2 class="title-3">Zutaten</h2>
+            <ul class="content">
+                {% for item in ingredients %}
+                    <li>{% ingredient item %}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Utensilien -->
+        {% if cookware.length %}
+            <div class="card card--bordered-top">
+                <h2 class="title-3">Utensilien</h2>
+                <ul class="content">
+                    {% for item in cookware %}
+                        <li>{{ item.name }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Anleitung -->
+    <div class="card space-top-md">
+        <h2 class="title-2">Anleitung</h2>
+        <div class="content">
+            <ol>
+                {% for step in steps %}
+                    <li>
+                        {%- for item in step -%}
+                            {{ item | safe }}
+                        {%- endfor -%}
+                    </li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+
+    <!-- Quelle -->
+    {% if source %}
+        <div class="card card--bordered-left space-top-md">
+            <h3 class="title-3">Quelle</h3>
+            <div class="content">
+                <p>{{ source | safe }}</p>
+            </div>
+        </div>
+    {% endif %}
 </div>

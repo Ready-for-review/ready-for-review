@@ -1,40 +1,37 @@
 ---
-title: Über Sandra
+title: Sandra Parsick
 eleventyNavigation:
-  key: Über Sandra
+  key: Sandra Parsick
   parent: Über uns
   order: 10
 ---
 
 {% extends "layout/base.njk" %}
 {% block content %}
-
-  <div class="page_section mt-36">
-    <h1
-    class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">
-      {{title}}</h1>
-    <div class="p-8 my-12 card">
-
-      <p>Sandra ist als freiberufliche Softwareentwicklerin und Beraterin im Java Umfeld tätig. Seit 2008 beschäftigte sie
-      sich mit agiler Softwareentwicklung in verschiedenen Rollen. Gerne unterstützt und beratet sie Ihre Kunden in den
-      Bereichen der Java Enterprise Anwendungen, agilen Methoden, Software Craftsmanship und in der Automatisierung von
-      Softwareentwicklungsprozessen.</p>
-      <p>Seit 2019 ist sie <a href="https://apexapps.oracle.com/pls/apex/r/ace_program/oracle-aces/ace?ace_id=821&clear=2">Oracle ACE Pro</a> und wurde 2020 zum Java Champion ernannt.</p>
-
-    </div>
-
-  </div>
-
-  {% if uses.sandra.hardware.length %}
-    <div class="page_section mt-36">
-      <h2 class="mb-3 text-2xl font-semibold tracking-wide uppercase text-prussian sm:leading-snug">Benutzte Hardware</h2>
-      <div class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-
-        {% for item in uses.sandra.hardware %}
-          {%- include "uses-card.njk" -%}
-        {% endfor %}
+  <div class="page-hero">
+    <div class="container">
+      <h1 class="title-1">{{title}}</h1>
+      <div class="page-hero__description">
+        <p>Sandra ist als freiberufliche Softwareentwicklerin und Beraterin im Java Umfeld tätig. Seit 2008 beschäftigte sie
+        sich mit agiler Softwareentwicklung in verschiedenen Rollen. Gerne unterstützt und beratet sie Ihre Kunden in den
+        Bereichen der Java Enterprise Anwendungen, agilen Methoden, Software Craftsmanship und in der Automatisierung von
+        Softwareentwicklungsprozessen.</p>
+        <p>Seit 2019 ist sie <a href="https://apexapps.oracle.com/pls/apex/r/ace_program/oracle-aces/ace?ace_id=821&clear=2">Oracle ACE Pro</a> und wurde 2020 zum Java Champion ernannt.</p>
 
       </div>
     </div>
+  </div>
+
+  {% if uses.sandra.hardware.length %}
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="title-2">Benutzte Hardware</h2>
+        <div class="grid">
+          {% for item in uses.sandra.hardware %}
+            {%- include "uses-card.njk" -%}
+          {% endfor %}
+        </div>
+      </div>
+    </section>
   {% endif %}
 {% endblock %}

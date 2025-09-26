@@ -1,20 +1,19 @@
-<article class="p-8 mb-8 card">
-
-  <h3 class="text-2xl font-bold leading-tight tracking-tight">
-    <a href="{{item.link}}" title="{{ item.name }}">{{item.name}}</a>
-  </h3>
+<article class="card card--bordered-top">
+  <h3 class="title-3">{{item.name}}</h3>
 
   {% if item.tags.length%}
-    <p class="my-4">
+    <div class="episode-topics">
       {% for tag in item.tags %}
-        <span class="text-gray-400">#{{tag}}</span>
+        <span class="badge badge--pill badge--secondary">{{tag}}</span>
       {% endfor %}
-    </p>
+    </div>
   {% endif %}
-  <p class"my-4">
+
+  <p class="host-description">
     {{item.description}}
   </p>
-  <p class="my-4">
-    <a href="{{item.link}}" title="{{ item.name }}" class="btn">Mehr Informationen <span>→</span></a>
-  </p>
+
+  <div class="section-cta">
+    <a href="{{item.link}}" title="{{ item.name }}" class="btn btn--outline btn--small">Mehr Informationen →</a>
+  </div>
 </article>

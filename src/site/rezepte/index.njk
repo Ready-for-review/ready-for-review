@@ -7,25 +7,36 @@ nosearch: true
 ---
 {% extends "layout/base.njk" %}
 {% block content %}
-    <div class="max-w-(--breakpoint-lg) px-8 mx-auto xl:max-w-(--breakpoint-xl) mt-36">
-        <h1 class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">{{title}}</h1>
-        <div class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-            {% if collections.recipes.length %}
-                {% for recipe in collections.recipes %}
-                    <article class="p-8 card">
-                        <h3 class="text-2xl font-bold leading-tight tracking-tight text-gray-700">
-                            {{ recipe.data.title }}
-                        </h3>
-                        <p class="my-8 font-medium text-gray-500 sm:my-6">
-                            {{recipe.data.description}}
-                        </p>
-
-                        <p class="my-4 text-right">
-                            <a href="{{ recipe.url | url }}" title="{{ recipe.data.title }}" class="btn">Rezept <span>→</span></a>
-                        </p>
-                    </article>
-                {% endfor %}
-            </div>
-        {% endif %}
+  <div class="page-hero">
+    <div class="container">
+      <h1 class="title-1">{{title}}</h1>
+      <div class="page-hero__description">
+        <p>Leckere Rezepte aus dem Ready for Review Team - von schnellen Snacks bis zu aufwändigen Gerichten für das nächste Entwickler-Meeting.</p>
+      </div>
     </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      {% if collections.recipes.length %}
+        <div class="grid">
+          {% for recipe in collections.recipes %}
+            <article class="card hover hover--subtle">
+              <h2 class="title-3">{{ recipe.data.title }}</h2>
+
+              <p class="episode-description space-bottom-md">
+                {{recipe.data.description}}
+              </p>
+
+              <div class="section-cta">
+                <a href="{{ recipe.url | url }}" class="btn btn--primary" title="Rezept für {{ recipe.data.title }}">
+                  Rezept ansehen →
+                </a>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </section>
 {% endblock %}

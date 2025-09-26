@@ -36,28 +36,21 @@
         <meta name="theme-color" content="#ffffff"/>
         <link rel="alternate" type="application/rss+xml" title="Ready for review" href="https://ready-for-review.podigee.io/feed/mp3"/>
         <meta name="apple-itunes-app" content="app-id=1535026156"/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+        <!-- Pagefind CSS wird nur bei Bedarf geladen -->
+        {% if title == "Suche" %}
+            <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+        {% endif %}
 
-        <style>
-            @media (prefers-color-scheme: dark) {
-                :root {
-                    --pagefind-ui-primary: #eeeeee;
-                    --pagefind-ui-text: #eeeeee;
-                    --pagefind-ui-background: #152028;
-                    --pagefind-ui-border: #152028;
-                    --pagefind-ui-tag: #152028;
-                }
-            }
-        </style>
         {% block head %}{% endblock %}
     </head>
-    <body class="bg-gray-50">
+    <body data-theme="light">
         {%include "svgs.njk" %}
-        <div class="flex flex-col justify-between h-screen">
+        <div>
             {% include "header.njk" %}
 
-            <main id="main mb-auto"{% if not nosearch %}data-pagefind-body{%endif%}>
+            <main id="main"{% if not nosearch %} data-pagefind-body{% endif %}>
                 {% block jumbo %}{% endblock %}
                 {% block content %}
                     {{ content | safe }}

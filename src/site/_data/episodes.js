@@ -4,6 +4,12 @@ import cacheUtil from "../../util/cache.js";
 const CACHE_FILE_PATH = "_cache/episodes.json";
 const cacheHandler = cacheUtil(CACHE_FILE_PATH);
 
+// Extract episode number from title (format: RfrXXX)
+function extractEpisodeNumber(title) {
+  const match = title.match(/^Rfr(\d+(\.\d+)?)/i);
+  return match ? parseFloat(match[1]) : null;
+}
+
 export default async function () {
   console.log(">>> Reading episodes from cache...");
   const cache = cacheHandler.readFromCache();
@@ -23,6 +29,7 @@ export default async function () {
         const items = loadedEpisodes.items.map((episode) => {
           return {
             ...episode,
+            episodeNumber: extractEpisodeNumber(episode.title),
             enclosure: {
               ...episode.enclosure,
               url: episode.enclosure.url.replace("&source=feed", ""),

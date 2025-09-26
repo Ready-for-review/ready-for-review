@@ -1,42 +1,38 @@
 ---
-title: Über Daniel
+title: Daniel Zenzes
 eleventyNavigation:
-  key: Über Daniel
+  key: Daniel Zenzes
   parent: Über uns
   order: 20
 ---
 {% extends "layout/base.njk" %}
 {% block content %}
-
-  <div class="page_section mt-36">
-    <h1
-    class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">
-      {{title}}</h1>
-    <div class="p-8 my-12 card">
-
-      <p>
-        <a href="https://zenzes.me" title="Daniels private Seite">Daniel</a> (geb. Mies) ist Software Craftsman mit einer
-      Leidenschaft für moderne Frontend Entwicklung. Seit 2003 entwickelt er (mal mehr, mal weniger) agil Software und
-      dies sowohl freiberuflich als auch später als Entwickler und hat ebenfalls Erfahrung als Product Owner und Agiler
-      Coach. Neben seiner Leidenschaft für Frontends ist er auch ein Freund von Testgetriebener Entwicklung.
-    </p>
-      <p>Neben &quot;Ready for review&quot; produziert er den Podcast &quot;<a href="https://zenzes.me/podcast">Herr Zenzes wills
-        wissen</a>&quot;.
-    </p>
-
+  <div class="page-hero">
+    <div class="container">
+      <h1 class="title-1">{{title}}</h1>
+      <div class="page-hero__description">
+        <p>
+          <a href="https://zenzes.me" title="Daniels private Seite">Daniel</a> (geb. Mies) entwickelt seit 2003 (mal mehr, mal weniger) agil Software und 
+        dies sowohl freiberuflich als auch später als Entwickler und hat ebenfalls Erfahrung als Product Owner und Agiler
+        Coach. Neben seiner Leidenschaft für Frontends ist er auch ein Freund von Testgetriebener Entwicklung.
+        </p>
+        <p>Neben &quot;Ready for review&quot; produziert er den Podcast &quot;<a href="https://zenzes.me/podcast">Herr Zenzes wills
+          wissen</a>&quot;.
+        </p>
+      </div>
     </div>
   </div>
 
   {% if uses.daniel.hardware.length %}
-    <div class="page_section mt-36">
-      <h2 class="mb-3 text-2xl font-semibold tracking-wide uppercase text-prussian sm:leading-snug">Benutzte Hardware</h2>
-      <div class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-
-        {% for item in uses.daniel.hardware %}
-          {%- include "uses-card.njk" -%}
-        {% endfor %}
-
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="title-2">Benutzte Hardware</h2>
+        <div class="grid">
+          {% for item in uses.daniel.hardware %}
+            {%- include "uses-card.njk" -%}
+          {% endfor %}
+        </div>
       </div>
-    </div>
+    </section>
   {% endif %}
 {% endblock %}

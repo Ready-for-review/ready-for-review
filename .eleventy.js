@@ -1,4 +1,3 @@
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import { execSync } from "child_process";
 import "dotenv/config";
@@ -7,21 +6,25 @@ import { CookLangPlugin } from "./_11ty/plugins.js";
 import { postcss } from "./_11ty/postcss.js";
 import * as shortcodes from "./_11ty/shortcodes.js";
 
-const LOCAL_DIR = "src/_site";
-
 export default function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
-  eleventyConfig.addWatchTarget("./src/_includes/styles/tailwind.css");
-
+  eleventyConfig.addWatchTarget("./src/_includes/styles/design.css");
   eleventyConfig.addPassthroughCopy({ "./src/images": "/images" });
+  eleventyConfig.addPassthroughCopy({
+    "src/site/_includes/sections/icons": "icons",
+  });
 
   Object.keys(filters).forEach((filterName) => {
     eleventyConfig.addFilter(filterName, filters[filterName]);
   });
 
   Object.keys(shortcodes).forEach((shortcode) => {
-    eleventyConfig.addShortcode(shortcode, shortcodes[shortcode]);
+    if (shortcode === "image" || shortcode === "bookCover") {
+      eleventyConfig.addAsyncShortcode(shortcode, shortcodes[shortcode]);
+    } else {
+      eleventyConfig.addShortcode(shortcode, shortcodes[shortcode]);
+    }
   });
 
   eleventyConfig.addNunjucksAsyncFilter("postcss", postcss);
@@ -29,14 +32,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(CookLangPlugin, {
     limitIngredientDecimals: 2,
-  });
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    extensions: "html",
-    formats: ["auto"],
-    defaultAttributes: {
-      loading: "lazy",
-      decoding: "async",
-    },
   });
 
   eleventyConfig.addCollection("recipes", (collectionApi) => {
@@ -54,7 +49,6 @@ export default function (eleventyConfig) {
     });
   });
 
-  // make the prime target act like prod
   return {
     dir: {
       input: "src/site",

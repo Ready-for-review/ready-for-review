@@ -1,29 +1,16 @@
 {% macro player(episode, source)%}
-    <div class="flex items-center justify-center px-8">
-        <div class="flex card" >
-            <div class="w-full p-8">
-                <div class="flex justify-between">
-                    <div>
-                        <h3 class="text-2xl font-medium text-grey-darkest">
-                            <a class="no-underline" href="/{{episode | toEpisodeUrl }}/" title="{{ episode.title }}">{{episode.title}}</a>
-                        </h3>
-
-                        <time class="mt-1 text-sm text-grey" datetime="{{ episode.isoDate}}">{{ episode.isoDate | shortReadableDateFromISO }}</time>
-                    </div>
-                </div>
-                <audio class="w-full my-4 rfr-player" controls preload="metadata">
-                    <source type="audio/mpeg" src="{{episode.enclosure.url}}&source={{source}}">
-                </audio>
-            </div>
-        </div>
-    </div>
+  <div class="episode-player-card">
+    <audio class="interactive interactive--full-width space-bottom-md rfr-player" controls preload="badge badge--metadata">
+      <source type="audio/mpeg" src="{{episode.enclosure.url}}&source={{source}}">
+    </audio>
+  </div>
 {% endmacro %}
 
 {% macro video(video) %}
-    <div class="rfr-player">
-        <iframe 
+  <div class="video-player rfr-player">
+    <iframe 
         src="https://www.youtube.com/embed/{{video.snippet.resourceId.videoId}}?iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" 
         allowfullscreen 
         allowtransparency ></iframe>
-    </div>
+  </div>
 {% endmacro %}

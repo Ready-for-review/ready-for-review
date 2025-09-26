@@ -1,20 +1,64 @@
-<footer class="mt-12 text-gray-800 bg-white border-t border-gray-200 shadow-lg">
-    <div class="w-full px-8 py-6 text-center">
-        <p>Created with <span class="text-red-600">&#9829;</span> and <a href="https://www.11ty.dev/" title="Webseite von Eleventy (11ty), einem static-site generator">11ty</a>. Hosted at <a href="https://www.netlify.com/" title="Webseite von Netlify. Netlify bietet Hosting- und serverless Backend-Services u.a. für statische Websites an.">Netlify</a>.
-  </p>
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4 class="title-4">Podcast hören</h4>
         <p>
+          <a href="https://ready-for-review.podigee.io/feed/mp3">RSS Feed</a>
+        </p>
+        <p>
+          <a href="https://podcasts.apple.com/de/podcast/ready-for-review/id1535026156">Apple Podcasts</a>
+        </p>
+        <p>
+          <a href="https://open.spotify.com/show/7dxK2wi4ZMGEYO3UHhTSc4?si=N6NT3727RWK0PfntC4cQYQ">Spotify</a>
+        </p>
+        <p>
+          <a href="https://www.deezer.com/de/show/1836312">Deezer</a>
+        </p>
+        <p>
+          <a href="https://overcast.fm/itunes1535026156">Overcast</a>
+        </p>
+        <p>
+          <a href="https://pca.st/nansephz">Pocket Casts</a>
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="title-4">Social Media</h4>
+        <p>
+          <a href="https://podcasts.social/@readyforreview">Mastodon</a>
+        </p>
+        <p>
+          <a href="https://mastodon.social/@sparsick">Sandra auf Mastodon</a>
+        </p>
+        <p>
+          <a href="https://chaos.social/@danielzenzes">Daniel auf Mastodon</a>
+        </p>
+        <p>
+          <a href="https://bsky.app/profile/readyforreview.dev">Bluesky</a>
+        </p>
+        <p>
+          <a href="https://www.youtube.com/channel/UCnVCACzOxoOShe_69qo51hg">YouTube</a>
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="title-4">Kontakt & Mehr</h4>
+        <p>
+          <a href="/kontakt">Kontakt</a>
+        </p>
+        <p>
+          <a href="/impressum">Impressum</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>{% buildInfo %}</p>
+      <p>
     Der Podcast &quot;<i>Ready for Review</i>&quot; wird unter der Lizenz <a href="https://creativecommons.org/licenses/by-nc/4.0/legalcode">Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)</a> veröffentlicht.
   </p>
-        <p>
-  All emojis designed by <a href="https://openmoji.org/" rel="nofollow">OpenMoji</a> – the open-source emoji and icon project. License: <a href="https://creativecommons.org/licenses/by-sa/4.0/#" rel="nofollow">CC BY-SA 4.0</a>
-        </p>
-        <p>
-            Sandra (<a rel="me" href="https://mastodon.social/@sparsick"title="Sandra Parsick bei Mastodon">Mastodon</a>) &middot;
-            Daniel (<a rel="me" href="https://chaos.social/@danielzenzes" title="Daniel Zenzes bei Mastodon">Mastodon</a>) &middot; <a href="/kontakt/" title="Kontaktseite">Kontakt</a> &middot; <a href="/datenschutz/" title="Datenschutzerklärung von Ready for Review">Datenschutz</a> &middot; <a href="/impressum/" title="Impressum von Ready for Review">Impressum</a>
-        </p>
-
-        <p>
-            <small>{% buildInfo %}</small>
-        </p>
+      <p>&copy; 2020 - {{ "now" | date("yyyy") }} Ready for Review. Ein Podcast von Sandra Parsick und Daniel Zenzes.</p>
     </div>
+  </div>
 </footer>

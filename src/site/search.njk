@@ -6,18 +6,23 @@ eleventyNavigation:
 nosearch: true
 ---
 {% extends "layout/base.njk" %}
-{%block head %}
-    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-    {%endblock%}
-    {%block content %}
-        <div class="page_section mt-36">
-            <h1
-    class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">
-                {{title}}</h1>
-            <div class="p-8 my-12 card">
-                <div id="search" class="search"></div>
+{% block content %}
+    <div class="page-hero">
+        <div class="container">
+            <h1 class="title-1">{{title}}</h1>
+            <div class="page-hero__description">
+                <p>Durchsuche alle Podcast-Episoden, Artikel und Inhalte von Ready for Review</p>
             </div>
         </div>
-        <script src="/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false, showSubResults: true });"></script>
+    </div>
 
-        {%endblock%}
+    <section class="section">
+        <div class="container">
+            <div class="card">
+                <div id="search" class="search-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false, showSubResults: true });"></script>
+{% endblock %}

@@ -8,38 +8,54 @@ nosearch: true
 
 {% extends "layout/base.njk" %}
 {% block content %}
-    <div class="page_section mt-36">
-        <h1
-    class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">
-            {{title}}</h1>
-        <section class="p-8 my-12 card">
-            <p>Regelmäßig besprechen wir im Podcast die "großen Klassiker": Bücher, die wir gut finden und Menschen, die in der IT arbeiten, empfehlen möchten.</p>
-        </section>
+  <div class="page-hero">
+    <div class="container">
+      <h1 class="title-1">{{title}}</h1>
+      <div class="page-hero__description">
+        <p>Regelmäßig besprechen wir im Podcast die "großen Klassiker": Bücher, die wir gut finden und Menschen, die in der IT arbeiten, empfehlen möchten.</p>
+      </div>
+    </div>
+  </div>
 
-        {% if collections.klassiker.length %}
-            <div class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-                {% for klassiker in collections.klassiker %}
-                    <article class="mb-8 card flex ">
-                        {% if klassiker.data.isbn %}
-                            <img eleventy:ignore class="w-auto h-auto rounded-l-lg mx-auto" src="https://covers.openlibrary.org/b/isbn/{{klassiker.data.isbn}}-M.jpg"/>
-                        {%endif %}
-                        <section class="p-8">
-                            <h3 class="text-2xl font-bold leading-tight tracking-tight text-gray-700">
-                                {{ klassiker.data.title }}
-                            </h3>
-                            <time class="text-sm text-gray-800" datetime="{{ klassiker.data.date}}">{{ klassiker.data.date | shortReadableDate }}</time>
-                            <p class="my-8 font-medium text-gray-500 sm:my-6">
-                                {{klassiker.data.author}} (<a href="{{klassiker.data.url}}" title="Webseite zum Buch {{ klassiker.data.title }}" class="">Webseite zum Buch</a>
-                                {% if klassiker.data.isbn %}&nbsp;<a href="https://openlibrary.org/isbn/{{klassiker.data.isbn}}" title="{{ klassiker.data.title }} bei OpenLibrary" class="">OpenLibrary</a>{%endif%})
-                        </p>
+  <section class="section">
+    <div class="container">
+      {% if collections.klassiker.length %}
+        <div class="grid grid--books">
+          {% for klassiker in collections.klassiker %}
+            <article class="card card--book hover hover--lift">
+              <div class="card__book-cover">
+                {% if klassiker.data.isbn %}
+                  {% bookCover klassiker.data.isbn, klassiker.data.title, "book-cover-image" %}
+                {% else %}
+                  <div class="book-cover-placeholder">
+                    <div class="book-cover-placeholder__content">
+                      <div>📚</div>
+                      <div class="book-title">{{klassiker.data.title}}</div>
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
 
-                                <div class="my-8 sm:my-6">
-                                    <a href="{{klassiker.data.episodeLink}}" title="Podcast Folge zum Buch {{ klassiker.data.title }}" class="btn">Episode <span>→</span></a>
-                                </div>
-                            </section>
-                        </article>
-                    {% endfor %}
+              <div class="card__book-content">
+                <h3 class="title-3 card__book-title">{{ klassiker.data.title }}</h3>
+
+                <p class="card__book-author">{{klassiker.data.author}}</p>
+
+                <div class="card__book-links">
+                  <a href="{{klassiker.data.url}}" class="link link--blue">Webseite zum Buch</a>
+                  {% if klassiker.data.isbn %}
+                    <a href="https://openlibrary.org/isbn/{{klassiker.data.isbn}}" class="link link--blue">OpenLibrary</a>
+                  {% endif %}
                 </div>
-            {% endif %}
+
+                <div class="card__book-actions">
+                  <a href="{{klassiker.data.episodeLink}}" class="btn btn--primary btn--small">Episode anhören →</a>
+                </div>
+              </div>
+            </article>
+          {% endfor %}
         </div>
-    {% endblock %}
+      {% endif %}
+    </div>
+  </section>
+{% endblock %}

@@ -8,43 +8,51 @@ nosearch: true
 
 {% extends "layout/base.njk" %}
 {% block content %}
-  <div class="page_section mt-36">
-    <h1
-    class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">
-      {{title}}</h1>
-    <div class="p-8 my-12 card">
-      <p>Seit 2020 produzieren Sandra und Daniel monatlich diesen Podcast und den zugehörigen <a
-        href="https://www.youtube.com/channel/UCnVCACzOxoOShe_69qo51hg">YouTube</a> Stream. Dabei geht es um aktuelle
-      Themen und Diskussionen aus der IT, neue technologische Trends oder auch einfach mal den familiären Family IT
-      Support, den beide regelmäßig leisten dürfen.</p>
-      <p>Ihr könnt den Podcast <a href="https://steadyhq.com/ready-for-review">über Steady</a> oder <a href="https://www.buymeacoffee.com/readyforreview"> über "Buy me a Coffee"</a> direkt unterstützen.</p>
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="title-1">{{ title }}</h1>
+      <div class="page-hero__description">
+        <p>Seit 2020 produzieren Sandra und Daniel monatlich diesen Podcast und den zugehörigen <a
+          href="https://www.youtube.com/channel/UCnVCACzOxoOShe_69qo51hg">YouTube</a> Stream. Dabei geht es um aktuelle
+        Themen und Diskussionen aus der IT, neue technologische Trends oder auch einfach mal den familiären Family IT
+        Support, den beide regelmäßig leisten dürfen.</p>
+        <p>Ihr könnt den Podcast <a href="https://steadyhq.com/ready-for-review">über Steady</a> oder <a href="https://www.buymeacoffee.com/readyforreview">über "Buy me a Coffee"</a> direkt unterstützen.</p>
+      </div>
     </div>
-    <h2 class="text-2xl font-semibold tracking-wide uppercase text-prussian sm:leading-snug">Über Sandra</h2>
-    <div class="p-8 mt-6 mb-12 card">
-      <p>Sandra ist als freiberufliche Softwareentwicklerin und Beraterin im Java Umfeld tätig. Seit 2008 beschäftigte sie
-      sich mit agiler Softwareentwicklung in verschiedenen Rollen. Gerne unterstützt und beratet sie Ihre Kunden in den
-      Bereichen der Java Enterprise Anwendungen, agilen Methoden, Software Craftsmanship und in der Automatisierung von
-      Softwareentwicklungsprozessen.</p>
-      <p>Seit 2019 ist sie <a href="https://apex.oracle.com/pls/apex/f?p=19297:3">Oracle ACE Pro</a> und wurde 2020 zum Java Champion ernannt.</p>
+  </section>
 
-      <p class="mt-6">
-        <a href="/ueber-uns/sandra/" class="btn">mehr über Sandra</a>
+  <section class="section">
+    <div class="container">
+      <div class="grid">
+        <div class="card card--bordered-top">
+          <h2 class="title-3">Sandra Parsick</h2>
+          <p>Sandra ist als freiberufliche Softwareentwicklerin und Beraterin im Java Umfeld tätig. Seit 2008 beschäftigte sie
+        sich mit agiler Softwareentwicklung in verschiedenen Rollen. Gerne unterstützt und beratet sie Ihre Kunden in den
+        Bereichen der Java Enterprise Anwendungen, agilen Methoden, Software Craftsmanship und in der Automatisierung von
+        Softwareentwicklungsprozessen.</p>
+          <p>Seit 2019 ist sie <a href="https://apex.oracle.com/pls/apex/f?p=19297:3">Oracle ACE Pro</a> und wurde 2020 zum Java Champion ernannt.</p>
+
+          <div class="section-cta">
+            <a href="/ueber-uns/sandra/" class="btn btn--primary">Mehr über Sandra</a>
+          </div>
+        </div>
+
+        <div class="card card--bordered-top">
+          <h2 class="title-3">Daniel Zenzes</h2>
+          <p>
+            <a href="https://zenzes.me">Daniel</a> (geb. Mies) ist Software Craftsman mit einer Leidenschaft für moderne
+        Frontend Entwicklung. Seit 2003 entwickelt er (mal mehr, mal weniger) agil Software und dies sowohl freiberuflich
+        als auch später als Entwickler und hat ebenfalls Erfahrung als Product Owner und Agiler Coach. Neben seiner
+        Leidenschaft für Frontends ist er auch ein Freund von Testgetriebener Entwicklung.
       </p>
-    </div>
-    <h2 class="text-2xl font-semibold tracking-wide uppercase text-prussian sm:leading-snug">Über Daniel</h2>
-    <div class="p-8 mt-6 mb-12 card">
-      <p>
-        <a href="https://zenzes.me">Daniel</a> (geb. Mies) ist Software Craftsman mit einer Leidenschaft für moderne
-      Frontend Entwicklung. Seit 2003 entwickelt er (mal mehr, mal weniger) agil Software und dies sowohl freiberuflich
-      als auch später als Entwickler und hat ebenfalls Erfahrung als Product Owner und Agiler Coach. Neben seiner
-      Leidenschaft für Frontends ist er auch ein Freund von Testgetriebener Entwicklung.
-    </p>
-      <p>Neben &quot;Ready for review&quot; produziert er den Podcast &quot;<a href="https://zenzes.me/podcast">Herr Zenzes wills
-        wissen</a>&quot;.
-    </p>
-      <p class="mt-6">
-        <a href="/ueber-uns/daniel/" class="btn">mehr über Daniel</a>
+          <p>Neben &quot;Ready for review&quot; produziert er den Podcast &quot;<a href="https://zenzes.me/podcast">Herr Zenzes wills
+          wissen</a>&quot;.
       </p>
+          <div class="section-cta">
+            <a href="/ueber-uns/daniel/" class="btn btn--primary">Mehr über Daniel</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 {% endblock %}

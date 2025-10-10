@@ -13,8 +13,7 @@ layout: layout/base.njk
 
 <div class="page-container">
     <div class="grid">
-        <!-- Zutaten -->
-        <div class="card card--bordered-left">
+        <div class="card card--bordered-top">
             <h2 class="title-3">Zutaten</h2>
             <ul class="content">
                 {% for item in ingredients %}
@@ -23,7 +22,6 @@ layout: layout/base.njk
             </ul>
         </div>
 
-        <!-- Utensilien -->
         {% if cookware.length %}
             <div class="card card--bordered-top">
                 <h2 class="title-3">Utensilien</h2>
@@ -36,7 +34,6 @@ layout: layout/base.njk
         {% endif %}
     </div>
 
-    <!-- Anleitung -->
     <div class="card space-top-md">
         <h2 class="title-2">Anleitung</h2>
         <div class="content">
@@ -52,12 +49,17 @@ layout: layout/base.njk
         </div>
     </div>
 
-    <!-- Quelle -->
     {% if source %}
         <div class="card card--bordered-left space-top-md">
-            <h3 class="title-3">Quelle</h3>
+            <h2 class="title-3">Quelle</h2>
             <div class="content">
-                <p>{{ source | safe }}</p>
+                {% if source.startsWith('http://')or source.startsWith('https://') %}
+                    <p>
+                        <a href="{{ source }}" target="_blank" rel="noopener noreferrer">{{ source }}</a>
+                    </p>
+                {% else %}
+                    <p>{{ source | safe }}</p>
+                {% endif %}
             </div>
         </div>
     {% endif %}

@@ -1088,6 +1088,10 @@ nav {
   line-height: 1;
 }
 
+[data-theme="dark"] .logo-text {
+  color: var(--text-primary);
+}
+
 .nav-content {
   display: flex;
   align-items: center;
@@ -1444,7 +1448,13 @@ footer {
   margin-bottom: 2rem;
 }
 
-.footer-section p {
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
   margin-bottom: 0.5rem;
 }
 

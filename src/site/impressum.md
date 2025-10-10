@@ -17,7 +17,7 @@ Telefon: 0176/70056222<br />
 E-Mail: mail (at) sandra-parsick.de
 
 Daniel Zenzes<br />
-Sassenfeld 61<br />
+Raher Feld 18<br />
 41334 Nettetal<br />
 
 ### Kontakt

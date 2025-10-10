@@ -22,7 +22,7 @@ nosearch: true
       {% if collections.klassiker.length %}
         <div class="grid grid--books">
           {% for klassiker in collections.klassiker %}
-            <article class="card card--book hover hover--lift">
+            <article class="card card--book card--bordered-top">
               <div class="card__book-cover">
                 {% if klassiker.data.isbn %}
                   {% bookCover klassiker.data.isbn, klassiker.data.title, "book-cover-image" %}

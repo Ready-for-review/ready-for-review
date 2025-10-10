@@ -3,19 +3,41 @@ title: Kontakt
 nosearch: true
 ---
 {% extends "layout/base.njk" %}
-{%block content %}
-    <div class="max-w-(--breakpoint-lg) px-8 mx-auto xl:max-w-(--breakpoint-xl) mt-36">
-        <h1 class="mt-4 mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-700 sm:text-6xl lg:text-7xl sm:mb-10">{{title}}</h1>
-        <section class="p-8 my-12 card">
-
-            <p class="my-4 text-gray-800">
-Wenn ihr uns kontaktieren wollt, könnt ihr dies gerne via Mastodon tun (<a href="https://podcasts.social/@readyforreview">@readyforreview</a>, <a href="https://mastodon.social/@sparsick">@sparsick</a> oder <a href="https://chaos.social/@danielzenzes" title="Daniel Zenzes bei Mastodon">@danielzenzes</a>).
-</p>
-            <p class="my-4 text-gray-800">
-Alternativ könnt ihr uns auch eine E-Mail senden an info[at] ready-for-review.dev.
-</p>
-
-        </section>
+{% block content %}
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="title-1">{{ title }}</h1>
+      <div class="page-hero__description">
+        <p>Wir freuen uns von euch zu hören! Meldet euch gerne über Social Media oder per E-Mail bei uns.</p>
+      </div>
     </div>
+  </section>
 
-    {%endblock%}
+  <section class="section">
+    <div class="container">
+      <div class="grid">
+        <div class="card card--bordered-top">
+          <h2 class="title-3">Social Media</h2>
+          <p>
+            Wenn ihr uns kontaktieren wollt, könnt ihr dies gerne via Mastodon tun:
+          </p>
+          <ul>
+            <li>
+              <a href="https://podcasts.social/@readyforreview">@readyforreview</a> - Der offizielle Podcast-Account</li>
+            <li>
+              <a href="https://mastodon.social/@sparsick">@sparsick</a> - Sandra</li>
+            <li>
+              <a href="https://chaos.social/@danielzenzes" title="Daniel Zenzes bei Mastodon">@danielzenzes</a> - Daniel</li>
+          </ul>
+        </div>
+
+        <div class="card card--bordered-top">
+          <h2 class="title-3">E-Mail</h2>
+          <p>
+            Alternativ könnt ihr uns auch eine E-Mail senden an <strong>info[at]ready-for-review.dev</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

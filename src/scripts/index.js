@@ -8,6 +8,8 @@ class ThemeManager {
   constructor() {
     this.storageKey = "theme-preference";
     this.mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    this.themeMenu = null;
+    this.isMenuOpen = false;
     this.themes = {
       AUTO: "auto",
       LIGHT: "light",
@@ -21,6 +23,9 @@ class ThemeManager {
     // Set initial theme
     this.setTheme(this.getStoredTheme() || this.themes.AUTO);
 
+    // Get theme menu reference
+    this.themeMenu = document.getElementById("themeMenu");
+
     // Listen for system theme changes
     this.mediaQuery.addEventListener("change", () => {
       if (
@@ -28,6 +33,20 @@ class ThemeManager {
         !this.getStoredTheme()
       ) {
         this.applyTheme(this.getSystemTheme());
+      }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (this.isMenuOpen && !e.target.closest(".theme-selector")) {
+        this.closeMenu();
+      }
+    });
+
+    // Close menu on escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && this.isMenuOpen) {
+        this.closeMenu();
       }
     });
   }
@@ -54,11 +73,12 @@ class ThemeManager {
     const actualTheme =
       theme === this.themes.AUTO ? this.getSystemTheme() : theme;
     this.applyTheme(actualTheme);
+    this.updateMenuActiveState();
   }
 
   applyTheme(theme) {
     document.body.setAttribute("data-theme", theme);
-    this.updateThemeIcon(theme);
+    this.updateThemeIcon();
 
     // Update meta theme-color for mobile browsers
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
@@ -68,18 +88,60 @@ class ThemeManager {
     }
   }
 
-  updateThemeIcon(theme) {
+  updateThemeIcon() {
     const themeIcon = document.querySelector(".theme-icon");
     if (themeIcon) {
-      const storedTheme = this.getStoredTheme();
+      const currentTheme = this.getCurrentTheme();
 
-      // Show different icons based on stored preference
-      if (storedTheme === this.themes.AUTO || !storedTheme) {
-        themeIcon.textContent = "🌓"; // Auto mode
+      // Show icon based on CURRENT theme state (not stored preference)
+      // This shows what the user actually sees
+      if (currentTheme === this.themes.LIGHT) {
+        themeIcon.textContent = "☀️"; // Light mode
       } else {
-        themeIcon.textContent = theme === this.themes.LIGHT ? "☀️" : "🌙";
+        themeIcon.textContent = "🌙"; // Dark mode
       }
     }
+  }
+
+  updateMenuActiveState() {
+    if (!this.themeMenu) return;
+
+    const storedTheme = this.getStoredTheme() || this.themes.AUTO;
+    const buttons = this.themeMenu.querySelectorAll("button");
+
+    buttons.forEach((button) => {
+      button.classList.remove("active");
+    });
+
+    // Add active class to current selection
+    const activeButton = Array.from(buttons).find((button) => {
+      const onClick = button.getAttribute("onclick");
+      return onClick && onClick.includes(`'${storedTheme}'`);
+    });
+
+    if (activeButton) {
+      activeButton.classList.add("active");
+    }
+  }
+
+  toggleMenu() {
+    if (!this.themeMenu) return;
+
+    this.isMenuOpen = !this.isMenuOpen;
+
+    if (this.isMenuOpen) {
+      this.themeMenu.classList.add("active");
+      this.updateMenuActiveState();
+    } else {
+      this.themeMenu.classList.remove("active");
+    }
+  }
+
+  closeMenu() {
+    if (!this.themeMenu) return;
+
+    this.isMenuOpen = false;
+    this.themeMenu.classList.remove("active");
   }
 
   toggle() {
@@ -109,7 +171,7 @@ class ThemeManager {
 class MobileMenuManager {
   constructor() {
     this.mobileNav = document.getElementById("mobileNav");
-    this.toggle = document.querySelector(".mobile-menu-toggle");
+    this.toggleButton = document.querySelector(".mobile-menu-toggle");
     this.isOpen = false;
 
     this.init();
@@ -146,8 +208,8 @@ class MobileMenuManager {
     if (!this.mobileNav) return;
 
     this.mobileNav.classList.add("active");
-    this.toggle.innerHTML = "✕";
-    this.toggle.setAttribute("aria-expanded", "true");
+    this.toggleButton.innerHTML = "✕";
+    this.toggleButton.setAttribute("aria-expanded", "true");
     document.body.style.overflow = "hidden";
     this.isOpen = true;
 
@@ -160,8 +222,8 @@ class MobileMenuManager {
     if (!this.mobileNav) return;
 
     this.mobileNav.classList.remove("active");
-    this.toggle.innerHTML = "☰";
-    this.toggle.setAttribute("aria-expanded", "false");
+    this.toggleButton.innerHTML = "☰";
+    this.toggleButton.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
     this.isOpen = false;
   }
@@ -241,19 +303,112 @@ class SmoothScrollManager {
   }
 }
 
+// Search Manager
+class SearchManager {
+  constructor() {
+    this.dropdown = document.getElementById("searchDropdown");
+    this.searchInitialized = false;
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      if (
+        this.dropdown?.classList.contains("active") &&
+        !e.target.closest(".search-selector")
+      ) {
+        this.close();
+      }
+    });
+
+    // Close dropdown on Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && this.dropdown?.classList.contains("active")) {
+        this.close();
+      }
+    });
+  }
+
+  async open() {
+    this.dropdown?.classList.add("active");
+
+    // Initialize Pagefind UI only once
+    if (!this.searchInitialized) {
+      await this.initializePagefind();
+      this.searchInitialized = true;
+    }
+
+    // Focus search input
+    setTimeout(() => {
+      const input = document.querySelector(".pagefind-ui__search-input");
+      input?.focus();
+    }, 100);
+  }
+
+  close() {
+    this.dropdown?.classList.remove("active");
+  }
+
+  toggle() {
+    if (this.dropdown?.classList.contains("active")) {
+      this.close();
+    } else {
+      this.open();
+    }
+  }
+
+  async initializePagefind() {
+    // Dynamically load Pagefind CSS if not already loaded
+    if (!document.querySelector('link[href*="pagefind-ui.css"]')) {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "/pagefind/pagefind-ui.css";
+      document.head.appendChild(link);
+    }
+
+    // Dynamically load Pagefind JS if not already loaded
+    if (!window.PagefindUI) {
+      await new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = "/pagefind/pagefind-ui.js";
+        script.onload = resolve;
+        script.onerror = reject;
+        document.body.appendChild(script);
+      });
+    }
+
+    // Initialize Pagefind UI
+    new window.PagefindUI({
+      element: "#search",
+      showImages: false,
+      showSubResults: true,
+    });
+  }
+}
+
 // Initialize all managers
-let themeManager, mobileMenuManager, scrollEffectManager, smoothScrollManager;
+let themeManager,
+  mobileMenuManager,
+  scrollEffectManager,
+  smoothScrollManager,
+  searchManager;
 
 document.addEventListener("DOMContentLoaded", function () {
   themeManager = new ThemeManager();
   mobileMenuManager = new MobileMenuManager();
   scrollEffectManager = new ScrollEffectManager();
   smoothScrollManager = new SmoothScrollManager();
+  searchManager = new SearchManager();
 
   // Make functions globally available for onclick handlers
   window.toggleTheme = () => themeManager.toggle();
+  window.toggleThemeMenu = () => themeManager.toggleMenu();
+  window.setTheme = (theme) => {
+    themeManager.setTheme(theme);
+    themeManager.closeMenu();
+  };
   window.toggleMobileMenu = () => mobileMenuManager.toggle();
   window.closeMobileMenu = () => mobileMenuManager.close();
+  window.toggleSearch = () => searchManager.toggle();
+  window.closeSearch = () => searchManager.close();
 });
 
 // Prefers-reduced-motion support

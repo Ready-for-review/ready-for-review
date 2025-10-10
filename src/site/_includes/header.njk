@@ -1,57 +1,77 @@
 <header>
-    <a class="sr-only" href="#main">Direkt zum Inhalt</a>
-    <nav class="nav-container">
-        <div class="logo-container">
-            <div class="media media--small">
-                <a href="/" >
-                    <svg  width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+  <a class="sr-only" href="#main">Direkt zum Inhalt</a>
+  <nav class="nav-container">
+    <div class="logo-container">
+      <div class="media media--small">
+        <a href="/" >
+          <svg  width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
             alt="ready-for-review.dev Logo" title="ready-for-review.dev Logo">
-                        <use xlink:href="#rfr"></use>
-                    </svg>
-                </a>
-            </div>
-            <span class="logo-text">Ready for Review</span>
-        </div>
+            <use xlink:href="#rfr"></use>
+          </svg>
+        </a>
+      </div>
+      <span class="logo-text">Ready for Review</span>
+    </div>
 
-        <div class="nav-content">
-            <ul class="nav-links">
-                {% set navPages = collections.all | eleventyNavigation %}
-                {%- for entry in navPages %}
-                    <li>
-                        <a href="{{ entry.url | url }}" 
+    <div class="nav-content">
+      <ul class="nav-links">
+        {% set navPages = collections.all | eleventyNavigation %}
+        {%- for entry in navPages %}
+          <li>
+            <a href="{{ entry.url | url }}" 
                            {% if entry.url | isActiveNavItem(page.url) %} 
                            aria-current="page" 
                            {% endif %}>
-                            {{ entry.title }}
-                        </a>
-                    </li>
-                {%- endfor %}
-            </ul>
+              {{ entry.title }}
+            </a>
+          </li>
+        {%- endfor %}
+      </ul>
 
-            <div class="theme-toggle" onclick="toggleTheme()">
-                <div class="theme-toggle-slider">
-                    <span class="theme-icon">☀️</span>
-                </div>
-            </div>
-
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+      <div class="theme-selector">
+        <button class="theme-toggle" onclick="toggleThemeMenu()">
+          <span class="theme-icon">☀️</span>
+        </button>
+        <div class="theme-menu" id="themeMenu">
+          <button onclick="setTheme('light')">
+            <span>☀️</span> Hell
+          </button>
+          <button onclick="setTheme('dark')">
+            <span>🌙</span> Dunkel
+          </button>
+          <button onclick="setTheme('auto')">
+            <span>⚙️</span> System
+          </button>
         </div>
-    </nav>
+      </div>
 
-    <div class="mobile-nav" id="mobileNav">
-        <ul class="nav-links">
-            {% set navPages = collections.all | eleventyNavigation %}
-            {%- for entry in navPages %}
-                <li>
-                    <a onclick="closeMobileMenu()" 
+      <div class="search-selector">
+        <button class="search-toggle" onclick="toggleSearch()" aria-label="Suche">
+          🔍
+        </button>
+        <div class="search-dropdown" id="searchDropdown">
+          <div id="search"></div>
+        </div>
+      </div>
+
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <ul class="nav-links">
+      {% set navPages = collections.all | eleventyNavigation %}
+      {%- for entry in navPages %}
+        <li>
+          <a onclick="closeMobileMenu()" 
                        href="{{ entry.url | url }}" 
                        {% if entry.url | isActiveNavItem(page.url) %} 
                        aria-current="page" 
                        {% endif %}>
-                        {{ entry.title }}
-                    </a>
-                </li>
-            {%- endfor %}
-        </ul>
-    </div>
+            {{ entry.title }}
+          </a>
+        </li>
+      {%- endfor %}
+    </ul>
+  </div>
 </header>

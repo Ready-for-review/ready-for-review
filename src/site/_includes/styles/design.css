@@ -66,6 +66,7 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg-primary);
 }
 
 body {
@@ -73,6 +74,8 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
+  min-height: 100vh;
+  width: 100%;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
@@ -340,10 +343,6 @@ a:not(.btn):focus {
 /* ================================
    COMPONENT STYLES - SEARCH
    ================================ */
-
-.search-container {
-  width: 100%;
-}
 
 /* Pagefind UI Integration */
 .pagefind-ui {
@@ -1002,42 +1001,159 @@ a:not(.btn):focus {
    COMPONENT STYLES - FORMS & UI
    ================================ */
 
-.theme-toggle {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 0.25rem;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+/* Theme Selector */
+/* Theme Switcher & Search - Shared Styles */
+.theme-selector,
+.search-selector {
   position: relative;
-  width: 60px;
-  height: 32px;
 }
 
-.theme-toggle:hover {
-  border-color: var(--logo-blue);
-}
-
-.theme-toggle-slider {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 26px;
-  height: 26px;
-  background: var(--logo-orange);
-  border-radius: 50%;
-  transition: transform 0.3s ease;
+.theme-toggle,
+.search-toggle {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  width: 44px;
+  height: 44px;
 }
 
-[data-theme="dark"] .theme-toggle-slider {
-  transform: translateX(28px);
+.theme-toggle:hover,
+.search-toggle:hover {
+  background-color: var(--bg-secondary);
+}
+
+/* Dropdown Menu Shared Styles */
+.theme-menu,
+.search-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.theme-menu.active,
+.search-dropdown.active {
+  display: block;
+}
+
+/* Dropdown Arrow / Speech Bubble Pointer */
+.theme-menu::before,
+.search-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--border-color);
+}
+
+.theme-menu::after,
+.search-dropdown::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid var(--bg-primary);
+}
+
+/* Theme menu arrow points to theme button */
+.theme-menu::before {
+  right: 10px;
+}
+
+.theme-menu::after {
+  right: 11px;
+}
+
+/* Search dropdown arrow points to search button */
+.search-dropdown::before {
+  right: 10px;
+}
+
+.search-dropdown::after {
+  right: 11px;
+}
+
+/* Theme Menu Specific Styles */
+.theme-menu {
+  min-width: 150px;
+}
+
+.theme-menu button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-primary);
+  text-align: left;
+  transition: background-color 0.2s;
+}
+
+.theme-menu button:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.theme-menu button:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+.theme-menu button:hover {
+  background-color: var(--bg-secondary);
+}
+
+.theme-menu button.active {
+  background-color: var(--bg-secondary);
+  font-weight: 600;
+}
+
+/* Search Dropdown Specific Styles */
+.search-dropdown {
+  min-width: 400px;
+  max-width: 90vw;
+  max-height: 70vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* Prevent border-radius from clipping arrow */
+  overflow: visible;
+}
+
+/* Wrapper to handle scrolling without clipping arrow */
+#search {
+  padding: 1rem;
+  max-height: calc(70vh - 2rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .search-dropdown {
+    min-width: 300px;
+    right: 0;
+    left: auto;
+  }
 }
 
 .mobile-menu-toggle {
@@ -1140,6 +1256,7 @@ nav {
   z-index: 100;
   padding: 6rem 2rem 2rem;
   display: none;
+  overflow-y: auto;
 }
 
 .mobile-nav.active {
@@ -1148,17 +1265,26 @@ nav {
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .mobile-nav .nav-links {
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .mobile-nav .nav-links a {
   font-size: 1.2rem;
   padding: 1rem 2rem;
+  width: 100%;
+  text-align: center;
 }
 
 /* ================================
@@ -1172,6 +1298,8 @@ nav {
   min-height: 70vh;
   display: flex;
   align-items: center;
+  width: 100%;
+  position: relative;
 }
 
 .hero-content {
@@ -1315,10 +1443,12 @@ nav {
 
 .section {
   padding: 4rem 0;
+  width: 100%;
 }
 
 .section-alt {
   background: var(--bg-secondary);
+  width: 100%;
 }
 
 .section-subtitle {
